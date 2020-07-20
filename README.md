@@ -2,7 +2,7 @@
 
 ## 使用方法
 1. git for windowsを入れておいてください。
-1. SourceTree(https://www.sourcetreeapp.com/)　　入れておくと便利です。
+1. [SourceTree](https://www.sourcetreeapp.com/)を入れておくと便利です。
 1. コマンドプロンプトもしくはgit bashを起動の上、作業フォルダまで移動した後、git clone https://github.com/it-specialist-develop-team/reddit-copysite.git を行います
 1. git remote add https://github.com/it-specialist-develop-team/reddit-copysite.git
 1. reddit-copysiteフォルダに移動した後、git branch を実行して現在のブランチを確認してください。
