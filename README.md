@@ -12,3 +12,5 @@
 1. githubにアクセスしdevelopブランチへのPull Request を行ってください(管理者側がレビューの上マージします) 
 
 .... 
+
+feature/add_index.html
