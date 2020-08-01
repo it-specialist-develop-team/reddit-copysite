@@ -168,24 +168,62 @@
 
 
 
-
-
+                    <!-- link -->
                     <div id="thirdmenu" class="tab-pane">
 
                       <div class="form-group">
                         <textarea class="form-control title-textarea" maxlength="400" placeholder="title"></textarea>
                         <br>
 
-                        <input type="text" id="text1" class="form-control">
+                        <input type="text" id="url-text" class="form-control">
                       </div>
 
                     </div>
 
 
-
+                    <!-- poll -->
                     <div id="fourthmenu" class="tab-pane">
-                      <h3 class="mt-4">What do you think about Angular JS?</h3>
-                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites</p>
+                      <form>
+                        <class class="form-group">
+                          <textarea class="form-control title-textarea" maxlength="400" placeholder="title"></textarea>
+                          <br>
+
+                          <input id="x" type="hidden" name="content" 　placeholder="Text">
+                          <trix-editor class="text" input="x"></trix-editor>
+
+
+                          <div class="poll">
+
+                            <div class="poll_option">
+
+                              <div class="poll_option_text">
+
+                                <input type="text" class="form-control" size="100">
+                                <input type="text" class="form-control">
+
+                                <div id="poll_text_add"></div>
+                              </div>
+
+                              <input type="button" value="追加" onclick="clickBtn3()" class="btn btn-primary">
+                              <input type="button" value="削除" onclick="clickBtn4()" class="btn btn-primary">
+
+                            </div>
+
+                            <div class="poll_help">
+
+
+                              <b>投票のヒント</b>
+                              <ol>
+                                <li>短く明確なオプションを記載する。</li>
+                                <li>オプションは多いほど良い。</li>
+                                <li>投票期間を選択する。</li>
+                                <li>投票を作成後にオプションの内容を変更する事は出来ません。</li>
+                              </ol>
+
+                            </div>
+
+                        </class>
+                      </form>
                     </div>
                   </div>
 
@@ -312,6 +350,25 @@
     $(function () {
       $('[data-toggle="tooltip"]').tooltip();
     })
+
+    // poll text area add
+    function clickBtn3() {
+      const poll_text_add = document.getElementById("poll_text_add");
+      const input1 = document.createElement("input");
+      input1.setAttribute("type", "text");
+      input1.setAttribute("class", "form-control");
+      poll_text_add.appendChild(input1);
+
+      // var br = document.createElement('br');
+      // poll_text_add.appendChild(br);
+    }
+    function clickBtn4() {
+      const poll_text_add = document.getElementById("poll_text_add");
+      // poll_text_add.removeChild(poll_text_add.firstChild);
+      // poll_text_add.removeChild(br.firstChild);
+      poll_text_add.innerHTML = '';
+    }
+
 
   </script>
 

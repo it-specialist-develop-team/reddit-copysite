@@ -179,3 +179,27 @@ height: 1000px;
 .post-footer{
 	background-color: white;
 }
+
+.poll{
+display: flex;
+padding: 10px 10px 15px 10px;
+border: 1px solid #bbb;
+border-radius: 0px 0px 3px 3px;
+border-top: #fff;
+
+}
+.poll_help{
+	padding: 0px 10px 0px 20px;
+	font-size: 13px;
+}
+.poll_help ol{
+	list-style: decimal outside;
+	font-size: 10px;
+}
+.poll_option_text{
+	padding-bottom: 5px;
+}
+
+#url-text{
+	min-height: 5em;
+}

@@ -1,25 +1,68 @@
-<div id="div2"></div>
-<input type="button" value="追加" onclick="clickBtn3()">
-<input type="button" value="削除" onclick="clickBtn4()">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    .main {
+      display: flex;
+    }
 
-<script>
-  function clickBtn3() {
-    const div2 = document.getElementById("div2");
-    // 要素の追加
-    const input1 = document.createElement("input");
-    input1.setAttribute("type", "text");
-    input1.setAttribute("maxlength", "5");
-    input1.setAttribute("size", "10");
-    input1.setAttribute("value", "初期表示");
+    ol {
+      border: 0ch;
+      margin-top: 0ch;
+    }
+  </style>
+</head>
+<body>
 
-    div2.appendChild(input1);
-    var br = document.createElement('br');
-    div2.appendChild(br);
-  }
-  function clickBtn4() {
-    const div2 = document.getElementById("div2");
-    // div2.removeChild(div2.firstChild);
-    // div2.removeChild(br.firstChild);
-    div2.innerHTML = '';
-  }
-</script>
+  <div class="poll">
+
+    <div class="poll_option">
+      <input type="text" size="10">
+      <br>
+      <input type="text" size="10">
+
+      <div id="div2"></div>
+      <input type="button" value="追加" onclick="clickBtn3()">
+      <input type="button" value="削除" onclick="clickBtn4()">
+
+    </div>
+
+    <div class="poll_help">
+
+      teaa
+      <ol>
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+
+      </ol>
+
+    </div>
+
+    <script>
+      function clickBtn3() {
+        const div2 = document.getElementById("div2");
+        // 要素の追加
+        const input1 = document.createElement("input");
+        input1.setAttribute("type", "text");
+        input1.setAttribute("maxlength", "5");
+        input1.setAttribute("size", "10");
+
+        div2.appendChild(input1);
+        var br = document.createElement('br');
+        div2.appendChild(br);
+      }
+      function clickBtn4() {
+        const div2 = document.getElementById("div2");
+        // div2.removeChild(div2.firstChild);
+        // div2.removeChild(br.firstChild);
+        div2.innerHTML = '';
+      }
+    </script>
+
+
+</body>
+</html>
