@@ -170,7 +170,8 @@ textarea.title-textarea {
 }
 .select2_01{
 width:200px;
-height: 1000px;
+/* height: 1000px; */
+background-color: white;
 }
 .select2_menu{
 	padding-bottom: 15px ;
@@ -202,4 +203,11 @@ border-top: #fff;
 
 #url-text{
 	min-height: 5em;
+}
+
+.block_post_classic{
+background: black;
+border: solid 1px #ccc;
+border-radius: 5px;
+padding: 30px;
 }
