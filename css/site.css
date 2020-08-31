@@ -146,6 +146,7 @@ body,ul,li{
 .custom-control{
 	background-color: #f3f3f3;
 	padding: 15px 40px;
+margin: 5px 0px 5px 0px;
 }
 .upload-file{
 	  display: -ms-flexbox;
@@ -210,4 +211,10 @@ background: black;
 border: solid 1px #ccc;
 border-radius: 5px;
 padding: 30px;
+}
+.sortmenu ul{
+	display: flex;
+}
+.sortmenu li{
+padding: 10px 30px;
 }
