@@ -114,6 +114,9 @@ body,ul,li{
 	height: auto;
 	width: 100%;
 }
+.subreddit-title{
+	margin:0px 5px 0px 5px;
+}
 
 .sub-header{
 	background-color: black;
