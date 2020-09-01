@@ -212,6 +212,10 @@ border-top: #fff;
 .sortmenu ul{
 	display: flex;
 }
+#newPost {
+	display: flex;
+}
+
 .sortmenu li{
 padding : 5px 10px 0px 10px
 }
@@ -271,4 +275,15 @@ font-weight: bold;
 .subreddit{
 color: #C9C7C7;
 ;
+}
+
+#newPost-botton{
+	margin: 0 auto 0 0;
+}
+
+.sortmenu{
+	margin:0 auto 0 auto
+}
+#newPost-dropdown{
+	margin:0 0 0 auto;
 }
