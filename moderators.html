@@ -14,7 +14,8 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/site.css">
-	<link rel="stylesheet" href="css/moderators.css">
+    <link rel="stylesheet" href="css/moderators.css">
+</head>
 <body>
     		<!-- <div class="fixed-top"> -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -59,79 +60,84 @@
 
 
     <div class="main">
-        <form>
-            <div class="top">r/xxxxxxxxxxxのモデレーター</div>
-            <div class="content">
-                <div class="content_header">
-                    <div class="user">
-                        <input type="search" placeholder="ユーザーを検索">
-                        <bottun class="search"><i class="fas fa-search"></i></bottun>
-                    </div>
-                    <bottun class="right arrows"><i class="fas fa-arrow-right"></i></bottun>
-                </div>
-                <div class="moderators_content">
-                    <div class="moderator">
-                        <div class="link">
-                            <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
+        <div class="community_moderatorlist">
+            <form>
+                <div class="top">r/xxxxxxxxxxxのモデレーター</div>
+                <div class="content">
+                    <div class="content_header">
+                        <div class="usersearch">
+                            <input type="search" placeholder="ユーザーを検索">
+                            <bottun class="search_btn"><i class="fas fa-search"></i></bottun>
                         </div>
-                        <div class="date">〇年前</div>
-                        <div class="right authority">完全な権限</div>
+                        <bottun class="right arrows"><i class="fas fa-arrow-right"></i></bottun>
                     </div>
-                    <div class="moderator">
-                        <div class="link">
-                            <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
-                        </div>                        
-                        <div class="date">〇か月前</div>
-                        <div class="right authority">完全な権限</div>
-                        <div class="details">
-                            <div class="flex">
-                                <div class="icon"></div>
-                                <div>
-                                    <div>u/xxxxxxxxxxx</div>
-                                    <div>xxxxxx,〇年前</div>
-                                </div>
+                    <div class="moderators_content">
+                        <div class="moderatorname">
+                            <div class="link">
+                                <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
                             </div>
-                            <div class="flex">
-                                <div class="num">
-                                    <font size="3">20.5k</font><br>
-                                    <font size="2">カルマを投稿</font>
+                            <div class="date">〇年前</div>
+                            <div class="right authority">完全な権限</div>
+                        </div>
+                        <div class="moderatorname">
+                            <div class="link">
+                                <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
+                            </div>                        
+                            <div class="date">〇か月前</div>
+                            <div class="right authority">完全な権限</div>
+                            <div class="details">
+                                <div class="flex">
+                                    <div class="icon"></div>
+                                    <div>
+                                        <div>u/xxxxxxxxxxx</div>
+                                        <div>xxxxxx,〇年前</div>
+                                    </div>
                                 </div>
-                                <div class="num">
-                                    <font size="3">xxxxxk</font><br>
-                                    <font size="2">コメントカルマ</font>
+                                <div class="flex">
+                                    <div class="num">
+                                        <font size="3">20.5k</font><br>
+                                        <font size="2">カルマを投稿</font>
+                                    </div>
+                                    <div class="num">
+                                        <font size="3">xxxxxk</font><br>
+                                        <font size="2">コメントカルマ</font>
+                                    </div>
                                 </div>
+                                <input type="button" value="チャットを開始" class="btn btn-primary details-btn">
+                                <input type="button" value="従う？" class="btn btn-primary details-btn">
                             </div>
-                            <input type="button" value="チャットを開始" class="btn btn-primary details-btn">
-                            <input type="button" value="従う？" class="btn btn-primary details-btn">
+                        </div>
+                        <div class="moderatorname">
+                            <div class="link">
+                                <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
+                            </div>                       
+                            <div class="date">〇年前</div> 
+                            <div class="right authority">投稿</div>
+                        </div>
+                        <div class="moderatorname">
+                            <div class="link">
+                                <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
+                            </div>                          
+                            <div class="date">〇年前</div>
+                            <div class="right authority">完全な権限</div>
+                        </div>
+                        <div class="moderatorname">
+                            <div class="link">
+                                <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
+                            </div>                          
+                            <div class="date">〇年前</div>
+                            <div class="right authority">Wiki、投稿、アクセス、メール、フレア</div>
                         </div>
                     </div>
-                    <div class="moderator">
-                        <div class="link">
-                            <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
-                        </div>                       
-                        <div class="date">〇年前</div> 
-                        <div class="right authority">投稿</div>
-                    </div>
-                    <div class="moderator">
-                        <div class="link">
-                            <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
-                        </div>                          
-                        <div class="date">〇年前</div>
-                        <div class="right authority">完全な権限</div>
-                    </div>
-                    <div class="moderator">
-                        <div class="link">
-                            <a href="#" class=""><div class="icon"></div>xxxxxxx</a>
-                        </div>                          
-                        <div class="date">〇年前</div>
-                        <div class="right authority">Wiki、投稿、アクセス、メール、フレア</div>
-                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/01f385dffc.js" crossorigin="anonymous"></script>
     <script src="js/moderators.js"></script>
 </body>
-</head>
+</html>
+

@@ -4,7 +4,6 @@
 }
 .top{
     margin-top: 50px;
-
 }
 .content{
     width:100%;
@@ -15,30 +14,26 @@
 }
 .content_header{
     display: flex;
-    
 }
-.moderator{
+.moderatorname{
     padding:10px;
     display: flex;
 }
 a{
     color: black;
     display: flex;
-
 }
 a:hover{
     text-decoration: none;
     color: black;
 }
-.user{
+.usersearch{
     display:flex;
     border: 1px solid rgb(136, 134, 134);
     border-radius: 5px;
-    /* width:200px; */
     margin-bottom: 10px;
-    
 }
-.search{
+.search_btn{
     background: rgb(136, 134, 134);
     padding:0 5px;
     color: #fff;
@@ -50,8 +45,6 @@ a:hover{
 .right{
     position: absolute;
     right:30px;
-    /* font-size: 13px;
-    color:rgb(133, 131, 131); */
 }
 .icon{
     width:30px;
@@ -76,7 +69,6 @@ a:hover{
 }
 .flex{
     display: flex;
-    /* margin:5px; */
 }
 .num{
     margin:10px 0 10px 25px;
@@ -84,7 +76,4 @@ a:hover{
 .details-btn{
     width:100%;
     margin:5px 0;
-}
-.link :hover .details{
-    display:block;
 }

@@ -1,3 +1,8 @@
+
+/*  ========================== */
+/* 共通  */
+/*  -------------------------- */
+
 .side{
     padding:0;
 }
@@ -14,35 +19,7 @@
 .side_content :hover{
     text-decoration: none;
 }
-.member_info{
-    display: flex;
-}
-.member_num{
-    margin:15px 100px 20px 0;
-}
-.create_btn{
-    margin-top: 5px;
-    width:100%;
-}
-.filter_btn{
-    margin-bottom: 5px;
-    border-radius: 18px;
-}
-.moderator{
-    margin-bottom: 7px;
-    font-size: 16px;
-}
-.display{
-    /* position: absolute;
-    right: 0; */
-    margin-top: 20px;
-    font-size: 13px;
-    text-align: right;
-}
-.right_btn{
-    position: absolute;
-    right:0;
-}
+
 .icon{
     vertical-align: middle;
     position: absolute;
@@ -52,11 +29,29 @@
 button:focus {
 	outline:0;
 }
+.right_btn{
+    position: absolute;
+    right:0;
+}
 
+/*  ========================== */
+/* コミュニティについて  */
+/*  -------------------------- */
+.member_info{
+    display: flex;
+}
+.member_online{
+    position: absolute;
+    left:50%;
+}
+.create_btn{
+    margin-top: 5px;
+    width:100%;
+}
 .num{
     font-size: 20px;
 }
-.add{
+.add{/*アイコンを押したとき*/
     background: #fff;
     color: rgb(112, 112, 112);
     visibility: hidden;
@@ -68,6 +63,14 @@ button:focus {
     right:10px;
     border: 1px solid rgb(204, 201, 201);
 }
+
+/*  ========================== */
+/* フィルター  */
+/*  -------------------------- */
+.filter_btn{
+    margin-bottom: 5px;
+    border-radius: 18px;
+}
 .see_next{
     color: rgb(0, 132, 255);
     margin-top: 20px;
@@ -76,6 +79,25 @@ button:focus {
     max-height: 170px;
     overflow: hidden;
 }
+
+/*  ========================== */
+/* モデレーター  */
+/*  -------------------------- */
+.moderator .username{
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+.display{
+    margin-top: 20px;
+    font-size: 13px;
+    text-align: right;
+}
+
+
+
+
+
+
 
 
 
