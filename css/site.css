@@ -59,6 +59,10 @@ main .block.post .post-rank p{
 	text-align:center;
 }
 
+.post-content .date{
+	margin-left: auto;
+}
+
 main .block.post .post-content{
 	margin-left:40px;
 }
@@ -202,6 +206,17 @@ border-top: #fff;
 	min-height: 5em;
 }
 
+.sortmenu ul{
+	display: flex;
+}
+.sortmenu li{
+padding : 5px 10px 0px 10px
+}
+.sortmenu .dropdown {
+	margin-left: auto;
+}
+
+/* r.page.classic.html css */
 .block_post_classic{
 background: white;
 border: solid 1px #ccc;
@@ -209,35 +224,48 @@ border-radius: 5px;
 padding: 10px 10px 10px 20px;
 position: relative;
 }
-.sortmenu ul{
-	display: flex;
-}
-.sortmenu li{
-padding : 5px 10px 0px 10px
-}
+
 .block_post_classic .post-rank-classic{
 position: absolute;
 top: 0px;
 left: 0px;
 width: 40px;
 height: 100%;
-background: blueviolet;
-padding-top: 0.4em;
+background: #343a40 ;
+padding-top: 25px;
 text-align: center;
 line-height: 1;
 }
 
-.post-rank-classic p{
+.block_post_classic .post-rank-classic p{
 margin-bottom: 0em;
+color:white;
 }
 
-.post-content{
+.block_post_classic .post-content{
 	padding-left: 2em;
+	display: flex;
 }
 
-.post-content p{
+.block_post_classic .post-content p{
 	margin-bottom: 0em;
 }
-.post-content header{
+.block_post_classic .post-content header{
 margin-bottom: 0em;
+}
+
+.block_post_classic .post-content-flex{
+	margin-left: 10px;
+}
+
+.block_post_classic .title{
+font-weight: bold;
+}
+.title{
+	font-weight: bold;
+
+}
+.subreddit{
+color: #C9C7C7;
+;
 }
