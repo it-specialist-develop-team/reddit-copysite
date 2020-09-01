@@ -180,12 +180,12 @@ label{
 	margin:0 0 0 0;
 }
 
-.m-btn{
+.mk-btn{
 	margin:5px 0px 0 10px;
 	width:55%;
 }
 
-.c-btn{
+.com-btn{
 	margin:5px 6px 0 0px;
 	width:30%;
 }
@@ -199,33 +199,33 @@ label{
 	width:100%;
 }
 
-.eva{
+.rep-eva{
 	color:#a0a0a0; 
 	font-size: 12px;
 }
 
-.res{
+.com-icoon .rep-res{
 	color:#a0a0a0; 
 	font-size: 12px;
 	margin-right: 8px;
 
 }
 
-.share{
+.com-icoon .rep-share{
 	color:#a0a0a0;
 	font-size: 12px;
 	margin-right: 8px; 
 
 }
 
-.repo{
+.com-icoon .rep-repo{
 	color:#a0a0a0; 
 	font-size: 12px;
 	margin-right: 8px;
 
 }
 
-.save{
+.com-icoon .rep-save{
 	color:#a0a0a0; 
 	font-size: 12px;
 
@@ -241,16 +241,16 @@ label{
 	font-size: 12px;
 }
 
-.bottom{
+/*.bottom{
 	color:#a0a0a0; 
 	font-size: 12px;
-}
+}*/
 
-.sort{
+.rep-sort{
 	font-size: 12px;
 }
 
-.sort-name{
+.rep-sort-name{
 	font-size: 15px;
 	position:relative;
 	top:-38px;
@@ -258,7 +258,7 @@ label{
 	
 }
 
-.sorts{
+.rep-sorts{
 	border-bottom: 1px solid #a0a0a0;
 	height:30px;
 	margin:-160px 0 0 0;
@@ -268,7 +268,7 @@ label{
 	margin:30px 0 -10px 0;
 }
 
-.img{
+.rep-imgs{
 	background-color: grey;
 	width:30px;
 	height:30px;
@@ -279,11 +279,11 @@ label{
 	margin-left:-40px;
 }
 
-.post-content1{
+.com-reply{
 	margin-left:40px;
 }
 
-.img1{
+.rep-img{
 	background-color: grey;
 	width:30px;
 	height:30px;
@@ -292,19 +292,13 @@ label{
 	margin-left:-40px;
 }
 
-.border2{
+.com-reply .rep-border{
 	border-left:1px solid #a0a0a0;
 	margin:5px 0 0 -25px;
 	padding: 0px 0 0 25px;
 }
 
-.border1{
-	border-left:1px solid #a0a0a0;
-	margin:5px 0 0 -25px;
-	padding: 0px 0 0 25px;
-}
-
-.time{
+.rep-time{
 	font-size: 14px;
 	margin-left:10px;
 	color: grey;
@@ -331,7 +325,7 @@ i{
 	padding-top:40px;
 }
 
-.sub-head{
+.con-sub-head{
 	position: relative;;
 	top:-40px;
 	background-color: #202020;
@@ -351,19 +345,19 @@ i{
 	padding-top:5px;
 }
 
-.up{
+.com-eva .subhead-up{
 	text-align: center;
 	color: grey;
 	margin-left:12px;
 }
 
-.count{
+.com-eva .subhead-count{
 	color:#fff;
 	text-align: center;
 	color: grey;
 }
 
-.down{
+.com-eva .subhead-down{
 	color:grey;
 	margin-left:5px;
 }
@@ -387,7 +381,7 @@ i{
 	margin-left:40%;
 }
 
-.close{
+.con-sub-head .subhead-close{
 	font-size:15px;
 	color:#a0a0a0;
 	margin:13px 7% 0 0;
