@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Required meta tags -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- CSS reset -->
+  <link rel="stylesheet" href="css/ress.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/trix.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+
+  <link rel="stylesheet" href="css/htab.css">
+  <link rel="stylesheet" href="css/radiobottom.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <!-- maxlength -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-maxlength/1.7.0/bootstrap-maxlength.min.js"></script>
+
+  <!-- select2 -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+  <link href="/css/select2.min.css" rel="stylesheet">
+  <script src="/js/select2.min.js"></script>
+
+
+
+  <title>サンプル</title>
+</head>
+<body>
+  <header>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="#" class="navbar-brand">Copy_Reddit</a>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <div class="dropdown">
+        <button type="button" id="dropdown1" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdown1">
+          <a class="dropdown-item" href="#">Menu #1</a>
+          <a class="dropdown-item" href="#">Menu #2</a>
+          <a class="dropdown-item" href="#">Menu #3</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- </div> -->
+  </header>
+
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Horizontal Bootstrap 4 Tabs -->
+      <main class="col-md-9">
+        <section id="tab-menus">
+          <div class="container">
+            <p class="post-title">Create-Post</p>
+            <div class=select2_menu>
+
+              <select class="select2_01">
+                <option value="tote">PS5</option>
+                <option value="shoulder">VALORANT</option>
+                <option value="ruck">HYPERSCPAE</option>
+                <option value="waist">XBOX SCARLET</option>
+                <option value="clutch">SWITCH</option>
+              </select>
+
+
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+
+                <div class=postmenu>
+                  <!-- Tabs navs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#firstMenu"><i class="fab fa-rocketchat"></i> Post</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#secondmenu"><i class="fas fa-image"></i> Image & Video</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#thirdmenu"><i class="fas fa-link"></i> Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#fourthmenu"><i class="fas fa-list-ol"></i> Poll</a>
+                    </li>
+                  </ul>
+
+
+
+                  <!-- Tabs Content -->
+                  <div class="tab-content">
+                    <!-- Post -->
+                    <div id="firstMenu" class="tab-pane active">
+
+                      <form>
+                        <class class="form-group">
+                          <textarea class="form-control title-textarea" maxlength="400" placeholder="title"></textarea>
+                          <br>
+
+                          <input id="x" type="hidden" name="content" 　placeholder="Text">
+                          <trix-editor class="text" input="x"></trix-editor>
+
+
+
+
+                        </class>
+                      </form>
+                    </div>
+
+
+                    <!-- Image&Video -->
+                    <div id="secondmenu" class="tab-pane">
+                      <form>
+                        <class class="form-group">
+                          <textarea class="form-control title-textarea" maxlength="400" placeholder="title"></textarea>
+                          <br>
+
+                          <div class="upload-file">
+
+                            <p>Drag n Drop or        <label class="btn btn-primary">
+                              Browse <input type="file" style="display: none;">
+                            </label></p>
+                          </div>
+
+
+                        </class>
+                      </form>
+                    </div>
+
+
+
+                    <!-- link -->
+                    <div id="thirdmenu" class="tab-pane">
+
+                      <div class="form-group">
+                        <textarea class="form-control title-textarea" maxlength="400" placeholder="title"></textarea>
+                        <br>
+
+                        <input type="text" id="url-text" class="form-control">
+                      </div>
+
+                    </div>
+
+
+                    <!-- poll -->
+                    <div id="fourthmenu" class="tab-pane">
+                      <form>
+                        <class class="form-group">
+                          <textarea class="form-control title-textarea" maxlength="400" placeholder="title"></textarea>
+                          <br>
+
+                          <input id="x" type="hidden" name="content" 　placeholder="Text">
+                          <trix-editor class="text" input="x"></trix-editor>
+
+
+                          <div class="poll">
+
+                            <div class="poll_option">
+
+                              <div class="poll_option_text">
+
+                                <input type="text" class="form-control" size="100">
+                                <input type="text" class="form-control">
+
+                                <div id="poll_text_add"></div>
+                              </div>
+
+                              <input type="button" value="追加" onclick="clickBtn3()" class="btn btn-primary">
+                              <input type="button" value="削除" onclick="clickBtn4()" class="btn btn-primary">
+
+                            </div>
+
+                            <div class="poll_help">
+
+
+                              <b>投票のヒント</b>
+                              <ol>
+                                <li>短く明確なオプションを記載する。</li>
+                                <li>オプションは多いほど良い。</li>
+                                <li>投票期間を選択する。</li>
+                                <li>投票を作成後にオプションの内容を変更する事は出来ません。</li>
+                              </ol>
+
+                            </div>
+
+                        </class>
+                      </form>
+                    </div>
+                  </div>
+
+
+                  <div class="post-footer">
+                    <class class="checkboxlist">
+                      <input type="checkbox" name="CheckboxGroup2" value="チェックボックス" id="Group2_0" class="checkbox02" /><label for="Group2_0" class="check_label">OC</label>
+                      <input type="checkbox" name="CheckboxGroup2" value="チェックボックス" id="Group2_1" class="checkbox02" /><label for="Group2_1" class="check_label">SPOILER</label>
+                      <input type="checkbox" name="CheckboxGroup2" value="チェックボックス" id="Group2_2" class="checkbox02" /><label for="Group2_2" class="check_label">NSFW</label>
+                      <input type="checkbox" name="CheckboxGroup2" value="チェックボックス" id="Group2_3" class="checkbox02" /><label for="Group2_3" class="check_label">FLAIR</label>
+
+                      <input type="button" id="checkboxlist-end" value="VIEW ALL" class="btn btn-primary">
+
+                    </class>
+
+                    <div class="custom-control custom-checkbox">
+
+                      <input type="checkbox" class="custom-control-input" id="custom-check-1">
+                      <label class="custom-control-label" for="custom-check-1">返信通知</label>
+                      <br>
+
+                      <span class="text-danger tooltip-pearent" data-toggle="tooltip" data-original-title="ユーザー設定からTwitterアカウントと連携します。連携すると作成した投稿を共有することができます。"><a href="#" class="stretched-link">アカウントに接続して共有</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+
+
+
+      <div id="sidebar" class="col-md-3">
+        <article id="todayRank" class="block ranking">
+          <header>
+            <h1>Trending Community</h1>
+          </header>
+          <div>
+            <ol>
+              <li>r/XXXXX</li>
+              <li>r/XXXXX</li>
+              <li>r/XXXXX</li>
+              <li>r/XXXXX</li>
+            </ol>
+          </div>
+          <div>
+            <input type="button" value="VIEW ALL" class="btn btn-primary">
+            <div>
+            </div>
+          </div>
+        </article>
+        <article class="block adv">
+          <input type="button" value="VIEW ALL" class="btn btn-primary">
+        </article>
+        <article class="block addv">
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+        </article>
+        <article class="block addv">
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+        </article>
+        <article class="block addv">
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+        </article>
+        <article class="block addv">
+
+          <form>
+            <div class="form-group">
+              <label>Details:</label>
+              <textarea class="form-control" maxlength="100"></textarea>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </article>
+        <article class="block addv">
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+          adadadadadadadadadadadad<br>
+        </article>
+        <article id="trendRank" class="block ">
+          <header>
+            <h1>Trending Community</h1>
+          </header>
+          <div>
+          </div>
+        </article>
+      </div>
+    </div><!-- .row -->
+  </div><!-- .wrap -->
+
+  <script type="text/javascript">
+    $('textarea').maxlength({
+      alwaysShow: true,
+      threshold: 10,
+      warningClass: "label label-success",
+      limitReachedClass: "label label-danger",
+      separator: ' out of ',
+      preText: 'You write ',
+      postText: ' chars.',
+      validate: true
+    });
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+
+    // poll text area add
+    function clickBtn3() {
+      const poll_text_add = document.getElementById("poll_text_add");
+      const input1 = document.createElement("input");
+      input1.setAttribute("type", "text");
+      input1.setAttribute("class", "form-control");
+      poll_text_add.appendChild(input1);
+
+      // var br = document.createElement('br');
+      // poll_text_add.appendChild(br);
+    }
+    function clickBtn4() {
+      const poll_text_add = document.getElementById("poll_text_add");
+      // poll_text_add.removeChild(poll_text_add.firstChild);
+      // poll_text_add.removeChild(br.firstChild);
+      poll_text_add.innerHTML = '';
+    }
+
+
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('.select2_01').select2();
+    });
+  </script>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <!-- import trix -->
+  <script src="js/trix.js"></script>
+
+</body>
+</html>
