@@ -13,9 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('top');
+Route::get('/post', function () {
+    return view('post');
 });
-Route::get('/submit', function () {
-    return view('submit');
+Route::get('/subreddit', function () {
+    return view('subreddit');
 });
+Route::get('/readerboard', function () {
+    return view('readerboard');
+});
+Route::get('/create', function () {
+    return view('create');
+});
+

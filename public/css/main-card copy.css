@@ -1,0 +1,81 @@
+
+/* r.page.classic.html css */
+.postcard-classic{
+  padding: 0em;
+}
+
+.block-post-classic{
+background: white;
+border-radius: 5px;
+position: relative;
+
+}
+
+.block-post-classic .post-rank-classic{
+position: absolute;
+top: 0px;
+left: 0px;
+width: 40px;
+height: 100%;
+background: #343a40 ;
+padding-top: 5px;
+padding-bottom: 4px;
+text-align: center;
+line-height: 1;
+}
+
+.block-post-classic .post-rank-classic p{
+margin-bottom: 0em;
+color:white;
+}
+
+.block-post-classic .post-content{
+	/* padding: 0.5em 0em 0.5em 3em; */
+  /* display: flex; */
+
+}
+
+.block-post-classic .post-content p{
+	margin-bottom: 0em;
+}
+.block-post-classic .post-content header{
+margin-bottom: 0em;
+}
+
+.block-post-classic .post-content-flex{
+	margin-left: 10px;
+}
+
+.block-post-classic .post-title{
+font-weight: bold;
+}
+.post-title{
+	font-weight: bold;
+
+}
+.subreddit{
+color: #C9C7C7;
+;
+}
+
+#newPost-botton{
+	margin: 0 auto 0 0;
+}
+
+.sortmenu{
+	margin:0 auto 0 auto
+}
+#newPost-dropdown{
+	margin:0 0 0 auto;
+}
+
+.post-content .linktitle{
+	  display: block;
+  padding: 10px;
+  text-decoration:none;
+	color: #505050;
+		display: flex;
+			padding: 0.5em 0em 0.5em 3em;
+
+
+}
