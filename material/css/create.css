@@ -1,0 +1,92 @@
+.sub-header-readerboard h5{
+  font-size: 20px;
+}
+.sub-header-readerboard {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* SUMMER NOTE */
+.panel-default > .panel-heading {
+    color: #333;
+    background-color:white;
+    border-color: #ddd;
+}
+.note-editor.note-airframe .note-statusbar, .note-editor.note-frame .note-statusbar {
+    background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: 1px solid rgba(0,0,0,.2);
+}
+.note-editable{
+  height: 10em;
+}
+.POSTFIELD .mdl-textfield--floating-label{
+  width: 100%;
+}
+.panel{
+  border: none;
+}
+
+
+/* SUBMIT CARD */
+.submit-card{
+width: 85%;
+}
+/* POST FIELD */
+.POSTFIELD{
+  margin: 1em;
+}
+.note-editor.note-frame{
+  border: none;
+}
+
+/* BOTTOM FIELD */
+.button-field .checkbox-field{
+  display: flex;
+  margin-left: 5px;
+}
+.button-field{
+  display: flex;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+.checkbox-field .mdl-js-checkbox{
+  margin: 5px;
+  margin-bottom: 1em;
+  margin-right: 10px;
+  padding-left: 18px;
+}
+.checkbox-field .mdl-checkbox__label{
+  font-size: 15px;
+}
+.submit-button-field{
+  margin: 1em;
+  margin-left: auto;
+  margin-top: 0px;
+}
+.submit-button-field button{
+  margin-left: 3px;
+}
+
+/* SUBMIT CARD FOOTER */
+/* .submit-card-footer{
+  background-color: yellow;
+
+} */
+
+/* MEDIA-DROP-FIELD */
+.media-drop-field{
+margin: auto;
+width: 15em;
+height: 15em;
+}
+.media-drop-field .dragndrop{
+  text-align: center;
+  margin-top: 10em;
+}
+.media-drop-field .dragndrop button{
+  border: solid 0.5px;
+  border-color: grey;
+
+}
