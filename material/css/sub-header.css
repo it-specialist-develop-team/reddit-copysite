@@ -1,0 +1,38 @@
+
+    .sub-header img {
+      width: 100%;
+    }
+
+    .sub-header-bar {
+      background: white;
+      display: flex;
+      text-align: center;
+      padding-left: 10em;
+      margin-right: auto;
+      margin-left: auto;
+      height: 50px;
+    }
+
+    .sub-header-bar #sub-header-icon {
+      border-radius: 100%;
+      border: 4px solid #fff;
+      height: 72px;
+      width: 72px;
+      position: relative;
+      bottom: 1em;
+    }
+
+    .sub-header-bar p,
+    button {
+      margin-top: 1em;
+      margin-left: 0.5em;
+      font-size: 20px;
+    }
+
+    .sub-header-bar button {
+      margin-right: auto;
+      margin-left: 1em;
+    }
+.sub-header-bar .mdl-button{
+  margin-top: 1em;
+}

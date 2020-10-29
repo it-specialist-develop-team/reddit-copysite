@@ -1,0 +1,36 @@
+
+    .card {
+      padding: 0em;
+      width: 80%;
+      margin-left: auto;
+      /* height: 30em; */
+      display: flex;
+      min-height: 5em;
+
+    }
+
+    .card .card-title {
+      display: flex;
+      background: #3f51b5;
+    }
+
+    .card .card-title .title {
+      color: white;
+      padding: 0 0 0 1em;
+    }
+
+    .card .right-card-body {
+      padding: 1em;
+    }
+.right-card-body.digit{
+  display: flex;
+}
+.right-card-body.digit div{
+  margin-right: 6em;
+}
+.right-card-body p{
+ margin-bottom: 2px;
+}
+.card-title h5{
+  margin: 18px 0 16px;
+}

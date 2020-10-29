@@ -1,0 +1,121 @@
+/* POSTCARD */
+/* POST RANK */
+.postcard-classic{
+  min-height: 900px;
+  height: auto;
+  width: auto;
+}
+.block-post-classic  .post-content{
+  margin-right: 2em;
+}
+.block-post-classic .post-content{
+  display: block;
+  padding: 0.5em 0em 0.5em 3em;
+}
+.postcard-classic .block-post-classic .post-rank-classic{
+    height: 900px;
+  background: white;
+}
+.postcard-classic .block-post-classic .post-rank-classic p{
+color: black;
+}
+.post-content-header .post-status{
+display: flex;
+}
+
+
+
+
+
+
+/* POSTS HEADER */
+.post-content-header .post-title{
+  margin: 5px 0px 20px 0px;
+}
+.post-content-header .post-status div{
+  margin-right: 1em;
+}
+
+/* POST BODY */
+.post-content .post-body .media{
+  text-align: center;
+  width: auto;
+  height: auto;
+  margin-bottom: 1em;
+}
+.post-content .post-body .text{
+   height:auto;
+ width:auto;
+ word-wrap:break-word;
+}
+.post-content .post-body{
+  padding-bottom: 3em;
+  border-bottom: solid 2px #3f51b5;
+}
+
+/* ADD COMMENT FIELD */
+.add-comment-field{
+  margin-top: 1em;
+  margin-right: 3em;
+  margin-left: 3em;
+  margin-bottom: 1em;
+    padding-bottom: 2em;
+  /* border-bottom: solid 2px #3f51b5; */
+}
+.add-comment-field .mdl-textfield{
+  width: 100%;
+}
+.add-comment-field .mdl-button{
+  display: block;
+  margin: 0 0 0 auto;
+}
+.add-comment-field-border{
+margin: 2em 10em 1em 10em;
+    border-bottom: dotted 2px #3f51b5;
+
+
+}
+
+
+
+/* comment FIELD */
+.add-comment-field{
+     height:auto;
+ width:auto;
+ word-wrap:break-word;
+
+}
+.comment{
+
+}
+.comment .comment-header{
+  display: flex;
+}
+.comment .comment-header .comment-user{
+  margin-right: 8px;
+}
+.comment .comment-header .comment-time{
+color: grey;
+font-size: 12px;
+}
+
+.comment .comment-header .comment-user-icon{
+          border-radius: 100%;
+      height: 50px;
+      width: 50px;
+}
+.comment .comment-header .comment-header-status{
+  margin:3px 0 3px 1em;
+}
+.comment .comment-body{
+  margin-left: 67px;
+  margin-top: 0;
+  padding-top: 0em;
+  position: relative;
+  bottom: 25px;
+}
+
+/* REPLY FIELD */
+.reply{
+  margin-left: 4em;
+}
