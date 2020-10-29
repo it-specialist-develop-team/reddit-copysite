@@ -19,6 +19,3 @@ Route::get('/', function () {
 Route::get('/submit', function () {
     return view('submit');
 });
-Route::get('/sidebar', function () {
-    return view('sidebar');
-});
