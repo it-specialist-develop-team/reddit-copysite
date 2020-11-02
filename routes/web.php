@@ -27,3 +27,6 @@ Route::get('/readerboard', function () {
 Route::get('/create', function () {
     return view('create');
 });
+Route::get('/sidebar', function () {
+    return view('sidebar');
+});

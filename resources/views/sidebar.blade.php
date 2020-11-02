@@ -1,4 +1,9 @@
-@extends('layouts.common')
+@extends('layouts.base')
+
+@php
+  $title="sidebar";
+@endphp
+
 @section('content')
 
 	<div class=sub-header>
