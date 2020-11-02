@@ -25,4 +25,3 @@ Route::get('/readerboard', function () {
 Route::get('/create', function () {
     return view('create');
 });
-
