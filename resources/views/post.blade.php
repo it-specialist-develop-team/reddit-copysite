@@ -76,7 +76,11 @@
                         <div class="add-comment-field-border"></div>
                       </div>
 
-                      <div class="comment-field">
+
+                      @component('components.comment')
+
+                      @endcomponent
+                      <!-- <div class="comment-field">
                       <div class="comment">
                           <div class="comment-header">
                             <img src="img/g2-logo.jpg" class="comment-user-icon">
@@ -157,10 +161,10 @@
                             </div>
 
 
-                          </div>
+                          </div> -->
 
 
-                        </div>
+                        <!-- </div>
                         <div class="comment">
                           <div class="comment-header">
                             <img src="img/g2-logo.jpg" class="comment-user-icon">
@@ -241,10 +245,10 @@
                             </div>
 
 
-                          </div>
+                          </div> -->
 
 
-                        </div>
+                        <!-- </div>
                         <div class="comment">
                           <div class="comment-header">
                             <img src="img/g2-logo.jpg" class="comment-user-icon">
@@ -325,7 +329,7 @@
                             </div>
 
 
-                          </div>
+                          </div> -->
 
 
                         </div>
