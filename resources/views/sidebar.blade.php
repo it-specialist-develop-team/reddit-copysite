@@ -1,135 +1,118 @@
 @extends('layouts.base')
-
 @php
-  $title="sidebar";
+$title="view";
 @endphp
+
+@section('header-links')
+<link rel="stylesheet" href="css/view.css">
+@endsection
+
 
 @section('content')
 
-	<div class=sub-header>
-		<img src="{{ asset('img/sub-header-backimg.jpg') }}" id="sub-header-backimg">
-		<div class="container">
-			<div class="sub-header">
-				<p><img src="{{ asset('img/sub-header-icon.jpg') }}" id="icon"> <a class="subreddit-title">SUBREDDIT</a> <input type="button" value="JOIN" class="btn btn-primary">
-				</p>
-				<div class="sub-header-menu">
-					<ul>
-						<li>Posts</li>
-						<li>Subreddit</li>
-						<li>Rules</li>
-						<li>WebsiteOther</li>
-						<div class="dropdown">
-							<button type="button" id="dropdown1" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Dropdown button
-							</button>
-							<div class="dropdown-menu" aria-labelledby="dropdown1">
-								<a class="dropdown-item" href="#">Menu #1</a>
-								<a class="dropdown-item" href="#">Menu #2</a>
-								<a class="dropdown-item" href="#">Menu #3</a>
-							</div>
-						</div>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="page-content">
+    <!-- SUB HEADER// -->
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <!-- POSTBAR// -->
+        <div class="mdl-tabs__panel is-active" id="A-panel">
+            <div class="mdl-grid">
+                <!-- SIDE BAR// -->
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="mdl-card mdl-shadow--2dp card">
+                        <div class="card-title">
+                            <h5 class="title">TEXT</h5>
+                        </div>
+                        <div class="right-card-body">
+                            <p>//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.</p>
+                        </div>
+                        
+                        <div class="right-card-body digit">
+                            <div>
+                                <p>100k</p>
+                                <p>Members</p>
+                            </div>
+                            <div>
+                                <p>4k</p>
+                                <p>Online</p>
+                            </div>
+                        </div>
 
-	<br>
+                        <div class="right-card-body">
 
-	<div class="container">
-		<div class="row">
-			<main class="col-md-8">
-				<div class="block">
-					<h2>UPDATES FROM REDDIT</h2>
-					<div>
-						<h3>Keep yourself safe and informed</h3>
-						<p>Visit r/Coronavirus to talk about COVID-19, and visit www.who.int for more information.</p>
-					</div>
-				</div>
+                            <p>Created 2020/12/25</p>
 
+                        </div>
+                    </div>
 
+                    <div class="mdl-card mdl-shadow--2dp card">
 
-				<div id="newPost" class="block">
-					<button type="button" class="btn btn-info" id="newPost-botton">CREATE POST</button>
+                        <div class="card-title">
+                            <h5 class="title">TEXT</h5>
 
-					<div class="sortmenu">
-						<ul>
-							<!-- <li>Hot</li>
-							<li>New</li>
-							<li>Top</li>
-							<li>Rising</li>
+                        </div>
+                        <div class="right-card-body">
 
+                            <p>
+                                right-card-body
+                            </p>
 
- -->
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-outline-secondary">Hot</button>
-								<button type="button" class="btn btn-outline-secondary">New</button>
-								<button type="button" class="btn btn-outline-secondary">Top</button>
-								<button type="button" class="btn btn-outline-secondary">Rising</button>
-							</div>
+                        </div>
 
-						</ul>
-					</div>
+                    </div>
+                    <div class="mdl-card mdl-shadow--2dp card">
 
-					<div id="newPost-dropdown">
-						<button type="button" id="dropdown1" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							VIWE STYLE
-						</button>
-						<div class="dropdown-menu" aria-labelledby="dropdown1">btn-outline-secondary
-							<a class="dropdown-item" href="r.page.html">CARD</a>
-							<a class="dropdown-item" href="r.page.classic.html">CLASSIC</a>
-						</div>
-					</div>
+                        <div class="card-title">
+                            <h5 class="title">TEXT</h5>
 
-				</div>
+                        </div>
+                        <div class="right-card-body">
 
+                            <p>
+                                right-card-body
+                            </p>
 
+                        </div>
 
-				<div class="block post">
-					<div class="post-rank">
-						<p>↑</p>
-						<p>000</p>
-						<p>↓</p>
-					</div>
-					<div class="post-content">
-						<header>
-							<div class="post-header">
-								<p class="posted-user">Posted by/</p>
-								<p class="user">hogehoge   </p>
-								<p class="date"> 100 hours ago</p>
-							</div>
-							<p class="title">titletitletitletitletitle</p>
-						</header>
-						<div>
-							<p>content content content content content
-							 content content content content content
-							 content content content content content
-							  content content content content content</p>
-							<p>content content content content content
-							  content content content content content</p>
-							<p>content content content content content
-							 content content content content content
-							  content content content content content</p>
-						</div>
-					</div>
-				</div>
-			</main>
-			<div id="sidebar" class="col-md-4">
-			    @include('components.sidebar_trending')
-			</div>
-		</div><!-- .row -->
-	</div><!-- .wrap -->
+                    </div>
+                    <div class="mdl-card mdl-shadow--2dp card">
 
-	<script type="text/javascript">
-		$('textarea').maxlength({
-			alwaysShow: true,
-			threshold: 10,
-			warningClass: "label label-success",
-			limitReachedClass: "label label-danger",
-			separator: ' out of ',
-			preText: 'You write ',
-			postText: ' chars.',
-			validate: true
-		});
-	</script>
+                        <div class="card-title">
+                            <h5 class="title">TEXT</h5>
+
+                        </div>
+                        <div class="right-card-body">
+
+                            <p>
+                                right-card-body
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="mdl-card mdl-shadow--2dp card">
+
+                        <div class="card-title">
+                            <h5 class="title">TEXT</h5>
+
+                        </div>
+                        <div class="right-card-body">
+
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                Button
+                            </button><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                Button
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- //SIDE BAR -->
+
+            </div>
+            <!-- //POSTBAR -->
+        </div>
+    </div>
+    <!-- //SUB HEADER -->
+</div>
 @endsection
