@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function () {
+    return view('post');
+});
 Route::get('/post', function () {
     return view('post');
 });
@@ -24,4 +26,7 @@ Route::get('/readerboard', function () {
 });
 Route::get('/create', function () {
     return view('create');
+});
+Route::get('/sidebar', function () {
+    return view('sidebar');
 });
