@@ -36,124 +36,28 @@
 
 
                   <div class="block-post-classic">
-                    <div class="post-rank-classic">
-                      <p>↑</p>
-                      <p>000</p>
-                      <p>↓</p>
-                    </div>
-                    <div class="post-content">
-
-                      <div class="post-content-header">
-                        <div class="post-status">
-                          <div>
-                            <span>Posted by </span>
-                            <span>u/User</span>
-                          </div>
-                          <span>12 hours ago</span>
-                        </div>
-                        <h4 class="post-title"> Title Title Title </h4>
-
-                      </div>
-                      <div class="post-body">
-                        <div class="media">
-                          <img src="img/php_logo.png">
-                        </div>
-                        <div class="text">
-<span>//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.</span>
-                        </div>
-                         </div>
-
-                      <div class="add-comment-field">
-                        <form action="#">
-                          <div class="mdl-textfield mdl-js-textfield">
-                            <textarea class="mdl-textfield__input" type="text" rows="3" id="sample5"></textarea>
-                            <label class="mdl-textfield__label" for="sample5">Ur comment...</label>
-                          </div>
-                        </form>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                          POST
-                        </button>
-                        <div class="add-comment-field-border"></div>
-                      </div>
+                      @include('components.post_head')
+                      
+                      @include('components.post_addcomment')
 
                       <div class="comment-field">
                       <div class="comment">
-                          <div class="comment-header">
-                            <img src="img/g2-logo.jpg" class="comment-user-icon">
-                            <div class="comment-header-status">
-                              <span class="comment-user">u/USER</span>
-                              <span class="comment-time">2 hours ago</span>
-
-                            </div>
-                          </div>
-                          <div class="comment-body">
-                            <span class="comment-body-text">//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.</span>
-                          </div>
+                          @include('components.post_comment')
 
                           <div class="comment reply">
-                            <div class="comment-header">
-                              <img src="img/g2-logo.jpg" class="comment-user-icon">
-                              <div class="comment-header-status">
-                                <span class="comment-user">u/USER</span>
-                                <span class="comment-time">2 hours ago</span>
-
-                              </div>
-                            </div>
-                            <div class="comment-body">
-                              <span class="comment-body-text">sample comment sample comment sample comment</span>
-                            </div>
+                            @include('components.post_comment')
                           </div>
                           <div class="comment reply">
-                            <div class="comment-header">
-                              <img src="img/g2-logo.jpg" class="comment-user-icon">
-                              <div class="comment-header-status">
-                                <span class="comment-user">u/USER</span>
-                                <span class="comment-time">2 hours ago</span>
-
-                              </div>
-                            </div>
-                            <div class="comment-body">
-                              <span class="comment-body-text">//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.//SAMPLE TEXT// Welcome to /r/AMD; the subreddit for all things AMD - come talk about Ryzen, Threadripper, EPYC, Navi, the next-gen consoles, news, rumours, show-off your build and more. /r/AMD is community run and does not represent AMD in any capacity unless specified.</span>
-                            </div>
+                              @include('components.post_comment')
 
                             <div class="comment reply">
-                              <div class="comment-header">
-                                <img src="img/g2-logo.jpg" class="comment-user-icon">
-                                <div class="comment-header-status">
-                                  <span class="comment-user">u/USER</span>
-                                  <span class="comment-time">2 hours ago</span>
-
-                                </div>
-                              </div>
-                              <div class="comment-body">
-                                <span class="comment-body-text">sample comment sample comment sample comment</span>
-                              </div>
+                               @include('components.post_comment')
                             </div>
                             <div class="comment reply">
-                              <div class="comment-header">
-                                <img src="img/g2-logo.jpg" class="comment-user-icon">
-                                <div class="comment-header-status">
-                                  <span class="comment-user">u/USER</span>
-                                  <span class="comment-time">2 hours ago</span>
-
-                                </div>
-                              </div>
-                              <div class="comment-body">
-                                <span class="comment-body-text">sample comment sample comment sample comment</span>
-                              </div>
+                              @include('components.post_comment')
                             </div>
                             <div class="comment reply">
-                              <div class="comment-header">
-                                <img src="img/g2-logo.jpg" class="comment-user-icon">
-                                <div class="comment-header-status">
-                                  <span class="comment-user">u/USER</span>
-                                  <span class="comment-time">2 hours ago</span>
-
-                                </div>
-                              </div>
-                              <div class="comment-body">
-                                <span class="comment-body-text">sample comment sample comment sample comment</span>
-                              </div>
+                              @include('components.post_comment')
                             </div>
 
 
@@ -162,82 +66,22 @@
 
                         </div>
                         <div class="comment">
-                          <div class="comment-header">
-                            <img src="img/g2-logo.jpg" class="comment-user-icon">
-                            <div class="comment-header-status">
-                              <span class="comment-user">u/USER</span>
-                              <span class="comment-time">2 hours ago</span>
-
-                            </div>
-                          </div>
-                          <div class="comment-body">
-                            <span class="comment-body-text">sample comment sample comment sample comment</span>
-                          </div>
+                          @include('components.post_comment')
 
                           <div class="comment reply">
-                            <div class="comment-header">
-                              <img src="img/g2-logo.jpg" class="comment-user-icon">
-                              <div class="comment-header-status">
-                                <span class="comment-user">u/USER</span>
-                                <span class="comment-time">2 hours ago</span>
-
-                              </div>
-                            </div>
-                            <div class="comment-body">
-                              <span class="comment-body-text">sample comment sample comment sample comment</span>
-                            </div>
+                            @include('components.post_comment')
                           </div>
                           <div class="comment reply">
-                            <div class="comment-header">
-                              <img src="img/g2-logo.jpg" class="comment-user-icon">
-                              <div class="comment-header-status">
-                                <span class="comment-user">u/USER</span>
-                                <span class="comment-time">2 hours ago</span>
-
-                              </div>
-                            </div>
-                            <div class="comment-body">
-                              <span class="comment-body-text">sample comment sample comment sample comment</span>
-                            </div>
+                            @include('components.post_comment')
 
                             <div class="comment reply">
-                              <div class="comment-header">
-                                <img src="img/g2-logo.jpg" class="comment-user-icon">
-                                <div class="comment-header-status">
-                                  <span class="comment-user">u/USER</span>
-                                  <span class="comment-time">2 hours ago</span>
-
-                                </div>
-                              </div>
-                              <div class="comment-body">
-                                <span class="comment-body-text">sample comment sample comment sample comment</span>
-                              </div>
+                              @include('components.post_comment')
                             </div>
                             <div class="comment reply">
-                              <div class="comment-header">
-                                <img src="img/g2-logo.jpg" class="comment-user-icon">
-                                <div class="comment-header-status">
-                                  <span class="comment-user">u/USER</span>
-                                  <span class="comment-time">2 hours ago</span>
-
-                                </div>
-                              </div>
-                              <div class="comment-body">
-                                <span class="comment-body-text">sample comment sample comment sample comment</span>
-                              </div>
+                              @include('components.post_comment')
                             </div>
                             <div class="comment reply">
-                              <div class="comment-header">
-                                <img src="img/g2-logo.jpg" class="comment-user-icon">
-                                <div class="comment-header-status">
-                                  <span class="comment-user">u/USER</span>
-                                  <span class="comment-time">2 hours ago</span>
-
-                                </div>
-                              </div>
-                              <div class="comment-body">
-                                <span class="comment-body-text">sample comment sample comment sample comment</span>
-                              </div>
+                              @include('components.post_comment')
                             </div>
 
 
@@ -246,82 +90,22 @@
 
                         </div>
                         <div class="comment">
-                          <div class="comment-header">
-                            <img src="img/g2-logo.jpg" class="comment-user-icon">
-                            <div class="comment-header-status">
-                              <span class="comment-user">u/USER</span>
-                              <span class="comment-time">2 hours ago</span>
-
-                            </div>
-                          </div>
-                          <div class="comment-body">
-                            <span class="comment-body-text">sample comment sample comment sample comment</span>
-                          </div>
+                          @include('components.post_comment')
 
                           <div class="comment reply">
-                            <div class="comment-header">
-                              <img src="img/g2-logo.jpg" class="comment-user-icon">
-                              <div class="comment-header-status">
-                                <span class="comment-user">u/USER</span>
-                                <span class="comment-time">2 hours ago</span>
-
-                              </div>
-                            </div>
-                            <div class="comment-body">
-                              <span class="comment-body-text">sample comment sample comment sample comment</span>
-                            </div>
+                            @include('components.post_comment')
                           </div>
                           <div class="comment reply">
-                            <div class="comment-header">
-                              <img src="img/g2-logo.jpg" class="comment-user-icon">
-                              <div class="comment-header-status">
-                                <span class="comment-user">u/USER</span>
-                                <span class="comment-time">2 hours ago</span>
-
-                              </div>
-                            </div>
-                            <div class="comment-body">
-                              <span class="comment-body-text">sample comment sample comment sample comment</span>
-                            </div>
+                            @include('components.post_comment')
 
                             <div class="comment reply">
-                              <div class="comment-header">
-                                <img src="img/g2-logo.jpg" class="comment-user-icon">
-                                <div class="comment-header-status">
-                                  <span class="comment-user">u/USER</span>
-                                  <span class="comment-time">2 hours ago</span>
-
-                                </div>
-                              </div>
-                              <div class="comment-body">
-                                <span class="comment-body-text">sample comment sample comment sample comment</span>
-                              </div>
+                              @include('components.post_comment')
                             </div>
                             <div class="comment reply">
-                              <div class="comment-header">
-                                <img src="img/g2-logo.jpg" class="comment-user-icon">
-                                <div class="comment-header-status">
-                                  <span class="comment-user">u/USER</span>
-                                  <span class="comment-time">2 hours ago</span>
-
-                                </div>
-                              </div>
-                              <div class="comment-body">
-                                <span class="comment-body-text">sample comment sample comment sample comment</span>
-                              </div>
+                              @include('components.post_comment')
                             </div>
                             <div class="comment reply">
-                              <div class="comment-header">
-                                <img src="img/g2-logo.jpg" class="comment-user-icon">
-                                <div class="comment-header-status">
-                                  <span class="comment-user">u/USER</span>
-                                  <span class="comment-time">2 hours ago</span>
-
-                                </div>
-                              </div>
-                              <div class="comment-body">
-                                <span class="comment-body-text">sample comment sample comment sample comment</span>
-                              </div>
+                              @include('components.post_comment')
                             </div>
 
 
