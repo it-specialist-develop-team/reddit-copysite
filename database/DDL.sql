@@ -16,7 +16,7 @@ create table user_subreddit_links (
   , role int
   , created_at timestamp
   , updated_at timestamp
-  , deleted_at timestamp
+  , deleted_at datetime
   , constraint user_subreddit_links_PKC primary key (id)
 );
 
@@ -30,7 +30,7 @@ create table evaluation_logs (
   , evaluation int
   , created_at timestamp
   , updated_at timestamp
-  , deleted_at timestamp
+  , deleted_at datetime
   , constraint evaluation_logs_PKC primary key (id)
 );
 
@@ -49,7 +49,7 @@ create table posts (
   , evaluation int
   , created_at timestamp
   , updated_at timestamp
-  , deleted_at timestamp
+  , deleted_at datetime
   , constraint posts_PKC primary key (id)
 );
 
@@ -62,7 +62,7 @@ create table subreddits (
   , subreddit_name varchar(50)
   , created_at timestamp
   , updated_at timestamp
-  , deleted_at timestamp
+  , deleted_at datetime
   , constraint subreddits_PKC primary key (id)
 );
 
@@ -74,7 +74,7 @@ create table categories (
   , category_name varchar(50)
   , updated_at timestamp
   , created_at timestamp
-  , deleted_at timestamp
+  , deleted_at datetime
   , constraint categories_PKC primary key (id)
 );
 
@@ -89,7 +89,7 @@ create table users (
   , password varchar(255)
   , created_at timestamp
   , updated_at timestamp
-  , deleted_at timestamp
+  , deleted_at datetime
   , constraint users_PKC primary key (id)
 );
 
