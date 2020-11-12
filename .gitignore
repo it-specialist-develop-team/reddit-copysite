@@ -13,3 +13,4 @@ yarn-error.log
 /.project
 /.buildpath
 /.env_
+composer.lock.rej
