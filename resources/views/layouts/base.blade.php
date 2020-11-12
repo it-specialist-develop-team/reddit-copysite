@@ -30,7 +30,7 @@
       <!-- Top row, always visible -->
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">COPY-REDDIT</span>
+      <span class="mdl-layout-title"><a href="{{ url('/') }}" class="mdl-layout__link">COPY-REDDIT</a></span>
         <div class="mdl-layout-spacer"></div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                       mdl-textfield--floating-label mdl-textfield--align-right">
