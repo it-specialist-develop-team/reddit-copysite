@@ -119,3 +119,22 @@ font-size: 12px;
 .reply{
   margin-left: 4em;
 }
+
+.com-icoon{
+   font-size: 13px; 
+   display: flex;
+   padding-top:10px;
+}
+.quickreply{
+  font-size:15px;
+}
+.rep-rank-classic,.rep-res, .rep-share, .rep-repo, .rep-save{
+  margin-right:15px;
+}
+
+
+
+
+
+
+
