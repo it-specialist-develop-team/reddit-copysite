@@ -40,7 +40,11 @@
                       
                       @include('components.post_addcomment')
 
-                      <div class="comment-field">
+
+                      @component('components.comment')
+
+                      @endcomponent
+                      <!-- <div class="comment-field">
                       <div class="comment">
                           @include('components.post_comment')
 
@@ -61,10 +65,10 @@
                             </div>
 
 
-                          </div>
+                          </div> -->
 
 
-                        </div>
+                        <!-- </div>
                         <div class="comment">
                           @include('components.post_comment')
 
@@ -85,10 +89,10 @@
                             </div>
 
 
-                          </div>
+                          </div> -->
 
 
-                        </div>
+                        <!-- </div>
                         <div class="comment">
                           @include('components.post_comment')
 
@@ -109,7 +113,7 @@
                             </div>
 
 
-                          </div>
+                          </div> -->
 
 
                         </div>
