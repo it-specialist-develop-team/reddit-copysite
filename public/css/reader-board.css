@@ -1,0 +1,266 @@
+/* sub-header-readerboard */
+.sub-header-readerboard{
+padding: 1em;
+padding-left: 5em;
+height: 90px;
+background-color: white;
+}
+
+.sub-header-readerboard h5{
+
+  font-weight: 600;
+
+  margin-bottom: 10px;
+
+}
+.sub-header-readerboard span{
+
+  color: #8a8a8a;
+
+}
+
+
+
+
+
+
+
+
+
+/* POSTBAR */
+
+.readercard{
+
+padding: 0em;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+min-height: 20em;
+display: flex;
+
+}
+.card{
+
+  padding: 0em;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+
+}
+
+
+
+
+
+
+
+
+
+/* LEFT */
+
+.readercard.left{
+left: 35%;
+width: 60%;
+
+}
+.readercard.left .card-title{
+  background-color: #bfbfbf;
+}
+.readercard.left .card-title h5{
+ color: #505050;
+}
+.readercard.left ol{
+  list-style-type: none;
+  padding: 0em;
+  margin: 0em;
+
+}
+.readercard.left li{
+padding: 8px;
+}
+.readercard.left li:hover{
+  background-color: #f3f3f3;
+}
+.left-li a{
+  display: block;
+  padding-left: 1em;
+  text-decoration:none;
+    color: #505050;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CENTER */
+
+.readercard.center{
+width: 80%;
+}
+
+.readercard.center .card-title{
+  background-color: #bfbfbf;
+}
+.readercard.center .card-title h5{
+ color: #505050;
+}
+.readercard .readerboard-content{
+  display: flex;
+
+}
+
+.readercard.center ol{
+  list-style-type: none;
+  /* counter-reset: number; */
+  padding: 0em;
+  margin: 0em;
+
+}
+.readercard.center li{
+/* display: flex; */
+border-bottom: solid 1px #bfbfbf;
+
+}
+
+.center-li a{
+  display: block;
+  padding: 1em;
+  text-decoration:none;
+  color: #505050;
+
+}
+.center-li a:hover{
+  background-color: #f3f3f3;
+}
+
+
+.readercard .readerboard-content span{
+
+	pointer-events: none;
+	cursor: default;
+	text-decoration:none;
+}
+
+.readercard .readerboard-content #icon{
+
+        border-radius: 100%;
+      height: 50px;
+      width: 50px;
+
+}
+.readercard .readerboard-content #number{
+
+  margin: auto 25px auto 10px;
+  font-weight: 600;
+  font-size: 1em;
+  pointer-events: none;
+  width: 1%;
+
+
+}
+.readercard .readerboard-content #title{
+
+  margin: auto 0px auto 10px;
+    font-weight: 500;
+    font-size: 1em;
+
+}
+
+/* li::before{
+  counter-increment: number;
+  content: counter(number);
+padding-top: 2em;
+padding-left: 1em;
+padding-right: 1em;
+padding-bottom: 1em;
+float: left;
+} */
+
+
+
+
+
+
+/* RIGHT */
+
+.readercard.right{
+
+  right: 25%;
+
+}
+.readercard.right .card-title{
+padding-top: 2em;
+}
+.readercard.right .card-title h5{
+font-size: 1em;
+}
+
+
+.readercard.right ol{
+  list-style-type: none;
+  /* counter-reset: number; */
+  padding: 0em;
+  margin: 0em;
+
+}
+.readercard.right li{
+/* display: flex; */
+border-bottom: solid 1px #bfbfbf;
+
+}
+
+.right-li a{
+  display: block;
+  padding: 10px;
+  text-decoration:none;
+  color: #505050;
+
+}
+.right-li a:hover{
+  background-color: #f3f3f3;
+}
+
+
+.readercard .readerboard-content span{
+
+	pointer-events: none;
+	cursor: default;
+	text-decoration:none;
+}
+
+.readercard .readerboard-content #icon{
+
+        border-radius: 100%;
+      height: 35px;
+      width: 35px;
+
+}
+.readercard .readerboard-content #number{
+
+  margin: auto 25px auto 10px;
+  font-weight: 600;
+  font-size: 1em;
+  pointer-events: none;
+  width: 1%;
+
+
+}
+.readercard .readerboard-content #title{
+
+  margin: auto 0px auto 10px;
+    font-weight: 500;
+    font-size: 1em;
+
+}
+.readercard.right .mdl-button{
+  margin: 1em;
+}

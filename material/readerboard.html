@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <!-- CDN -->
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/sub-header.css">
+  <link rel="stylesheet" href="css/main-card.css">
+  <link rel="stylesheet" href="css/right-card.css">
+  <link rel="stylesheet" href="css/main-card copy.css">
+  <link rel="stylesheet" href="css/reader-board.css">
+
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP COMMUNITY</title>
+</head>
+<body>
+
+
+
+
+
+  <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+    <!-- HEADER// -->
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
+      <!-- Top row, always visible -->
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">COPY-REDDIT</span>
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <!-- HEADER MENU// -->
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">C-REDDIT</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/subreddit.html">HOME</a>
+        <a class="mdl-navigation__link" href="">POPULAR</a>
+        <a class="mdl-navigation__link" href="">ALL</a>
+        <a class="mdl-navigation__link" href="/readerboard.html">TOP COMMUNITY</a>
+      </nav>
+    </div>
+    <!-- //HEADER MENU -->
+    <!-- //HEADER -->
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+
+        <!-- SUBHEADER -->
+        <div class="sub-header-readerboard">
+          <h5>今日、最も成長しているコミュニティ</h5>
+          <span>copy-redditで最も成長しているコミュニティです。カテゴリ別で並べ替える事が出来ます。</span>
+        </div>
+
+        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+
+          <!-- POSTBAR// -->
+          <div class="mdl-grid">
+
+            <!-- LEFT BAR// -->
+            <div class="mdl-cell mdl-cell--3-col ">
+
+              <div class="mdl-card mdl-shadow--2dp readercard card left">
+                <div class="card-title">
+                  <h5 class="title">Categories</h5>
+                </div>
+
+                <!-- CATEGORY// -->
+                <ol>
+                  <li class="left-li">
+                    <a href="#">
+                      <span>All Communities</span>
+                    </a>
+                  </li>
+                  <li class="left-li">
+                    <a href="#">
+                      <span>GAME</span>
+                    </a>
+                  </li>
+                  <li class="left-li">
+                    <a href="#">
+                      <span>SCIENCE</span>
+                    </a>
+                  </li>
+                  <li class="left-li">
+                    <a href="#">
+                      <span>HARDWARE</span>
+                    </a>
+                  </li>
+                  <li class="left-li">
+                    <a href="#">
+                      <span>TV</span>
+                    </a>
+                  </li>
+                  <li class="left-li">
+                    <a href="#">
+                      <span>NEWS</span>
+                    </a>
+                  </li>
+                  <li class="left-li">
+                    <a href="#">
+                      <span>Memes</span>
+                    </a>
+                  </li>
+                </ol>
+                <!-- //CATEGORY -->
+
+              </div>
+
+            </div>
+            <!-- //LEFT BAR -->
+
+            <!-- CENTER BAR// -->
+            <div class="mdl-cell mdl-cell--6-col">
+
+              <div class="mdl-card mdl-shadow--2dp readercard card center">
+
+                <div class="card-title">
+                  <h5 class="title">今日のトップコミュニティ</h5>
+                </div>
+
+                <!-- TOPCOMMUNITY CONTENTS// -->
+                <ol>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">1</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">2</span>
+                        <img id="icon" src="img/intel-logo.png">
+                        <span id="title">r/intel</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">3</span>
+                        <img id="icon" src="img/nrg-logo.png">
+                        <span id="title">r/nrg</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">4</span>
+                        <img id="icon" src="img/ps-logo.png">
+                        <span id="title">r/playstation</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">5</span>
+                        <img id="icon" src="img/ryzen-logo.png">
+                        <span id="title">r/ryzen</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">6</span>
+                        <img id="icon" src="img/tsm-logo.png">
+                        <span id="title">r/teamsolomid</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">7</span>
+                        <img id="icon" src="img/xbox-logo.png">
+                        <span id="title">r/xbox</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">8</span>
+                        <img id="icon" src="img/sub-header-icon.jpg">
+                        <span id="title">r/twitter</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">9</span>
+                        <img id="icon" src="img/t1-logo.png">
+                        <span id="title">r/sktelecom1</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="center-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">10</span>
+                        <img id="icon" src="img/copy-reddit-logo.png">
+                        <span id="title">r/reddit</span>
+                      </div>
+                    </a>
+                  </li>
+
+                </ol>
+
+                <!-- //TOPCOMMUNITY CONTENTS -->
+
+
+
+              </div>
+
+            </div>
+            <!-- //CENTER BAR -->
+
+            <!-- RIGHT BAR// -->
+            <div class="mdl-cell mdl-cell--3-col">
+              <!-- RIGHT CARD#1 -->
+              <div class="mdl-card mdl-shadow--2dp readercard right card">
+
+                <div class="card-title">
+                  <h5 class="title">TOP NULL Communities</h5>
+
+                </div>
+
+                <!-- TOP COMMUNITIES// -->
+                <ol>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">1</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">2</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">3</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">4</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">5</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                </ol>
+
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                  Button
+                </button>
+
+                <!-- //TOP COMMUNITIES -->
+
+
+
+              </div>
+              <!-- RIGHT CARD#2 -->
+              <div class="mdl-card mdl-shadow--2dp readercard right card">
+
+                <div class="card-title">
+                  <h5 class="title">TOP NULL Communities</h5>
+
+                </div>
+
+                <!-- TOP COMMUNITIES// -->
+                <ol>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">1</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">2</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">3</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">4</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">5</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                </ol>
+
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                  Button
+                </button>
+
+                <!-- //TOP COMMUNITIES -->
+
+
+
+              </div>
+              <!-- RIGHT CARD#3 -->
+              <div class="mdl-card mdl-shadow--2dp readercard right card">
+
+                <div class="card-title">
+                  <h5 class="title">TOP NULL Communities</h5>
+
+                </div>
+
+                <!-- TOP COMMUNITIES// -->
+                <ol>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">1</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">2</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">3</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">4</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="right-li">
+                    <a id="linktitle" href="/subreddit.html">
+                      <div class="readerboard-content">
+                        <span id="number">5</span>
+                        <img id="icon" src="img/g2-logo.jpg">
+                        <span id="title">r/g2esports</span>
+                      </div>
+                    </a>
+                  </li>
+                </ol>
+
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                  Button
+                </button>
+
+                <!-- //TOP COMMUNITIES -->
+
+
+
+              </div>
+            </div>
+            <!-- //RIGHT BAR -->
+
+          </div>
+          <!-- //POSTBAR -->
+
+        </div>
+        <!-- //SUB HEADER -->
+
+
+
+
+
+      </div>
+    </main>
+  </div>
+
+
+
+</body>
+</html>
