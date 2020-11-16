@@ -38,10 +38,10 @@
                 <!-- //POSTCARDCLASSIC -->
 
                 @include('components.subreddit_classic')
+                {{-- @include('components.subreddit_classic')
                 @include('components.subreddit_classic')
                 @include('components.subreddit_classic')
-                @include('components.subreddit_classic')
-                @include('components.subreddit_classic')
+                @include('components.subreddit_classic') --}}
 
                 <!-- POSTCARDCLASSIC// -->
 

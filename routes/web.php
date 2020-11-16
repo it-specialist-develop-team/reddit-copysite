@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +18,12 @@ Route::get('/', function () {
 Route::get('/post', function () {
     return view('post');
 });
-Route::get('/subreddit', function () {
-    return view('subreddit');
-});
+// Route::get('/subreddit', function () {
+//     return view('subreddit');
+// });
+Route::get('/subreddit',[PostController::class,'classic']);
+
+
 Route::get('/readerboard', function () {
     return view('readerboard');
 });

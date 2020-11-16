@@ -1,10 +1,15 @@
+@foreach($posts as $p)
+
+
+
+
 <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
 
 
   <div class="block-post-classic">
     <div class="post-rank-classic">
       <p>↑</p>
-      <p>000</p>
+    <p>{{$p->evaluation}}</p>
       <p>↓</p>
     </div>
     <div class="post-content">
@@ -16,7 +21,7 @@
 
         <header>
         <div class="post-header">
-          <p class="post-title">title</p>
+          <p class="post-title">{{$p->title}}</p>
           <p class="subreddit">r/subreddit</p>
           <p class="post-user">u/user</p>
         </div>
@@ -44,8 +49,6 @@
 
   </div>
 </div>
-
-
-
-
 </div>
+
+@endforeach
