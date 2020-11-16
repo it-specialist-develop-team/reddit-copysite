@@ -88,5 +88,10 @@ height: 15em;
 .media-drop-field .dragndrop button{
   border: solid 0.5px;
   border-color: grey;
+
+}
+.panel-heading.note-toolbar :nth-child(7),
+.panel-heading.note-toolbar :nth-child(8){
+  display: none;
 }
 

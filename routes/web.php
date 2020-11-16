@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CreateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +30,3 @@ Route::get('/create', function () {
 Route::get('/sidebar', function () {
     return view('sidebar');
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::post('/create/create_post', [CreateController::class, 'create_post']);
