@@ -10,11 +10,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/sub-header.css">
-  <link rel="stylesheet" href="css/main-card.css">
-  <link rel="stylesheet" href="css/right-card.css">
-  <link rel="stylesheet" href="css/main-card copy.css">
+  <link rel="stylesheet" href="{{asset('css/main.css')}}">
+  <link rel="stylesheet" href="{{asset('css/sub-header.css')}}">
+  <link rel="stylesheet" href="{{asset('css/main-card.css')}}">
+  <link rel="stylesheet" href="{{asset('css/right-card.css')}}">
+  <link rel="stylesheet" href="{{asset('css/main-card copy.css')}}">
 
   @yield('header-links')
 
@@ -54,7 +54,7 @@
         <a class="mdl-navigation__link" href="/subreddit.html">HOME</a>
         <a class="mdl-navigation__link" href="">POPULAR</a>
         <a class="mdl-navigation__link" href="">ALL</a>
-        <a class="mdl-navigation__link" href="/readerboard.html">TOP COMMUNITY</a>
+        <a class="mdl-navigation__link" href="{{ asset('/readerboard')}}">TOP COMMUNITY</a>
       </nav>
     </div>
     <!-- //HEADER MENU -->
