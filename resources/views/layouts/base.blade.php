@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!-- CDN -->
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
@@ -14,13 +16,14 @@
   <link rel="stylesheet" href="css/right-card.css">
   <link rel="stylesheet" href="css/main-card copy.css">
 
-    @yield('header-links')
+  @yield('header-links')
 
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{$title}}</title>
 </head>
+
 <body>
 
 
@@ -58,11 +61,12 @@
     <!-- //HEADER -->
 
     <main class="mdl-layout__content">
-    @yield('content')
+      @yield('content')
     </main>
   </div>
 
 
 
 </body>
+
 </html>
