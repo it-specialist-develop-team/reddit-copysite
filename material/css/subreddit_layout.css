@@ -1,0 +1,21 @@
+.mdl-grid .mdl-cell.sublayout{
+  /* display: none; */
+  width: 110%;
+}
+.mdl-grid .mdl-cell--8-col{
+  /* width: 110%; */
+}
+.sub-post-field{
+  display: flex;
+  width: 110%;
+  margin-top: 1em;
+}
+.mdl-grid .mdl-cell .sub-post-field .postcard-classic{
+  width: 13em;
+  min-width: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.post-content .linktitle{
+  display: block;
+}
