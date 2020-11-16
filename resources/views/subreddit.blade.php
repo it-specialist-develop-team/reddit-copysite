@@ -18,7 +18,25 @@
 
         <!-- SUB HEADER// -->
 
-        @include('components.subreddit_header')
+        <div class="sub-header">
+          <img src="img/sub-header-backimg.jpg">
+
+          <div class="sub-header-bar">
+            <img src="img/sub-header-icon.jpg" id="sub-header-icon">
+
+            <p>SUBREDDIT</p>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+              Button
+            </button> </div>
+
+        </div>
+
+        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+          <div class="mdl-tabs__tab-bar">
+            <a href="#A-panel" class="mdl-tabs__tab is-active">POST</a>
+            <a href="#B-panel" class="mdl-tabs__tab">RULES</a>
+            <a href="#C-panel" class="mdl-tabs__tab">DISCORD</a>
+          </div>
 
 
 
@@ -32,16 +50,272 @@
               <div class="mdl-cell mdl-cell--8-col">
 
 
-                @include('components.subreddit_notice')
+                <div class="mdl-card mdl-shadow--2dp maincard">
+
+                  <p>UPDATES FROM REDDIT</p>
+                  <p>Keep yourself safe and informed</p>
+                  <p>Visit r/Coronavirus to talk about COVID-19, and visit www.who.int for more information.</p>
+
+                </div>
 
 
                 <!-- //POSTCARDCLASSIC -->
 
-                @include('components.subreddit_classic')
-                @include('components.subreddit_classic')
-                @include('components.subreddit_classic')
-                @include('components.subreddit_classic')
-                @include('components.subreddit_classic')
+                <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
+
+
+                  <div class="block-post-classic">
+                    <div class="post-rank-classic">
+                      <p>↑</p>
+                      <p>000</p>
+                      <p>↓</p>
+                    </div>
+                    <div class="post-content">
+
+                      <a class="linktitle" href="view.html">
+                    <img src="img/php_logo.png" heigh="100" width="150">
+
+                    <div class="post-content-flex">
+
+                      <header>
+                        <div class="post-header">
+                          <p class="post-title">title</p>
+                            <p class="subreddit">r/subreddit</p>
+                            <p class="post-user">u/user</p>
+                        </div>
+                      </header>
+
+                      <!-- <span class="mdl-chip">
+                        <span class="mdl-chip__text">Comment</span>
+                      </span>
+                      <span class="mdl-chip">
+                        <span class="mdl-chip__text">Share</span>
+                      </span>
+                      <span class="mdl-chip">
+                        <span class="mdl-chip__text">Save</span>
+                      </span>
+                      <span class="mdl-chip">
+                        <span class="mdl-chip__text">Hide</span>
+                      </span>
+                      <span class="mdl-chip">
+                        <span class="mdl-chip__text">Report</span>
+                      </span> -->
+                    </div>
+                      </a>
+
+
+
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+                <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
+
+
+                  <div class="block-post-classic">
+                    <div class="post-rank-classic">
+                      <p>↑</p>
+                      <p>000</p>
+                      <p>↓</p>
+                    </div>
+                    <div class="post-content">
+
+                      <a class="linktitle" href="view.html">
+                        <img src="img/php_logo.png" heigh="100" width="150">
+
+                        <div class="post-content-flex">
+
+                          <header>
+                            <div class="post-header">
+                              <p class="post-title">title</p>
+                              <p class="subreddit">r/subreddit</p>
+                              <p class="post-user">u/user</p>
+                            </div>
+                          </header>
+
+                          <!-- <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Comment</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Share</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Save</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Hide</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Report</span>
+                                      </span> -->
+                        </div>
+                      </a>
+
+
+
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+                <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
+
+
+                  <div class="block-post-classic">
+                    <div class="post-rank-classic">
+                      <p>↑</p>
+                      <p>000</p>
+                      <p>↓</p>
+                    </div>
+                    <div class="post-content">
+
+                      <a class="linktitle" href="view.html">
+                        <img src="img/php_logo.png" heigh="100" width="150">
+
+                        <div class="post-content-flex">
+
+                          <header>
+                            <div class="post-header">
+                              <p class="post-title">title</p>
+                              <p class="subreddit">r/subreddit</p>
+                              <p class="post-user">u/user</p>
+                            </div>
+                          </header>
+
+                          <!-- <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Comment</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Share</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Save</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Hide</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Report</span>
+                                      </span> -->
+                        </div>
+                      </a>
+
+
+
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+                <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
+
+
+                  <div class="block-post-classic">
+                    <div class="post-rank-classic">
+                      <p>↑</p>
+                      <p>000</p>
+                      <p>↓</p>
+                    </div>
+                    <div class="post-content">
+
+                      <a class="linktitle" href="view.html">
+                        <img src="img/php_logo.png" heigh="100" width="150">
+
+                        <div class="post-content-flex">
+
+                          <header>
+                            <div class="post-header">
+                              <p class="post-title">title</p>
+                              <p class="subreddit">r/subreddit</p>
+                              <p class="post-user">u/user</p>
+                            </div>
+                          </header>
+
+                          <!-- <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Comment</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Share</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Save</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Hide</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Report</span>
+                                      </span> -->
+                        </div>
+                      </a>
+
+
+
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+                <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
+
+
+                  <div class="block-post-classic">
+                    <div class="post-rank-classic">
+                      <p>↑</p>
+                      <p>000</p>
+                      <p>↓</p>
+                    </div>
+                    <div class="post-content">
+
+                      <a class="linktitle" href="view.html">
+                        <img src="img/php_logo.png" heigh="100" width="150">
+
+                        <div class="post-content-flex">
+
+                          <header>
+                            <div class="post-header">
+                              <p class="post-title">title</p>
+                              <p class="subreddit">r/subreddit</p>
+                              <p class="post-user">u/user</p>
+                            </div>
+                          </header>
+
+                          <!-- <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Comment</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Share</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Save</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Hide</span>
+                                      </span>
+                                      <span class="mdl-chip">
+                                        <span class="mdl-chip__text">Report</span>
+                                      </span> -->
+                        </div>
+                      </a>
+
+
+
+                    </div>
+                  </div>
+
+
+
+
+                </div>
 
                 <!-- POSTCARDCLASSIC// -->
 
@@ -163,10 +437,17 @@
 
           </div>
           <div class="mdl-tabs__panel" id="B-panel">
-            @include('components.subreddit_tabs')
+            <ul>
+              <li>B</li>
+              <li>B</li>
+            </ul>
           </div>
           <div class="mdl-tabs__panel" id="C-panel">
-             @include('components.subreddit_tabs')
+            <ul>
+              <li>C</li>
+              <li>C</li>
+              <li>C</li>
+            </ul>
           </div>
         </div>
 

@@ -6,8 +6,8 @@
 
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
       <div class="mdl-tabs__tab-bar">
-        <a href="#starks-panel" class="mdl-tabs__tab is-active">POST</a>
-        <a href="#lannisters-panel" class="mdl-tabs__tab">IMAGE & VIDEO</a>
+        <a href="#starks-panel" class="mdl-tabs__tab is-active" id="post_select">POST</a>
+        <a href="#lannisters-panel" class="mdl-tabs__tab" id="image_video_select">IMAGE & VIDEO</a>
       </div>
 
       <!-- POST -->
@@ -16,14 +16,12 @@
 
           <form action="#">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="sample3">
+              <input class="mdl-textfield__input" type="text" id="title">
               <label class="mdl-textfield__label" for="sample3">Title...</label>
             </div>
           </form>
-
           <div id="summernote">
           </div>
-
           <script>
             $(document).ready(function () {
               $('#summernote').summernote();
@@ -66,8 +64,6 @@
 
         </div>
 
-
-
       </div>
       <!-- Image n Video -->
       <div class="mdl-tabs__panel" id="lannisters-panel">
@@ -83,9 +79,7 @@
           <div class="media-drop-field">
             <div class="dragndrop">
               <span>Drag and Drop or </span>
-              <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-                Button
-              </button>
+              <input type="file" name="image" class="mdl-button mdl-js-button mdl-js-ripple-effect">
 
             </div>
           </div>
@@ -158,23 +152,15 @@
         </div>
 
         <div class="submit-button-field">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             SAVE
           </button>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="post_btn">
             POST
           </button>
-
         </div>
-
-
       </div>
-
-
     </div>
-
-
-
   </div>
 
 </div>
