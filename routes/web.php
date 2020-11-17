@@ -40,5 +40,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('/create/create_post', [CreateController::class, 'create_post']);
 
 Route::get('/subreddit/{id?}', function($id = 1){
-  return $id;
+  return view('subreddit');
 });
