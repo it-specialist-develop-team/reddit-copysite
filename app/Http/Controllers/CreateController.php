@@ -21,7 +21,7 @@ class CreateController extends Controller
           $post->subreddit_id = 1;
           $post->post_type = $request->post_type;
           $post->title = $request->title;
-          $post->body = "";
+          $post->body = $request->body;
           $post->attachment = $path;
           $post->parent_id = Null;
           $post->user_id = 1;
@@ -34,7 +34,7 @@ class CreateController extends Controller
       $post->subreddit_id = 1;
       $post->post_type = $request->post_type;
       $post->title = $request->title;
-      $post->body = $request->body;
+      $post->body = "";
       $post->attachment = "";
       $post->parent_id = Null;
       $post->user_id = 1;
