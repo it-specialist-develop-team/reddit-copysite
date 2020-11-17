@@ -30,3 +30,5 @@ Route::get('/create', function () {
 Route::get('/sidebar', function () {
     return view('sidebar');
 });
+
+Route::post('/create/create_post', [CreateController::class, 'create_post']);
