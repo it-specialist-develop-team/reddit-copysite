@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CreateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,27 +13,28 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
-    return view('post');
+  return view('post');
 });
 Route::get('/post', function () {
-    return view('post');
+  return view('post');
 });
 Route::get('/subreddit', function () {
-    return view('subreddit');
+  return view('subreddit');
 });
 Route::get('/readerboard', function () {
-    return view('readerboard');
+  return view('readerboard');
 });
 Route::get('/create', function () {
-    return view('create');
+  return view('create');
 });
 Route::get('/sidebar', function () {
-    return view('sidebar');
+  return view('sidebar');
 });
-
-Route::post('/create/create_post', [CreateController::class, 'create_post']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/create/create_post', [CreateController::class, 'create_post']);
