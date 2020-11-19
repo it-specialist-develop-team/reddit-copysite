@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateController;
-
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,3 +38,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('/create/create_post', [CreateController::class, 'create_post']);
+
+Route::get('/post/{post}', [PostController::class, 'show']);
