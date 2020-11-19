@@ -40,6 +40,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('/create/create_post', [CreateController::class, 'create_post']);
 
 Route::get('/post/{post}', [PostController::class, 'show']);
+
 Route::get('/subreddit/{id?}', function($id = 1){
   return view('subreddit') -> with('id',$id);
 });
