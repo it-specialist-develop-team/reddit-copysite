@@ -15,7 +15,8 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', function () {
-  return view('post');
+  $id=1;
+  return view('subreddit')->with('id',$id);
 });
 Route::get('/post', function () {
   return view('post');
