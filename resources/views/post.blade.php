@@ -32,17 +32,17 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
           </div>
         </div>
       </div>
+      <!-- SIDE BAR// -->
+      <div class="mdl-cell mdl-cell--4-col">
+        @include('components.sidebar_ch')
+        <x-sidebar_card />
+        <x-sidebar_card />
+        <x-sidebar_card />
+        @include('components.sidebar_bt')
+      </div>
+      <!-- //SIDE BAR -->
     </div>
   </div>
-  <!-- SIDE BAR// -->
-  <div class="mdl-cell mdl-cell--4-col">
-    @include('components.sidebar_ch')
-    <x-sidebar_card />
-    <x-sidebar_card />
-    <x-sidebar_card />
-    @include('components.sidebar_bt')
-  </div>
-  <!-- //SIDE BAR -->
 </div>
 <!-- //POSTBAR -->
 
@@ -153,25 +153,4 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
     });
   });
 </script>
-
-
-
-
-
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- //SUB HEADER -->
-
-
-
-
-
-</div>
 @endsection
