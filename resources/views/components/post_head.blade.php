@@ -1,10 +1,10 @@
 <div class="post-rank-classic">
-  <p>↑</p>
-  <p>000</p>
-  <p>↓</p>
+  <p class="eva_up">↑</p>
+  <p class="eva_val">000</p>
+  <p class="eva_down">↓</p>
 </div>
-<div class="post-content">
 
+<div class="post-content">
   <div class="post-content-header">
     <div class="post-status">
       <div>
