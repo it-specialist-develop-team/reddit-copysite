@@ -49,3 +49,5 @@ Route::post('/eva_down_cancel', [Evaluation_logController::class, 'eva_down_canc
 Route::get('/subreddit/{id?}', function ($id = 1) {
   return view('subreddit')->with('id', $id);
 });
+
+Route::get('/post/{post}', [PostController::class, 'show']);
