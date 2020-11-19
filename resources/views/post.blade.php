@@ -42,43 +42,109 @@ $title="view";
 <!-- //POSTBAR -->
 
 <script>
+  let eva_val = document.getElementsByClassName("eva_val")[0];
+  let eva_up = document.getElementsByClassName("eva_up")[0];
+  let eva_down = document.getElementsByClassName("eva_down")[0];
   $(function(){
-    let eva_val = document.getElementsByClassName("eva_val")[0];
-    let eva_up = document.getElementsByClassName("eva_up")[0];
-    let eva_down = document.getElementsByClassName("eva_down")[0];
     eva_up.addEventListener("click",e=>{
-      $.ajax({
-      headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      },
-      url: '/eva_up',
-      type: 'POST',
-      contentType: false,
-      processData: false,
-      })
-      .done(function(data1) {
+      if(e.target.className == "eva_up_set"){
+        $.ajax({
+        headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/eva_down',
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        })
+        .done(function(data1) {
         eva_val.textContent = data1.val;
-      })
-      .fail(function(data) {
-        console.log("error")
-      });
+        eva_up.style.color = "black";
+        eva_up.setAttribute("class", "eva_up");
+        })
+        .fail(function(data) {
+          console.log("error")
+        });
+      }else if(e.target.className == "eva_up"){
+        $.ajax({
+        headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/eva_up',
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        })
+        .done(function(data1) {
+        eva_val.textContent = data1.val;
+        eva_up.style.color = "green";
+        eva_down.style.color = "black";
+        eva_up.setAttribute("class", "eva_up_set");
+        eva_down.setAttribute("class", "eva_down");
+        })
+        .fail(function(data) {
+          console.log("error")
+        });
+      }
     });
     eva_down.addEventListener("click",e=>{
-      $.ajax({
-      headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      },
-      url: '/eva_down',
-      type: 'POST',
-      contentType: false,
-      processData: false,
-      })
-      .done(function(data1) {
-      eva_val.textContent = data1.val;
-      })
-      .fail(function(data) {
-        console.log("error")
-      });
+      if(e.target.className == "eva_down_set"){
+        $.ajax({
+        headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/eva_up',
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        })
+        .done(function(data1) {
+        eva_val.textContent = data1.val;
+        eva_down.style.color = "black";
+        eva_down.setAttribute("class", "eva_down");
+        })
+        .fail(function(data) {
+          console.log("error")
+        });
+      }else if(e.target.className == "eva_down" && e.target.className == "eva_up_set"){
+        $.ajax({
+        headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/eva_down',
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        })
+        .done(function(data1) {
+        eva_val.textContent = data1.val;
+        eva_down.style.color = "red";
+        eva_up.style.color = "black";
+        eva_down.setAttribute("class", "eva_down_set");
+        eva_up.setAttribute("class", "eva_up");
+        })
+        .fail(function(data) {
+          console.log("error")
+        });
+      }else if(e.target.className == "eva_down"){
+        $.ajax({
+        headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: '/eva_down',
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        })
+        .done(function(data1) {
+        eva_val.textContent = data1.val;
+        eva_down.style.color = "red";
+        eva_down.setAttribute("class", "eva_down_set");
+        })
+        .fail(function(data) {
+          console.log("error")
+        });
+      }
     });
   });
 </script>
