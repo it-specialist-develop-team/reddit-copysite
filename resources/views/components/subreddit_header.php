@@ -4,7 +4,7 @@
   <div class="sub-header-bar">
     <img src="img/sub-header-icon.jpg" id="sub-header-icon">
 
-    <p>SUBREDDIT</p>
+    <p><?php echo $data->subreddit_name; ?></p>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
     Button
     </button> 
