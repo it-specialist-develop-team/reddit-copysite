@@ -39,4 +39,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::post('/create/create_post', [CreateController::class, 'create_post']);
 
+<<<<<<< HEAD
 Route::get('/post/{post}', [PostController::class, 'show']);
+=======
+Route::get('/subreddit/{id?}', function($id = 1){
+  return view('subreddit') -> with('id',$id);
+});
+>>>>>>> 9b16648829f6f8ac74712064ef4d8b70871aeb35

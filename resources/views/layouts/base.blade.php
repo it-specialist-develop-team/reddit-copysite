@@ -51,7 +51,7 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">C-REDDIT</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="/subreddit.html">HOME</a>
+        <a class="mdl-navigation__link" href="{{ url('/subreddit') }}">HOME</a>
         <a class="mdl-navigation__link" href="">POPULAR</a>
         <a class="mdl-navigation__link" href="">ALL</a>
         <a class="mdl-navigation__link" href="{{ asset('/readerboard')}}">TOP COMMUNITY</a>
