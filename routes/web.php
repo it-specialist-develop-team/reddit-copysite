@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
 
 /*
@@ -16,7 +17,8 @@ use App\Http\Controllers\Evaluation_logController;
 */
 
 Route::get('/', function () {
-  return view('post');
+  $id=1;
+  return view('subreddit')->with('id',$id);
 });
 Route::get('/post', function () {
   return view('post');
