@@ -39,6 +39,16 @@ CREATE TABLE `categories` (
 -- --------------------------------------------------------
 
 --
+-- テーブルのデータのダンプ `categories`
+--
+
+INSERT INTO `categories` (`id`, `category_name`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Game', '1996-11-22 01:38:45', '1983-05-04 08:21:35', NULL),
+(2, 'Sports', '1996-11-22 01:38:45', '1983-05-04 08:21:35', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- テーブルの構造 `evaluation_logs`
 --
 
@@ -136,6 +146,16 @@ CREATE TABLE `subreddits` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルのデータのダンプ `subreddits`
+--
+
+INSERT INTO `subreddits` (`id`, `category_id`, `subreddit_name` ,`created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 1, 'r/任天堂', '1996-11-22 01:38:45', '1983-05-04 08:21:35', NULL),
+(2, 1, 'r/PS5', '1996-11-22 01:38:45', '1983-05-04 08:21:35', NULL);
 
 -- --------------------------------------------------------
 
