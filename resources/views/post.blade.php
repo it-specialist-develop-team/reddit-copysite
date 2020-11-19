@@ -4,11 +4,11 @@ $title="view";
 @endphp
 
 @section('header-links')
-<link rel="stylesheet" href="css/view.css">
+<link rel="stylesheet" href="{{asset('css/view.css')}}">
 @endsection
 
 @section('content')
-<div class="page-content">
+<div class=" page-content">
   <!-- SUB HEADER// -->
   <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
     <!-- POSTBAR// -->
