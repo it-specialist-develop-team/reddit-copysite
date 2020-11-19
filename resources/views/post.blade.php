@@ -1,6 +1,8 @@
 @extends('layouts.base')
 @php
 $title="view";
+// $data = DB::table('posts')->where('parent_id', 1)->get();
+$posts = App\Models\Post::where('parent_id',$post->id)->get();
 @endphp
 
 @section('header-links')
@@ -23,8 +25,7 @@ $title="view";
               @include('components.post_addcomment')
               <div class="comment-field">
                 <div class="comment">
-                  @component('components.comment')
-                  @endcomponent
+                  @include('components.comment',["posts" => $posts])
                 </div>
               </div>
             </div>
