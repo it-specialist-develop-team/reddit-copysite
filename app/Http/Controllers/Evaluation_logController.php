@@ -12,9 +12,7 @@ class Evaluation_logController extends Controller
   function show(Request $request)
   {
     $eva_log = DB::table('evaluation_logs')->where([
-      ['user_id', $request->user_id],
       ['post_id', $request->post_id],
-      ['deleted_at', NULL],
     ])->get();
 
     return response()->json([

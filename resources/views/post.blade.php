@@ -66,15 +66,10 @@ $title="view";
     type: 'POST',
     data:{
       "post_id":post_id,
-      "user_id":user_id,
-      "evaluation":1
     }
     })
     .done(function(data1) {
-      console.log(data1.ret);
-      // eva_id = data1.id;
       eva_val.textContent = data1.val;
-      // eva_like.setAttribute("class", "eva_like_set");
     })
     .fail(function(data) {
       console.log("error")
@@ -94,10 +89,7 @@ $title="view";
         }
         })
         .done(function(data1) {
-          console.log(data1.ret);
-          // eva_id = data1.id;
           eva_val.textContent = data1.val;
-          // eva_like.setAttribute("class", "eva_like_set");
         })
         .fail(function(data) {
           console.log("error")
@@ -121,10 +113,7 @@ $title="view";
         }
         })
         .done(function(data1) {
-          console.log(data1.ret);
-          // eva_id = data1.id;
           eva_val.textContent = data1.val;
-          // eva_dislike.setAttribute("class", "eva_dislike_set");
         })
         .fail(function(data) {
           console.log("error")
