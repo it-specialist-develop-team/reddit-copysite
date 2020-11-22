@@ -1,7 +1,7 @@
 <div class="post-rank-classic">
-  <p class="eva_up">↑</p>
+  <p class="eva_like">↑</p>
   <p class="eva_val">000</p>
-  <p class="eva_down">↓</p>
+  <p class="eva_dislike">↓</p>
 </div>
 
 <div class="post-content">

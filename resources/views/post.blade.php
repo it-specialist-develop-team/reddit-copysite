@@ -6,6 +6,15 @@ $title="view";
 @section('header-links')
 <link rel="stylesheet" href="css/view.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+  .eva_like_set {
+    color: green;
+  }
+
+  .eva_dislike_set {
+    color: red;
+  }
+</style>
 @endsection
 @section('content')
 <div class="page-content">
@@ -43,88 +52,52 @@ $title="view";
 
 <script>
   let eva_val = document.getElementsByClassName("eva_val")[0];
-  let eva_up = document.getElementsByClassName("eva_up")[0];
-  let eva_down = document.getElementsByClassName("eva_down")[0];
+  let eva_like = document.getElementsByClassName("eva_like")[0];
+  let eva_dislike = document.getElementsByClassName("eva_dislike")[0];
   let eva_id;
-
+  let post_id = 2;
+  let user_id = 1;
   $(function(){
-    eva_up.addEventListener("click",e=>{
-      if(e.target.className == "eva_up_set"){//up cancel
+    $.ajax({
+    headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+    url: '/eva_show',
+    type: 'POST',
+    data:{
+      "post_id":post_id,
+      "user_id":user_id,
+      "evaluation":1
+    }
+    })
+    .done(function(data1) {
+      console.log(data1.ret);
+      // eva_id = data1.id;
+      eva_val.textContent = data1.val;
+      // eva_like.setAttribute("class", "eva_like_set");
+    })
+    .fail(function(data) {
+      console.log("error")
+    });
+    eva_like.addEventListener("click",e=>{
+      if(e.target.className == "eva_like"){//like
         $.ajax({
         headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: '/eva_up_cancel',
+        url: '/evaluation',
         type: 'POST',
-        contentType: false,
-        processData: false,
         data:{
-          "id":eva_id,
+          "post_id":post_id,
+          "user_id":user_id,
+          "evaluation":1
         }
         })
         .done(function(data1) {
-        eva_val.textContent = data1.val;
-        eva_up.style.color = "black";
-        eva_up.setAttribute("class", "eva_up");
-        })
-        .fail(function(data) {
-          console.log("error")
-        });
-      }else if(e.target.className == "eva_up" && e.target.className == "eva_down_set"){//up to down
-        $.ajax({
-        headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/eva_down_cancel',
-        type: 'POST',
-        contentType: false,
-        processData: false,
-        data:{
-          "id":eva_id,
-        }
-        })
-        .done(function(data1) {
-        eva_val.textContent = data1.val;
-        eva_down.style.color = "black";
-        eva_down.setAttribute("class", "eva_down");
-        })
-        .fail(function(data) {
-          console.log("error")
-        });
-        
-        $.ajax({
-        headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/eva_up',
-        type: 'POST',
-        contentType: false,
-        processData: false,
-        })
-        .done(function(data1) {
-          eva_id = data1.id;
+          console.log(data1.ret);
+          // eva_id = data1.id;
           eva_val.textContent = data1.val;
-          eva_up.style.color = "green";
-          eva_up.setAttribute("class", "eva_up_set");
-        })
-        .fail(function(data) {
-          console.log("error")
-        });
-      }else if(e.target.className == "eva_up"){//up
-        $.ajax({
-        headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/eva_up',
-        type: 'POST',
-        contentType: false,
-        processData: false,
-        })
-        .done(function(data1) {
-          eva_id = data1.id;
-          eva_val.textContent = data1.val;
-          eva_up.style.color = "green";
-          eva_up.setAttribute("class", "eva_up_set");
+          // eva_like.setAttribute("class", "eva_like_set");
         })
         .fail(function(data) {
           console.log("error")
@@ -133,82 +106,25 @@ $title="view";
     });
 
 
-    eva_down.addEventListener("click",e=>{
-      if(e.target.className == "eva_down_set"){//down cancel
+    eva_dislike.addEventListener("click",e=>{
+      if(e.target.className == "eva_dislike"){//dislike
         $.ajax({
         headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        url: '/eva_down_cancel',
+        url: '/evaluation',
         type: 'POST',
-        contentType: false,
-        processData: false,
         data:{
-          "id":eva_id,
+          "post_id":post_id,
+          "user_id":user_id,
+          "evaluation":-1
         }
         })
         .done(function(data1) {
-        eva_val.textContent = data1.val;
-        eva_down.style.color = "black";
-        eva_down.setAttribute("class", "eva_down");
-        })
-        .fail(function(data) {
-          console.log("error")
-        });
-      }else if(e.target.className == "eva_down" && e.target.className == "eva_up_set"){//up to down
-        $.ajax({
-        headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/eva_up_cancel',
-        type: 'POST',
-        contentType: false,
-        processData: false,
-        data:{
-          "id":eva_id,
-        }
-        })
-        .done(function(data1) {
-        eva_val.textContent = data1.val;
-        eva_up.style.color = "black";
-        eva_up.setAttribute("class", "eva_up");
-        })
-        .fail(function(data) {
-          console.log("error")
-        });
-        $.ajax({
-        headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/eva_down',
-        type: 'POST',
-        contentType: false,
-        processData: false,
-        })
-        .done(function(data1) {
-          eva_id = data1.id;
+          console.log(data1.ret);
+          // eva_id = data1.id;
           eva_val.textContent = data1.val;
-          eva_down.style.color = "red";
-          eva_down.setAttribute("class", "eva_down_set");
-        })
-        .fail(function(data) {
-          console.log("error")
-        });
-      }else if(e.target.className == "eva_down"){//down
-        $.ajax({
-        headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/eva_down',
-        type: 'POST',
-        contentType: false,
-        processData: false,
-        })
-        .done(function(data1) {
-          eva_id = data1.id;
-          eva_val.textContent = data1.val;
-          eva_down.style.color = "red";
-          eva_down.setAttribute("class", "eva_down_set");
+          // eva_dislike.setAttribute("class", "eva_dislike_set");
         })
         .fail(function(data) {
           console.log("error")
@@ -217,11 +133,6 @@ $title="view";
     });
   });
 </script>
-
-
-
-
-
 
 </div>
 
