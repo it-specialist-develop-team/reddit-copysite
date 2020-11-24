@@ -9,8 +9,19 @@ class Post extends Model
 {
     protected $table = 'posts';
 
+    public function evaluation_log(){
+        return $this->hasMany('App\Models\Evaluation_log');
+    }
+
     public function user() //関数名は単数形がベスト
     {
         return $this->belongsTo('App\Models\User');
     }
+
+    public function subreddit()
+    {
+        return $this->belongsTo('App\Models\Subreddit');
+    }
+
+
 }
