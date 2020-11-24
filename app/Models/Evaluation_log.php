@@ -10,12 +10,12 @@ class Evaluation_log extends Model
   
   protected $table = 'evaluation_logs';
 
-  public function post() //関数名は単数形がベスト
+  public function post()
   {
     return $this->belongsTo('App\Models\Post');
   }
 
-  public function user() //関数名は単数形がベスト
+  public function user()
   {
     return $this->belongsTo('App\Models\User');
   }

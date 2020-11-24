@@ -10,7 +10,7 @@ class Categorie extends Model
   use HasFactory;
   protected $table = 'categories';
 
-  public function subreddit() //関数名は単数形がベスト
+  public function subreddit()
   {
     return $this->hasMany('App\Models\Subreddit');
   }

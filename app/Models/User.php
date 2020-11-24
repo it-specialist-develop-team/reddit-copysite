@@ -9,7 +9,7 @@ class User extends Model
 {
     protected $table = 'users';
 
-    public function post() //関数名は単数形がベスト
+    public function post()
     {
         return $this->hasMany('App\Models\Post');
     }
