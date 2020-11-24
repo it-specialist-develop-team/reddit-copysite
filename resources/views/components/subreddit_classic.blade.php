@@ -11,7 +11,7 @@
     <div class="post-content">
 
     <a class="linktitle" href="view.html">
-      <img src="img/php_logo.png" heigh="100" width="150">
+    <img src={{asset('img/php_logo.png')}} heigh="100" width="150">
 
       <div class="post-content-flex">
 
@@ -40,7 +40,6 @@
         </span> -->
       </div>
     </a>
-
   </div>
 </div>
 </div>

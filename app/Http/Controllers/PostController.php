@@ -10,15 +10,15 @@ class PostController extends Controller
     // public function classic()
     // {
     //     $posts = Post::get();
-    //     return view('subreddit',['posts' => $posts]) ;
+    //     return view('subreddit',['posts' => $posts]);
     // }
-    public function classic()
+    public function classic($id)
     {
-        $posts = Post::paginate(1);
-        return view('subreddit',['posts' => $posts]) ;
+        $posts = Post::paginate(6);
+        return view('subreddit',['posts' => $posts, 'id'=>$id]) ;
     }
-  function show(Post $post)
-  {
-    return view("post", ["post" => $post]);
-  }
+//   function show(Post $post)
+//   {
+//     return view("post", ["post" => $post]);
+//   }
 }
