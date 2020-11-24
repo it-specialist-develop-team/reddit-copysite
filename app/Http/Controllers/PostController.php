@@ -7,9 +7,14 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+    // public function classic()
+    // {
+    //     $posts = Post::get();
+    //     return view('subreddit',['posts' => $posts]) ;
+    // }
     public function classic()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(1);
         return view('subreddit',['posts' => $posts]) ;
     }
 }

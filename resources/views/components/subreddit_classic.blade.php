@@ -1,10 +1,6 @@
 @foreach($posts as $p)
 
-
-
-
 <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
-
 
   <div class="block-post-classic">
     <div class="post-rank-classic">
@@ -44,8 +40,6 @@
         </span> -->
       </div>
     </a>
-
-
 
   </div>
 </div>
