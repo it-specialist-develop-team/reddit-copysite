@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Evaluation_log extends Model
 {
-  
+  use HasFactory;
   protected $table = 'evaluation_logs';
 
   public function post()

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subreddit extends Model
 {
+    use HasFactory;
     protected $table = 'subreddits';
 
     public function Post(){
