@@ -1,13 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-use App\Http\Controllers\PostController;
-=======
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
->>>>>>> dd51688bc5a9e5124e3ae4f6bcdea5c5c3a32352
 
 /*
 |--------------------------------------------------------------------------
