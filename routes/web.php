@@ -30,3 +30,5 @@ Route::get('/create', function () {
 Route::get('/sidebar', function () {
     return view('sidebar');
 });
+Route::get('posts', 'App\Http\Controllers\PostController@index');
+Route::get('users', 'App\Http\Controllers\UserController@index');
