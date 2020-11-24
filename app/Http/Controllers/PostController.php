@@ -17,4 +17,8 @@ class PostController extends Controller
         $posts = Post::paginate(1);
         return view('subreddit',['posts' => $posts]) ;
     }
+  function show(Post $post)
+  {
+    return view("post", ["post" => $post]);
+  }
 }

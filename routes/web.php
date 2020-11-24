@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\PostController;
+=======
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\Evaluation_logController;
+>>>>>>> dd51688bc5a9e5124e3ae4f6bcdea5c5c3a32352
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +19,13 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
-    return view('post');
+  $id=1;
+  return view('subreddit')->with('id',$id);
 });
 Route::get('/post', function () {
-    return view('post');
+  return view('post');
 });
 // Route::get('/subreddit', function () {
 //     return view('subreddit');
@@ -26,11 +34,27 @@ Route::get('/subreddit',[PostController::class,'classic']);
 
 
 Route::get('/readerboard', function () {
-    return view('readerboard');
+  return view('readerboard');
 });
 Route::get('/create', function () {
-    return view('create');
+  return view('create');
 });
 Route::get('/sidebar', function () {
-    return view('sidebar');
+  return view('sidebar');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/create/create_post', [CreateController::class, 'create_post']);
+Route::post('/eva_up', [Evaluation_logController::class, 'eva_up']);
+Route::post('/eva_down', [Evaluation_logController::class, 'eva_down']);
+Route::post('/eva_up_cancel', [Evaluation_logController::class, 'eva_up_cancel']);
+Route::post('/eva_down_cancel', [Evaluation_logController::class, 'eva_down_cancel']);
+
+Route::get('/subreddit/{id?}', function ($id = 1) {
+  return view('subreddit')->with('id', $id);
+});
+
+Route::get('/post/{post}', [PostController::class, 'show']);
