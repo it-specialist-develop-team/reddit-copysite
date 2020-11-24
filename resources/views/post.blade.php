@@ -7,11 +7,11 @@ $title="view";
 <link rel="stylesheet" href="css/view.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
-  .eva_like_set {
+  .postcard-classic .block-post-classic .post-rank-classic p.eva_dislike_set {
     color: green;
   }
 
-  .eva_dislike_set {
+  .postcard-classic .block-post-classic .post-rank-classic p.eva_dislike_set {
     color: red;
   }
 </style>
@@ -54,7 +54,6 @@ $title="view";
   let eva_val = document.getElementsByClassName("eva_val")[0];
   let eva_like = document.getElementsByClassName("eva_like")[0];
   let eva_dislike = document.getElementsByClassName("eva_dislike")[0];
-  let eva_id;
   let post_id = 2;
   let user_id = 1;
   $(function(){
@@ -75,7 +74,6 @@ $title="view";
       console.log("error")
     });
     eva_like.addEventListener("click",e=>{
-      if(e.target.className == "eva_like"){//like
         $.ajax({
         headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -90,16 +88,21 @@ $title="view";
         })
         .done(function(data1) {
           eva_val.textContent = data1.val;
+          console.log(data1.ret);
+          if(data1.ret == 0){
+            eva_like.setAttribute("class","eva_like");
+          }else if(data1.ret == 1){
+            eva_like.setAttribute("class","eva_like_set");
+            eva_dislike.setAttribute("class","eva_dislike");
+          }
         })
         .fail(function(data) {
           console.log("error")
         });
-      }
     });
 
 
     eva_dislike.addEventListener("click",e=>{
-      if(e.target.className == "eva_dislike"){//dislike
         $.ajax({
         headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -113,12 +116,18 @@ $title="view";
         }
         })
         .done(function(data1) {
+          console.log(data1.ret);
           eva_val.textContent = data1.val;
+          if(data1.ret == 0){
+            eva_dislike.setAttribute("class","eva_dislike");
+          }else if(data1.ret == -1){
+            eva_dislike.setAttribute("class","eva_dislike_set");
+            eva_like.setAttribute("class","eva_like");
+          }
         })
         .fail(function(data) {
           console.log("error")
         });
-      }
     });
   });
 </script>

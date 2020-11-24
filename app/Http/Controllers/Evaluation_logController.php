@@ -21,6 +21,7 @@ class Evaluation_logController extends Controller
   }
   function evaluation(Request $request)
   {
+    $ret = 0;
     $eva_log = DB::table('evaluation_logs')->where([
       ['user_id', $request->user_id],
       ['post_id', $request->post_id],
@@ -35,6 +36,7 @@ class Evaluation_logController extends Controller
         $eva->user_id = $request->user_id;
         $eva->evaluation = 1;
         $eva->save();
+        $ret = 1;
       } else if ($request->evaluation == -1) { //-1作成
         $post = DB::table('posts')->where('id', $request->post_id)->first();
         DB::table('posts')->where('id', $request->post_id)->update(['evaluation' => $post->evaluation - 1]);
@@ -43,6 +45,7 @@ class Evaluation_logController extends Controller
         $eva->user_id = $request->user_id;
         $eva->evaluation = -1;
         $eva->save();
+        $ret = -1;
       }
     } else if ($eva_log->count() > 0) { //ログにある時
       DB::table('evaluation_logs')->where([
@@ -52,6 +55,7 @@ class Evaluation_logController extends Controller
       $post = DB::table('posts')->where('id', $request->post_id)->first();
       if ($eva_log->first()->evaluation == 1) { //+1
         DB::table('posts')->where('id', $request->post_id)->update(['evaluation' => $post->evaluation - 1]);
+        $ret = 0;
         if ($request->evaluation == -1) { //+1取消-1作成
           DB::table('posts')->where('id', $request->post_id)->update(['evaluation' => $post->evaluation - 2]);
           $eva = new Evaluation_log;
@@ -59,9 +63,11 @@ class Evaluation_logController extends Controller
           $eva->user_id =  $request->user_id;
           $eva->evaluation = -1;
           $eva->save();
+          $ret = -1;
         }
       } else if ($eva_log->first()->evaluation == -1) { //-1
         DB::table('posts')->where('id', $request->post_id)->update(['evaluation' => $post->evaluation + 1]);
+        $ret = 0;
         if ($request->evaluation == 1) { //-1取消+1作成
           DB::table('posts')->where('id', $request->post_id)->update(['evaluation' => $post->evaluation + 2]);
           $eva = new Evaluation_log;
@@ -69,11 +75,13 @@ class Evaluation_logController extends Controller
           $eva->user_id =  $request->user_id;
           $eva->evaluation = 1;
           $eva->save();
+          $ret = 1;
         }
       }
     }
     return response()->json([
       'val' => DB::table('posts')->where('id', $request->post_id)->value('evaluation'),
+      'ret' => $ret,
     ]);
   }
 }
