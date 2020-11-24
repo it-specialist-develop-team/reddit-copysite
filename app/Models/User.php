@@ -7,10 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
+    use HasFactory;    use HasFactory;
     protected $table = 'users';
 
-    public function post() //関数名は単数形がベスト
+    public function post()
     {
-        return $this->belongsTo('App\Models\Post');
+        return $this->hasMany('App\Models\Post');
+    }
+
+    public function user_subreddit_link(){
+        return $this->hasMany('App\Models\User_subreddit_link');
+    }
+
+    public function evaluation_log(){
+        return $this->hasMany('App\Models\Evaluation_log');
     }
 }

@@ -9,4 +9,9 @@ class Categorie extends Model
 {
   use HasFactory;
   protected $table = 'categories';
+
+  public function subreddit()
+  {
+    return $this->hasMany('App\Models\Subreddit');
+  }
 }
