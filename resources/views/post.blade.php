@@ -1,10 +1,11 @@
 @extends('layouts.base')
 @php
 $title="view";
+$posts = App\Models\Post::where('parent_id',$post->id)->get();
 @endphp
 
 @section('header-links')
-<link rel="stylesheet" href="css/view.css">
+<link rel="stylesheet" href="{{asset('css/view.css')}}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
   .postcard-classic .block-post-classic .post-rank-classic p.eva_dislike_set {
@@ -16,6 +17,7 @@ $title="view";
   }
 </style>
 @endsection
+
 @section('content')
 <div class="page-content">
   <!-- SUB HEADER// -->
@@ -28,25 +30,29 @@ $title="view";
           <!-- //POSTCARDCLASSIC -->
           <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
             <div class="block-post-classic">
-              @include('components.post_head')
+              @include('components.post_head', ["title" => $post->title, "body" => $post->body, "name" =>
+              $post->user->name])
               @include('components.post_addcomment')
-              @component('components.comment')
-              @endcomponent
+              <div class="comment-field">
+                <div class="comment">
+                  @include('components.comment',["posts" => $posts])
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- SIDE BAR// -->
+      <div class="mdl-cell mdl-cell--4-col">
+        @include('components.sidebar_ch')
+        <x-sidebar_card />
+        <x-sidebar_card />
+        <x-sidebar_card />
+        @include('components.sidebar_bt')
+      </div>
+      <!-- //SIDE BAR -->
     </div>
   </div>
-  <!-- SIDE BAR// -->
-  <div class="mdl-cell mdl-cell--4-col">
-    @include('components.sidebar_ch')
-    <x-sidebar_card />
-    <x-sidebar_card />
-    <x-sidebar_card />
-    @include('components.sidebar_bt')
-  </div>
-  <!-- //SIDE BAR -->
 </div>
 <!-- //POSTBAR -->
 
@@ -131,20 +137,4 @@ $title="view";
     });
   });
 </script>
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- //SUB HEADER -->
-
-
-
-
-
-</div>
 @endsection
