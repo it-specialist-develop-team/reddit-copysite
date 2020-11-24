@@ -41,10 +41,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('/create/create_post', [CreateController::class, 'create_post']);
-Route::post('/eva_up', [Evaluation_logController::class, 'eva_up']);
-Route::post('/eva_down', [Evaluation_logController::class, 'eva_down']);
-Route::post('/eva_up_cancel', [Evaluation_logController::class, 'eva_up_cancel']);
-Route::post('/eva_down_cancel', [Evaluation_logController::class, 'eva_down_cancel']);
+Route::post('/evaluation', [Evaluation_logController::class, 'evaluation']);
+Route::post('/eva_show', [Evaluation_logController::class, 'show']);
 
 Route::get('/subreddit/{id?}', function ($id = 1) {
   return view('subreddit')->with('id', $id);
