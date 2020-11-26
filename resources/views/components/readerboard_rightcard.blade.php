@@ -7,11 +7,9 @@
 
     <!-- TOP COMMUNITIES// -->
     <ol>
-        @include('components.rightcardtopcommunity')
-        @include('components.rightcardtopcommunity')
-        @include('components.rightcardtopcommunity')
-        @include('components.rightcardtopcommunity')
-        @include('components.rightcardtopcommunity')
+    @foreach ($res as $index => $content)
+        @include('components.readerboard_rightcardtopcommunity')
+    @endforeach
     </ol>
 
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
