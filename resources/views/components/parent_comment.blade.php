@@ -1,6 +1,7 @@
 @php
 $child_posts = App\Models\Post::where('parent_id',$post->id)->get();
 @endphp
+
 <div class="comment-header">
   <img src="img/g2-logo.jpg" class="comment-user-icon">
   <div class="comment-header-status">
@@ -10,7 +11,7 @@ $child_posts = App\Models\Post::where('parent_id',$post->id)->get();
   </div>
 </div>
 <div class="comment-body">
-  <span class="comment-body-text">{{$post->body}}</span>
+<span class="comment-body-text">{!! $post->body !!}</span>
   <div class="com-icoon">
     <div class="rep-rank-classic">
       <span class="eva_like" id="evalike_{{$post->id}}">↑</span>

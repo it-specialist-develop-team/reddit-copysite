@@ -21,6 +21,6 @@
       <img src="img/php_logo.png">
     </div>
     <div class="text">
-      <span> {{ $body }}</span>
+      <span> {!! $body !!}</span>
     </div>
   </div>

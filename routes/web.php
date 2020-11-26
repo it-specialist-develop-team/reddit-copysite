@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +24,13 @@ Route::get('/', function () {
 Route::get('/post', function () {
   return view('post');
 });
-Route::get('/subreddit', function () {
-  return view('subreddit');
-});
-// Route::get('/readerboard', function () {
-//     return view('readerboard');
+// Route::get('/subreddit', function () {
+//     return view('subreddit');
 // });
+Route::get('/subreddit',[PostController::class,'classic']);
+
+
+
 Route::get('/create', function () {
   return view('create');
 });
@@ -45,8 +47,18 @@ Route::post('/create/create_post', [CreateController::class, 'create_post']);
 Route::post('/evaluation', [Evaluation_logController::class, 'evaluation']);
 Route::post('/eva_show', [Evaluation_logController::class, 'show']);
 
-Route::get('/subreddit/{id?}', function ($id = 1) {
-  return view('subreddit')->with('id', $id);
-});
+Route::get('/subreddit/{id}', [PostController::class, 'classic']);
+// Route::get('/subreddit/{id?}', function ($id = 1) {
+//   return view('subreddit')->with('id', $id);
+// });
 
 Route::get('/post/{post}', [PostController::class, 'show']);
+
+
+//test
+Route::post('/create/testPost',[CreateController::class, 'testPost']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
