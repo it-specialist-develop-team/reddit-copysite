@@ -19,9 +19,9 @@ $child_posts = App\Models\Post::where('parent_id',$post->id)->get();
       <span class="eva_dislike" id="evadislike_{{$post->id}}">↓</span>
     </div>
     <a class="rep-res" href="#"><span class="material-icons quickreply">quickreply</span>Reply</a>
-    <a class="rep-share" href="#">Share</a>
+    <!--<a class="rep-share" href="#">Share</a>
     <a class="rep-repo" href="#">Report</a>
-    <a class="rep-save" href="#">Save</a>
+    <a class="rep-save" href="#">Save</a>-->
   </div>
 </div>
 
