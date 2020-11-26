@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,9 +53,12 @@ Route::get('/subreddit/{id}', [PostController::class, 'classic']);
 // });
 
 Route::get('/post/{post}', [PostController::class, 'show']);
-<<<<<<< HEAD
-=======
+
+
+//test
+Route::post('/create/testPost',[CreateController::class, 'testPost']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
->>>>>>> 502d287739b6e76f10f33a09fa6003ca0eea260a
+
