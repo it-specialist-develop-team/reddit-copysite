@@ -57,84 +57,92 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
 <!-- //POSTBAR -->
 
 <script>
-  let eva_val = document.getElementsByClassName("eva_val")[0];
-  let eva_like = document.getElementsByClassName("eva_like")[0];
-  let eva_dislike = document.getElementsByClassName("eva_dislike")[0];
-  let post_id = 2;
-  let user_id = 1;
-  $(function(){
-    $.ajax({
-    headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },
-    url: '/eva_show',
-    type: 'POST',
-    data:{
-      "post_id":post_id,
-    }
-    })
-    .done(function(data1) {
-      eva_val.textContent = data1.val;
-    })
-    .fail(function(data) {
-      console.log("error")
-    });
-    eva_like.addEventListener("click",e=>{
-        $.ajax({
-        headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/evaluation',
-        type: 'POST',
-        data:{
-          "post_id":post_id,
-          "user_id":user_id,
-          "evaluation":1
-        }
-        })
-        .done(function(data1) {
-          eva_val.textContent = data1.val;
-          console.log(data1.ret);
-          if(data1.ret == 0){
-            eva_like.setAttribute("class","eva_like");
-          }else if(data1.ret == 1){
-            eva_like.setAttribute("class","eva_like_set");
-            eva_dislike.setAttribute("class","eva_dislike");
-          }
-        })
-        .fail(function(data) {
-          console.log("error")
-        });
-    });
+  // let eva_val = document.getElementsByClassName("eva_val")[0];
+let eva_like = document.getElementsByClassName("eva_like");
+// let eva_like = document.getElementsByClassName("eva_like")[0];
+let eva_dislike = document.getElementsByClassName("eva_dislike");
+// let eva_dislike = document.getElementsByClassName("eva_dislike")[0];
+let user_id = 1;
+for (let i = 0; i < eva_like.length; i++) {
+	let val = eva_like[i].parentElement.children[1];
+	let like = eva_like[i].parentElement.children[0];
+	let dislike = eva_like[i].parentElement.children[2];
 
+	let post_id = Number(eva_like[i].id.split('_')[1]);
+  console.log(like);
+	$.ajax({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			},
+			url: '/eva_show',
+			type: 'POST',
+			data: {
+				"post_id": post_id,
+			}
+		})
+		.done(function (data1) {
+			val.textContent = data1.val;
+		})
+		.fail(function (data) {
+			console.log("error")
+		});
 
-    eva_dislike.addEventListener("click",e=>{
-        $.ajax({
-        headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        url: '/evaluation',
-        type: 'POST',
-        data:{
-          "post_id":post_id,
-          "user_id":user_id,
-          "evaluation":-1
-        }
-        })
-        .done(function(data1) {
-          console.log(data1.ret);
-          eva_val.textContent = data1.val;
-          if(data1.ret == 0){
-            eva_dislike.setAttribute("class","eva_dislike");
-          }else if(data1.ret == -1){
-            eva_dislike.setAttribute("class","eva_dislike_set");
-            eva_like.setAttribute("class","eva_like");
-          }
-        })
-        .fail(function(data) {
-          console.log("error")
-        });
-    });
-  });
+	like.addEventListener("click", e => {
+		$.ajax({
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				},
+				url: '/evaluation',
+				type: 'POST',
+				data: {
+					"post_id": post_id,
+					"user_id": user_id,
+					"evaluation": 1
+				}
+			})
+			.done(function (data1) {
+				console.log(data1.ret);
+				console.log(val);
+				val.textContent = data1.val;
+				if (data1.ret == 0) {
+					like.setAttribute("class", "eva_like");
+				} else if (data1.ret == 1) {
+					like.setAttribute("class", "eva_like_set");
+					dislike.setAttribute("class", "eva_dislike");
+				}
+			})
+			.fail(function (data) {
+				console.log("error")
+			});
+	});
+	dislike.addEventListener("click", e => {
+		$.ajax({
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				},
+				url: '/evaluation',
+				type: 'POST',
+				data: {
+					"post_id": post_id,
+					"user_id": user_id,
+					"evaluation": -1
+				}
+			})
+			.done(function (data1) {
+				console.log(data1.ret);
+				val.textContent = data1.val;
+				if (data1.ret == 0) {
+					dislike.setAttribute("class", "eva_dislike");
+				} else if (data1.ret == -1) {
+					dislike.setAttribute("class", "eva_dislike_set");
+					like.setAttribute("class", "eva_like");
+				}
+			})
+			.fail(function (data) {
+				console.log("error")
+			});
+	});
+}
+
 </script>
 @endsection

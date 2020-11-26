@@ -2,6 +2,7 @@
 @php
   $title="Subreddit";
   $data = DB::table('subreddits')->find($id);
+  // $posts = DB::table('posts')->get();
 @endphp
 @section('header-links')
 
@@ -36,11 +37,14 @@
 
                 <!-- //POSTCARDCLASSIC -->
 
+                @include('components.subreddit_classic',['posts' => $posts])
+                @if ($posts->hasMorePages())
+                <p class="button more"><a href="{{ $posts->nextPageUrl() }}">もっと見る</a></p>
+                @endif
+                {{-- @include('components.subreddit_classic')
                 @include('components.subreddit_classic')
                 @include('components.subreddit_classic')
-                @include('components.subreddit_classic')
-                @include('components.subreddit_classic')
-                @include('components.subreddit_classic')
+                @include('components.subreddit_classic') --}}
 
                 <!-- POSTCARDCLASSIC// -->
 
