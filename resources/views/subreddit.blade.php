@@ -1,14 +1,15 @@
 @extends('layouts.base')
 @php
   $title="Subreddit";
-  $data = DB::table('subreddits')->find($id);
 @endphp
+
 @section('header-links')
 
 @endsection
 
 
 @section('content')
+
       <div class="page-content">
 
         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="create-button" onclick="location.href='/create.html'">
@@ -17,7 +18,7 @@
 
         <!-- SUB HEADER// -->
 
-        @include('components.subreddit_header',['data' => $data])
+        @include('components.subreddit_header')
 
 
 

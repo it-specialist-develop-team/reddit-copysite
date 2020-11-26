@@ -87,9 +87,17 @@
 
                 <!-- TOPCOMMUNITY CONTENTS// -->
                 <ol>
-                @foreach ($res as $index => $content)
-                  @include('components.readerboard_topcommunity')
-                @endforeach
+                  @include('components.topcommunity')
+                  @include('components.topcommunity')
+                  @include('components.topcommunity')
+                  @include('components.topcommunity')
+                  @include('components.topcommunity')
+                  @include('components.topcommunity')
+                  @include('components.topcommunity')
+                  @include('components.topcommunity')
+                  @include('components.topcommunity')
+                  @include('components.topcommunity')
+
                 </ol>
 
                 <!-- //TOPCOMMUNITY CONTENTS -->
@@ -103,9 +111,9 @@
 
             <!-- RIGHT BAR// -->
             <div class="mdl-cell mdl-cell--3-col">
-              @include('components.readerboard_rightcard')
-              @include('components.readerboard_rightcard')
-              @include('components.readerboard_rightcard')
+              @include('components.rightcard')
+              @include('components.rightcard')
+              @include('components.rightcard')
             </div>
             <!-- //RIGHT BAR -->
 
