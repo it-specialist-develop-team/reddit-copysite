@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,3 +50,6 @@ Route::get('/subreddit/{id?}', function ($id = 1) {
 });
 
 Route::get('/post/{post}', [PostController::class, 'show']);
+
+//test
+Route::post('/create/testPost',[CreateController::class, 'testPost']);

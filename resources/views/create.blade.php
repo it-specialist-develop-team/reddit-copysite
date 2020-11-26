@@ -55,48 +55,6 @@ $title="Create Post";
   <!-- //SUB HEADER -->
 </div>
 <script>
-  $(function(){
-  let post_type = 0;
-  let post_select = document.getElementById("post_select");
-  let image_video_select = document.getElementById("image_video_select");
-  post_select.addEventListener("click",e=>{
-    post_type = 0;
-  });
-  image_video_select.addEventListener("click",e=>{
-    post_type = 1;
-  });
-  $('#post_btn').on("click",function(){
-    let $title = $("#title");
-    let $body = $("#summernote").summernote("code");
-    let $image = $('input[name="image"]');
-    
-    let fd = new FormData();
-    fd.append("image", $image.prop('files')[0]);
-    fd.append("body", $body);
-    fd.append("post_type", post_type);
-    fd.append("title", $title.prop('value'));
-    
-    // fd.append("id",id);
 
-    $.ajax({
-    headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },//Headersを書き忘れるとエラーになる
-    url: '/create/create_post',//ご自身のweb.phpのURLに合わせる
-    type: 'POST',//リクエストタイプ
-    contentType: false,
-    processData: false,
-    data: fd,
-    })
-    // Ajaxリクエスト成功時の処理
-    .done(function(data) {
-    
-    })
-    // Ajaxリクエスト失敗時の処理
-    .fail(function(data) {
-    console.log("error")
-    });
-  });
-});
 </script>
 @endsection
