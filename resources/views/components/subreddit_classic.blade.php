@@ -10,7 +10,7 @@
     </div>
     <div class="post-content">
 
-    <a class="linktitle" href="view.html">
+    <a class="linktitle" href="/post/{{$p->id}}">
     <img src={{asset('img/php_logo.png')}} heigh="100" width="150">
 
       <div class="post-content-flex">
