@@ -26,9 +26,9 @@ Route::get('/post', function () {
 Route::get('/subreddit', function () {
   return view('subreddit');
 });
-Route::get('/readerboard', function () {
-  return view('readerboard');
-});
+// Route::get('/readerboard', function () {
+//     return view('readerboard');
+// });
 Route::get('/create', function () {
   return view('create');
 });
@@ -36,6 +36,7 @@ Route::get('/sidebar', function () {
   return view('sidebar');
 });
 
+Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksController');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
