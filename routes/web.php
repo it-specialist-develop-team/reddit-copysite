@@ -30,9 +30,7 @@ Route::get('/post', function () {
 Route::get('/subreddit',[PostController::class,'classic']);
 
 
-Route::get('/readerboard', function () {
-  return view('readerboard');
-});
+
 Route::get('/create', function () {
   return view('create');
 });
@@ -40,6 +38,7 @@ Route::get('/sidebar', function () {
   return view('sidebar');
 });
 
+Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksController');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -55,5 +54,11 @@ Route::get('/subreddit/{id}', [PostController::class, 'classic']);
 
 Route::get('/post/{post}', [PostController::class, 'show']);
 
+
 //test
 Route::post('/create/testPost',[CreateController::class, 'testPost']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
