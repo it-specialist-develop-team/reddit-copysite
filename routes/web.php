@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\Evaluation_logController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,21 +15,38 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
-    return view('post');
+  $id=1;
+  return view('subreddit')->with('id',$id);
 });
 Route::get('/post', function () {
-    return view('post');
+  return view('post');
 });
 Route::get('/subreddit', function () {
-    return view('subreddit');
+  return view('subreddit');
 });
-Route::get('/readerboard', function () {
-    return view('readerboard');
-});
+// Route::get('/readerboard', function () {
+//     return view('readerboard');
+// });
 Route::get('/create', function () {
-    return view('create');
+  return view('create');
 });
 Route::get('/sidebar', function () {
-    return view('sidebar');
+  return view('sidebar');
 });
+
+Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksController');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/create/create_post', [CreateController::class, 'create_post']);
+Route::post('/evaluation', [Evaluation_logController::class, 'evaluation']);
+Route::post('/eva_show', [Evaluation_logController::class, 'show']);
+
+Route::get('/subreddit/{id?}', function ($id = 1) {
+  return view('subreddit')->with('id', $id);
+});
+
+Route::get('/post/{post}', [PostController::class, 'show']);
