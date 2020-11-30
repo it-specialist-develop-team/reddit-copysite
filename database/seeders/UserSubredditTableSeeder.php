@@ -22,11 +22,10 @@ class UserSubredditTableSeeder extends Seeder
             DB::table('user_subreddit_links')->insert([
                 'id' => $i+1,
                 'user_id' => $faker->numberBetween($min = 1, $max = 21),
-                'subreddit' => $faker->numberBetween($min = 1, $max = 10),
+                'subreddit_id' => $faker->numberBetween($min = 1, $max = 10),
                 'role' => $faker->numberBetween($min = 0, $max = 9),
                 'created_at' => $faker->dateTime(),
                 'updated_at' => $faker->dateTime(),
-                'deleted_at' => $faker->dateTime(),
             ]);
         }
     }
