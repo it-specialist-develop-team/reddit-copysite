@@ -14,7 +14,8 @@ class PostController extends Controller
   // }
   public function classic($id)
   {
-    $posts = Post::paginate(6);
+    $posts = Post::where('subreddit_id',$id)->paginate(6);
+
     return view('subreddit', ['posts' => $posts, 'id' => $id]);
   }
   function show(Post $post)
