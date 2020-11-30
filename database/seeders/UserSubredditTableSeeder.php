@@ -26,6 +26,7 @@ class UserSubredditTableSeeder extends Seeder
                 'role' => $faker->numberBetween($min = 0, $max = 9),
                 'created_at' => $faker->dateTime(),
                 'updated_at' => $faker->dateTime(),
+                'deleted_at' => $faker->dateTime(),
             ]);
         }
     }
