@@ -33,6 +33,11 @@
 
 
                 @include('components.subreddit_notice')
+                
+                <div id="app">
+                  <example-component></example-component>
+                  <script src={{asset('js/app.js')}}></script>
+                </div>
 
 
                 <!-- //POSTCARDCLASSIC -->
@@ -41,6 +46,7 @@
                 @if ($posts->hasMorePages())
                 <p class="button more"><a href="{{ $posts->nextPageUrl() }}">もっと見る</a></p>
                 @endif
+                
                 {{-- @include('components.subreddit_classic')
                 @include('components.subreddit_classic')
                 @include('components.subreddit_classic')
