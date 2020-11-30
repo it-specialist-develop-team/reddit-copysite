@@ -3,7 +3,7 @@ $child_posts = App\Models\Post::where('parent_id',$post->id)->get();
 @endphp
 
 <div class="comment-header">
-  <img src="img/g2-logo.jpg" class="comment-user-icon">
+  <img src="{{asset('img/g2-logo.jpg')}}" class="comment-user-icon">
   <div class="comment-header-status">
     {{-- <span class="comment-user">{{ $item->user->name }}</span> --}}
     <span class="comment-user">{{ $post->user->name }}</span>
