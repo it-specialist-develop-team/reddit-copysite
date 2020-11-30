@@ -3,7 +3,7 @@ $child_posts = App\Models\Post::where('parent_id',$post->id)->get();
 @endphp
 
 <div class="comment-header">
-  <img src="img/g2-logo.jpg" class="comment-user-icon">
+  <img src="{{asset('img/g2-logo.jpg')}}" class="comment-user-icon">
   <div class="comment-header-status">
     {{-- <span class="comment-user">{{ $item->user->name }}</span> --}}
     <span class="comment-user">{{ $post->user->name }}</span>
@@ -19,9 +19,9 @@ $child_posts = App\Models\Post::where('parent_id',$post->id)->get();
       <span class="eva_dislike" id="evadislike_{{$post->id}}">↓</span>
     </div>
     <a class="rep-res" href="#"><span class="material-icons quickreply">quickreply</span>Reply</a>
-    <a class="rep-share" href="#">Share</a>
+    <!--<a class="rep-share" href="#">Share</a>
     <a class="rep-repo" href="#">Report</a>
-    <a class="rep-save" href="#">Save</a>
+    <a class="rep-save" href="#">Save</a>-->
   </div>
 </div>
 
