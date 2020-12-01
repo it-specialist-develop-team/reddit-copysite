@@ -5,10 +5,12 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
 @endphp
 
 @section('header-links')
+<link rel="stylesheet" href="{{asset('css/evalution.css')}}">
 <link rel="stylesheet" href="{{asset('css/view.css')}}">
 <script src="{{asset('js/evaluation.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
+
 @endsection
 
 @section('content')
