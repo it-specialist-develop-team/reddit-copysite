@@ -22,9 +22,9 @@ onload = function () {
             .done(function (data1) {
                 let d = Number(data1.val)
                 if (d == 1) {
-                    like.style.color = "green";
+                    like.setAttribute("class", "eva_like_set");
                 } else if (d == -1) {
-                    dislike.style.color = "red";
+                    dislike.setAttribute("class", "eva_dislike_set");
                 }
             })
             .fail(function (data) {
@@ -48,10 +48,10 @@ onload = function () {
                 .done(function (data1) {
                     val.textContent = data1.val;
                     if (data1.ret == 0) {
-                        like.style.color = "black";
+                        like.setAttribute("class", "eva_like");
                     } else if (data1.ret == 1) {
-                        like.style.color = "green";
-                        dislike.style.color = "black";
+                        like.setAttribute("class", "eva_like_set");
+                        dislike.setAttribute("class", "eva_dislike");
                     }
                 })
                 .fail(function (data) {
@@ -73,11 +73,12 @@ onload = function () {
                 })
                 .done(function (data1) {
                     val.textContent = data1.val;
+
                     if (data1.ret == 0) {
-                        dislike.style.color = "black";
+                        dislike.setAttribute("class", "eva_dislike");
                     } else if (data1.ret == -1) {
-                        like.style.color = "black";
-                        dislike.style.color = "red";
+                        like.setAttribute("class", "eva_like");
+                        dislike.setAttribute("class", "eva_dislike_set");
                     }
                 })
                 .fail(function (data) {
