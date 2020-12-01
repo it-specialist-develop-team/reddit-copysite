@@ -9,6 +9,23 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
 <script src="{{asset('js/evaluation.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
+<style>
+    .postcard-classic .block-post-classic .post-rank-classic p.eva_like_set {
+        color: greenyellow;
+    }
+
+    .postcard-classic .block-post-classic .post-rank-classic p.eva_dislike_set {
+        color: red;
+    }
+
+    span.eva_like_set {
+        color: greenyellow;
+    }
+
+    span.eva_dislike_set {
+        color: red;
+    }
+</style>
 @endsection
 
 @section('content')
