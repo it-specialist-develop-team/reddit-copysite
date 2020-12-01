@@ -14,15 +14,15 @@ class UserSubredditLinks extends Model
 
         $query = DB::table('user_subreddit_links');
         $data = $query->select(
-            'subreddit',
+            'subreddit_id',
             'subreddit_name',
             DB::raw('count(*) as user_cnt')
         )
         ->leftJoin(
-            'subreddits','subreddits.id', '=', 'user_subreddit_links.subreddit'
+            'subreddits','subreddits.id', '=', 'user_subreddit_links.subreddit_id'
         )
         ->groupBy(
-            'subreddit',
+            'subreddit_id',
             'subreddit_name',
         )
         ->orderBy(

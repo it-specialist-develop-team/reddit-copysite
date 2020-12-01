@@ -7,7 +7,11 @@
 
     <!-- TOP COMMUNITIES// -->
     <ol>
-    @foreach ($res as $index => $content)
+    @php
+        $obj_post = new \App\Models\SubredditPostMany();
+        $res_post = $obj_post->getCommunitiesByRegComment();
+    @endphp
+    @foreach ($res_post as $index => $content)
         @include('components.readerboard_rightcardtopcommunity')
     @endforeach
     </ol>
