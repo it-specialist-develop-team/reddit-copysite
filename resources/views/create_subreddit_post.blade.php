@@ -6,6 +6,7 @@ $title="Create Post";
 @section('header-links')
 <link rel="stylesheet" href="{{asset('css/reader-board.css')}}">
 
+
 <!-- Summernote -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -13,6 +14,7 @@ $title="Create Post";
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <link rel="stylesheet" href="{{asset('css/create.css')}}">
+
 
 @endsection
 
@@ -32,18 +34,18 @@ $title="Create Post";
     <div class="mdl-grid">
 
       <!-- LEFT BAR// -->
-      @include('components.create.post_left_bar')
+      @include('components.create_subreddit_post.post_left_bar')
 
       <!-- //LEFT BAR -->
 
       <!-- RIGHT BAR// -->
       <div class="mdl-cell mdl-cell--4-col">
         <!-- RIGHT CARD#1 -->
-        @include('components.create.top_communities')
+        @include('components.create_subreddit_post.top_communities')
         <!-- RIGHT CARD#2 -->
-        @include('components.create.top_communities')
+        @include('components.create_subreddit_post.top_communities')
         <!-- RIGHT CARD#3 -->
-        @include('components.create.top_communities')
+        @include('components.create_subreddit_post.top_communities')
       </div>
       <!-- //RIGHT BAR -->
 
@@ -54,6 +56,6 @@ $title="Create Post";
   <!-- //SUB HEADER -->
 </div>
 <script>
-
+  console.log({{$id}});
 </script>
 @endsection

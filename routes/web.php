@@ -18,8 +18,8 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-  $id=1;
-  return view('subreddit')->with('id',$id);
+  $id = 1;
+  return view('subreddit')->with('id', $id);
 });
 Route::get('/post', function () {
   return view('post');
@@ -27,9 +27,12 @@ Route::get('/post', function () {
 // Route::get('/subreddit', function () {
 //     return view('subreddit');
 // });
-Route::get('/subreddit',[PostController::class,'classic']);
+Route::get('/subreddit', [PostController::class, 'classic']);
 
-
+Route::get('/subreddit/{id}/create', function ($id) {
+  return view('create_subreddit_Post', ['id' => $id]);
+});
+Route::post('/create/create_Post/{subreddit_id}', [CreateController::class, 'create_subreddit_Post']);
 
 Route::get('/create', function () {
   return view('create');
@@ -54,11 +57,5 @@ Route::get('/subreddit/{id}', [PostController::class, 'classic']);
 
 Route::get('/post/{post}', [PostController::class, 'show']);
 
-
 //test
-Route::post('/create/testPost',[CreateController::class, 'testPost']);
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::post('/create/testPost', [CreateController::class, 'testPost']);
