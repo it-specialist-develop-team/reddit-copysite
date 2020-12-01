@@ -57,6 +57,29 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
         let dislike = eva_like[i].parentElement.children[2];
 
         let post_id = Number(eva_like[i].id.split('_')[1]);
+        $.ajax({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			},
+			url: '/eva_show',
+			type: 'POST',
+			data: {
+                "post_id": post_id,
+                "user_id": user_id
+			}
+		})
+		.done(function (data1) {
+            let d = Number(data1.val)
+            if(d == 1){
+                like.style.color = "green";
+            }else if(d == -1){
+                dislike.style.color = "red";
+            }
+		})
+		.fail(function (data) {
+			console.log("error")
+		});
+
 
         like.addEventListener("click", e => {
         $.ajax({
