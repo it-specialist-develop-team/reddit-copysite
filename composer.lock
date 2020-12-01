@@ -359,6 +359,13 @@
                 "cron",
                 "schedule"
             ],
+<<<<<<< HEAD
+            "support": {
+                "issues": "https://github.com/dragonmantank/cron-expression/issues",
+                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.1.0"
+            },
+=======
+>>>>>>> origin/master
             "funding": [
                 {
                     "url": "https://github.com/dragonmantank",
@@ -1105,6 +1112,13 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+=======
+>>>>>>> origin/master
             "time": "2020-11-25T15:01:02+00:00"
         },
         {
@@ -4755,6 +4769,13 @@
                 "check",
                 "validate"
             ],
+<<<<<<< HEAD
+            "support": {
+                "issues": "https://github.com/webmozart/assert/issues",
+                "source": "https://github.com/webmozart/assert/tree/master"
+            },
+=======
+>>>>>>> origin/master
             "time": "2020-07-08T17:02:28+00:00"
         }
     ],
