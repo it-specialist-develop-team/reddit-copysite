@@ -11,12 +11,11 @@ class Evaluation_logController extends Controller
 {
     function show(Request $request)
     {
-        $eva_log = DB::table('evaluation_logs')->where([
-            ['post_id', $request->post_id],
-        ])->get();
-
         return response()->json([
-            'val' => DB::table('posts')->where('id', $request->post_id)->value('evaluation'),
+            'val' => DB::table('evaluation_logs')->where([
+                ['post_id', $request->post_id],
+                ['user_id', $request->user_id],
+            ])->value('evaluation'),
         ]);
     }
     function evaluation(Request $request)
