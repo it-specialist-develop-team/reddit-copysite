@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- テーブルの構造 `posts`
 --
 
+DROP TABLE IF EXISTS `posts`;
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
   `subreddit_id` int(11) NOT NULL,
