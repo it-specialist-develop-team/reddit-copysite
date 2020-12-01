@@ -12,7 +12,11 @@
   height: 100px;
 }
 
-.mdl-layout__link{
+a.mdl-layout__link, 
+a.mdl-layout__link:visited,
+a.mdl-layout__link:hover,
+a.mdl-layout__link:focus,
+a.mdl-layout__link:active{
   color: inherit; /*親要素で設定したカラーの継承*/
   text-decoration:none; /*下線の無効化*/
 }
