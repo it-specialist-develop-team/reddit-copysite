@@ -42,7 +42,7 @@ Route::get('/sidebar', function () {
 });
 
 Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksController');
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -66,5 +66,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //top
 Route::get('/top', [App\Http\Controllers\TopController::class, 'classic']);
+
+Route::get('/mlogin', function(){
+  return view('login');
+});
+
+Route::get('/mregister', function(){
+  return view('register');
+});
+
 
 Route::post('/create/testPost', [CreateController::class, 'testPost']);
