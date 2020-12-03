@@ -4,7 +4,7 @@ $title="Create Post";
 @endphp
 
 @section('header-links')
-<link rel="stylesheet" href="css/reader-board.css">
+<link rel="stylesheet" href="{{asset('css/reader-board.css')}}">
 
 <!-- Summernote -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +12,7 @@ $title="Create Post";
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<link rel="stylesheet" href="css/create.css">
+<link rel="stylesheet" href="{{asset('css/create.css')}}">
 
 @endsection
 
@@ -20,7 +20,6 @@ $title="Create Post";
 @section('content')
 
 <div class="page-content">
-
   <!-- SUBHEADER -->
   <div class="sub-header-readerboard">
     <h5>新規投稿</h5>
