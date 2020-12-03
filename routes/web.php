@@ -18,11 +18,11 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-  $id = 1;
-  return view('subreddit')->with('id', $id);
+    $id = 1;
+    return view('subreddit')->with('id', $id);
 });
 Route::get('/post', function () {
-  return view('post');
+    return view('post');
 });
 // Route::get('/subreddit', function () {
 //     return view('subreddit');
@@ -30,15 +30,15 @@ Route::get('/post', function () {
 Route::get('/subreddit', [PostController::class, 'classic']);
 
 Route::get('/subreddit/{id}/create', function ($id) {
-  return view('create_subreddit_Post', ['id' => $id]);
+    return view('create_subreddit_Post', ['id' => $id]);
 });
 Route::post('/create/create_Post/{subreddit_id}', [CreateController::class, 'create_subreddit_Post']);
 
 Route::get('/create', function () {
-  return view('create');
+    return view('create');
 });
 Route::get('/sidebar', function () {
-  return view('sidebar');
+    return view('sidebar');
 });
 
 Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksController');
@@ -58,7 +58,7 @@ Route::get('/subreddit/{id}', [PostController::class, 'classic']);
 Route::get('/post/{post}', [PostController::class, 'show']);
 
 //test
-Route::post('/create/testPost',[CreateController::class, 'testPost']);
+Route::post('/create/testPost', [CreateController::class, 'testPost']);
 
 Auth::routes();
 
