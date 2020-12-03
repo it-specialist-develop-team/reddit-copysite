@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @php
   $title="Subreddit";
-  $data = DB::table('subreddits')->find($id);
+ // $data = DB::table('subreddits')->find($id);
   // $posts = DB::table('posts')->get();
 @endphp
 @section('header-links')
@@ -15,13 +15,6 @@
         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="create-button" onclick="location.href='/create.html'">
           <i class="material-icons">add</i>
         </button>
-
-        <!-- SUB HEADER// -->
-
-        @include('components.subreddit_header',['data' => $data])
-
-
-
           <!-- POSTBAR// -->
 
           <div class="mdl-tabs__panel is-active" id="A-panel">
@@ -30,9 +23,6 @@
               <!-- MAIN BAR// -->
 
               <div class="mdl-cell mdl-cell--8-col">
-
-
-                @include('components.subreddit_notice')
 
 
                 <!-- //POSTCARDCLASSIC -->

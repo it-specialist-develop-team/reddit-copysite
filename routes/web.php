@@ -62,3 +62,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//top
+Route::get('/top', [App\Http\Controllers\TopController::class, 'classic']);
