@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
+use App\Http\Controllers\User_subreddit_linkController;
 use App\Models\Post;
 
 /*
@@ -68,3 +69,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/top', [App\Http\Controllers\TopController::class, 'classic']);
 
 Route::post('/create/testPost', [CreateController::class, 'testPost']);
+
+Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
+Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
