@@ -5,8 +5,9 @@
         <img src="{{asset('img/sub-header-icon.jpg')}}" id="sub-header-icon">
 
         <p>{{ $data->subreddit_name}}</p>
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-            Button
+        <button onclick="join(this,1)" id="join_{{$id}}"
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            JOIN
         </button>
     </div>
 

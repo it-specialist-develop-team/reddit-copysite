@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
+use App\Http\Controllers\User_subreddit_linkController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
@@ -73,3 +74,6 @@ Route::get('/sign_in', [AuthController::class, 'sign_in']);
 Route::get('/sign_up', [AuthController::class, 'sign_up']);
 
 Route::post('/create/testPost', [CreateController::class, 'testPost']);
+
+Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
+Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
