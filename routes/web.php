@@ -67,11 +67,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //top
 Route::get('/top', [App\Http\Controllers\TopController::class, 'classic']);
 
-Route::get('/mlogin', function(){
+Route::get('/login', function(){
   return view('login');
 });
 
-Route::get('/mregister', function(){
+Route::get('/register', function(){
   return view('register');
 });
 
