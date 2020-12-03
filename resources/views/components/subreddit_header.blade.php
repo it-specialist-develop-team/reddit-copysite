@@ -1,8 +1,8 @@
 <div class="sub-header">
-  <img src="img/sub-header-backimg.jpg">
+  <img src="{{asset('img/sub-header-backimg.jpg')}}">
 
   <div class="sub-header-bar">
-    <img src="img/sub-header-icon.jpg" id="sub-header-icon">
+    <img src="{{asset('img/sub-header-icon.jpg')}}" id="sub-header-icon">
 
   <p>{{ $data->subreddit_name}}</p>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
