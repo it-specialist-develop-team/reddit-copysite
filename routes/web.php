@@ -5,6 +5,8 @@ use App\Http\Controllers\CreateController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
 use App\Http\Controllers\User_subreddit_linkController;
+use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 
 /*
@@ -43,7 +45,7 @@ Route::get('/sidebar', function () {
 });
 
 Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksController');
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -67,6 +69,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //top
 Route::get('/top', [App\Http\Controllers\TopController::class, 'classic']);
+
+Route::get('/sign_in', [AuthController::class, 'sign_in']);
+Route::get('/sign_up', [AuthController::class, 'sign_up']);
 
 Route::post('/create/testPost', [CreateController::class, 'testPost']);
 
