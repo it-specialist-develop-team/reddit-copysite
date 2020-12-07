@@ -51,7 +51,19 @@ class PostController extends Controller
 //      * @param  int  $id
 //      * @return \Illuminate\Http\Response
 //      */
-     function show(Post $post)
+    //  function show(Post $post)
+  // public function classic()
+  // {
+  //     $posts = Post::get();
+  //     return view('subreddit',['posts' => $posts]);
+  // }
+  public function classic($id)
+  {
+    $posts = Post::where('subreddit_id',$id)->paginate(6);
+
+    return view('subreddit', ['posts' => $posts, 'id' => $id]);
+  }
+  function show(Post $post)
   {
     return view("post", ["post" => $post]);
   }

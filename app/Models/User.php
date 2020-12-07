@@ -2,42 +2,69 @@
 
 namespace App\Models;
 
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class User extends Model
+
+class User extends Authenticatable
 {
-    use HasFactory;    use HasFactory;
-    protected $table = 'users';
+  use HasFactory, Notifiable;
 
-    public function post()
-    {
-        return $this->hasMany('App\Models\Post');
-    }
+  /**
+   * The attributes that are mass assignable.
+   *
+   * @var array
+   */
+  protected $fillable = [
+    'id',
+    'name',
+    'email',
+    'password',
+  ];
 
-    public function user_subreddit_link(){
-        return $this->hasMany('App\Models\User_subreddit_link');
-    }
+  /**
+   * The attributes that should be hidden for arrays.
+   *
+   * @var array
+   */
+  protected $hidden = [
+    'password',
+    'remember_token',
+  ];
 
-    // /**
-    //  * The attributes that should be cast to native types.
-    //  *
-    //  * @var array
-    //  */
-    // protected $casts = [
-    //     'email_verified_at' => 'datetime',
-    // ];
+  /**
+   * The attributes that should be cast to native types.
+   *
+   * @var array
+   */
+  protected $casts = [
+    'email_verified_at' => 'datetime',
+  ];
+  protected $primaryKey = "id";
 
-    // /**
-    //  * リレーション (1対多の関係)
-    //  *
-    //  * @return \Illuminate\Database\Eloquent\Relations\HasMany
-    //  */
-    // public function posts() // 複数形
-    // {
-    //     // 記事を新しい順で取得する
-    //     return $this->hasMany('App\Models\Post')->latest();
-    public function evaluation_log(){
-        return $this->hasMany('App\Models\Evaluation_log');
-    }
+  // public function post()
+  // {
+  //   return $this->hasMany('App\Models\Post');
+  // }
+  // public function post()
+  // {
+  //   return $this->belongsTo('App\Models\Post');
+  // }
+
+  public function post()
+  {
+    return $this->hasMany('App\Models\Post');
+  }
+
+  public function user_subreddit_link()
+  {
+    return $this->hasMany('App\Models\User_subreddit_link');
+  }
+
+  public function evaluation_log()
+  {
+    return $this->hasMany('App\Models\Evaluation_log');
+  }
 }
