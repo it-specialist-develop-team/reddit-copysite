@@ -75,11 +75,9 @@ Route::get('/top', [App\Http\Controllers\TopController::class, 'classic']);
 Route::get('/sign_in', [AuthController::class, 'sign_in']);
 Route::get('/sign_up', [AuthController::class, 'sign_up']);
 
-Route::post('/create/testPost', [CreateController::class, 'testPost']);
 
 Route::get('/post/{id?}', function ($id = 1) {
   return view('post')->with('id', $id);
 });
-
 Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
 Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
