@@ -18,7 +18,7 @@
 
     <div class="post-body">
         <div class="media">
-            <img src="{{asset('img/php_logo.png')}}">
+            <img src="{{asset($file_path)}}">
         </div>
         <div class="text">
             <span> {!! $body !!}</span>
