@@ -1,6 +1,6 @@
 <div class="mdl-cell mdl-cell--8-col ">
     <div class="mdl-card mdl-shadow--2dp card left submit-card ">
-        <form action="{{url('/create/testPost')}}" method="post">
+        <form action="{{url('/create/testPost')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <div class="mdl-tabs__tab-bar">
