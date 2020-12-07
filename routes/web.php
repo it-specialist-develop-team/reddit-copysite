@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
 use App\Http\Controllers\User_subreddit_linkController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SubredditController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 
@@ -33,7 +34,7 @@ Route::get('/post', function () {
 Route::get('/subreddit', [PostController::class, 'classic']);
 
 Route::get('/subreddit/{id}/create', function ($id) {
-    return view('create_subreddit_Post', ['id' => $id]);
+    return view('create_post', ['id' => $id]);
 });
 Route::post('/create/create_Post/{subreddit_id}', [CreateController::class, 'create_subreddit_Post']);
 
@@ -77,3 +78,8 @@ Route::post('/create/testPost', [CreateController::class, 'testPost']);
 
 Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
 Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
+
+// Route::get('/create/subreddit', [SubredditController::class, 'create']);
+Route::get('/create/subreddit', function () {
+    return view('create_subreddit');
+});
