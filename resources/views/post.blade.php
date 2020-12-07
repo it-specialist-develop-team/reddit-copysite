@@ -6,12 +6,7 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
 
 @section('header-links')
 <link rel="stylesheet" href="{{asset('css/view.css')}}">
-<!-- Summernote -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> -->
 <link rel="stylesheet" href="css/create.css">
 <style>
   .postcard-classic .block-post-classic .post-rank-classic p.eva_dislike_set {
