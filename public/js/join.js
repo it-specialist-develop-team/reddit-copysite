@@ -12,7 +12,6 @@ $.ajax({
         }
     })
     .done(function (data1) {
-        console.log(data1)
         if (data1 == 1) {
             btn_dom.textContent = "joined";
         }
