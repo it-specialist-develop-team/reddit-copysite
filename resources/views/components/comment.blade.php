@@ -1,5 +1,5 @@
-<script language=javascript>
-<!--
+
+<!-- <script language=javascript>
 function show(inputData){
     var objID=document.getElementById( "layer_" + inputData );
     var buttonID=document.getElementById( "category_" + inputData );
@@ -12,7 +12,7 @@ function show(inputData){
     }
 }
 //-->
-</script>
+<!-- </script>
 
 <div class="comment-field">
                       <div class="comment">
@@ -149,4 +149,10 @@ function show(inputData){
                             </div>
 
 
-                          </div>
+                          </div> -->
+
+@if(!empty($posts) and !$posts->isEmpty())
+@foreach ($posts as $post)
+    @include('components.parent_comment',['post' => $post])
+@endforeach
+@endif

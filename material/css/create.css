@@ -90,3 +90,7 @@ height: 15em;
   border-color: grey;
 
 }
+.panel-heading.note-toolbar :nth-child(7),
+.panel-heading.note-toolbar :nth-child(8){
+  display: none;
+}
