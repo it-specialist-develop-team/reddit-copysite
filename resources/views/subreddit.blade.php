@@ -124,7 +124,7 @@ $data = DB::table('subreddits')->find($id);
 <script>
     window.laravel={};
     window.laravel.subreddit_id={{$id}};
-    window.laravel.user_id=0;
+    window.laravel.user_id=1;
 </script>
 <script src="{{asset('js/join.js')}}"></script>
 @endsection
