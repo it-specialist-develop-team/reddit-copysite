@@ -3,6 +3,7 @@
   $title="Subreddit";
 @endphp
 @section('header-links')
+  <script src="{{ asset('js/infinite-scroll.pkgd.min.js') }}"></script>
 @endsection
 
 
@@ -24,7 +25,9 @@
               <!-- MAIN BAR// -->
 
               <div class="mdl-cell mdl-cell--8-col">
+                
                 @include('components.subreddit_classic')
+                
               </div>
 
               <!-- MAIN BAR// -->
