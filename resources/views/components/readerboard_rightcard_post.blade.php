@@ -8,16 +8,16 @@
     <!-- TOP COMMUNITIES// -->
     <ol>
     @php
-        $obj_post = new \App\Models\SubredditPostMany();
-        $res_post = $obj_post->getCommunitiesByRegComment();
+        $obj_comment = new \App\Models\PostCommentMany();
+        $res_comment = $obj_comment->getPostsByRegComment();
     @endphp
-    @foreach ($res_post as $index => $content)
+    @foreach ($res_comment as $index => $content)
     <li class="right-li">
-        <a id="linktitle" href="{{route('subreddit.show',['id' => $content -> subreddit_id]) }}">
+        <a id="linktitle" href="{{route('post.show',['post' => $content -> id]) }}">
             <div class="readerboard-content">
             <span id="number">{{$index + 1}}</span>
             <img id="icon" src="img/g2-logo.jpg">
-            <span id="title">{{$content -> subreddit_name}}</span>
+            <span id="title">{{$content -> title}}</span>
             </div>
         </a>
     </li>
