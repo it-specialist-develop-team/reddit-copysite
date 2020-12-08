@@ -56,17 +56,10 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
     
    $('#comment_btn').on("click",function(){
     let $body = $("#body");
-    // let $body = $("#summernote").summernote("code");
-    // let $image = $('input[name="image"]');
-    
     let fd = new FormData();
-    // fd.append("image", $image.prop('files')[0]);
-    // fd.append("body", $body);
-    // fd.append("post_type", post_type);
+    
     fd.append("body", $body.prop('value'));
     fd.append("parent_id", {{$post->id}});
-    // fd.append("id",id);
-
 
     $.ajax({
     headers: {

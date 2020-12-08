@@ -87,6 +87,7 @@ class CreateController extends Controller
           $post->user_id = 1;
           $post->evaluation = 0;
           $post->save();
-      }  
+      }
+      return redirect('post/' . $post->id);  
     }
 }
