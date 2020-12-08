@@ -22,40 +22,39 @@ $title="Create Post";
 @section('content')
 
 <div class="page-content">
-  <!-- SUBHEADER -->
-  <div class="sub-header-readerboard">
-    <h5>新規投稿</h5>
-    <span>subredditに対して新しい投稿を作成します。</span>
-  </div>
+    <!-- SUBHEADER -->
+    <div class="sub-header-readerboard">
+        <h5>新規投稿</h5>
+        <span>subredditに対して新しい投稿を作成します。</span>
+    </div>
 
-  <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
 
-    <!-- POSTBAR// -->
-    <div class="mdl-grid">
+        <!-- POSTBAR// -->
+        <div class="mdl-grid">
 
-      <!-- LEFT BAR// -->
-      @include('components.create_subreddit_post.post_left_bar')
+            <!-- LEFT BAR// -->
+            @include('components.create_subreddit_post.post_left_bar')
 
-      <!-- //LEFT BAR -->
+            <!-- //LEFT BAR -->
 
-      <!-- RIGHT BAR// -->
-      <div class="mdl-cell mdl-cell--4-col">
-        <!-- RIGHT CARD#1 -->
-        @include('components.create_subreddit_post.top_communities')
-        <!-- RIGHT CARD#2 -->
-        @include('components.create_subreddit_post.top_communities')
-        <!-- RIGHT CARD#3 -->
-        @include('components.create_subreddit_post.top_communities')
-      </div>
-      <!-- //RIGHT BAR -->
+            <!-- RIGHT BAR// -->
+            <div class="mdl-cell mdl-cell--4-col">
+                <!-- RIGHT CARD#1 -->
+                @include('components.create_subreddit_post.top_communities')
+                <!-- RIGHT CARD#2 -->
+                @include('components.create_subreddit_post.top_communities')
+                <!-- RIGHT CARD#3 -->
+                @include('components.create_subreddit_post.top_communities')
+            </div>
+            <!-- //RIGHT BAR -->
+
+        </div>
+        <!-- //POSTBAR -->
 
     </div>
-    <!-- //POSTBAR -->
-
-  </div>
-  <!-- //SUB HEADER -->
+    <!-- //SUB HEADER -->
 </div>
 <script>
-  console.log({{$id}});
 </script>
 @endsection
