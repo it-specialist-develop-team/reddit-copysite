@@ -15,6 +15,7 @@ class CreateController extends Controller
         if ($upload_image) {
             //アップロードされた画像を保存する
             $path = $upload_image->store("public/uploads");
+            $path = str_replace("public/uploads","storage/uploads/",$path);
             //画像の保存に成功したらDBに記録する
             if ($path) {
                 $post = new Post;
@@ -48,6 +49,7 @@ class CreateController extends Controller
         if ($upload_image) {
             //アップロードされた画像を保存する
             $path = $upload_image->store("public/uploads");
+            $path = str_replace("public/uploads","storage/uploads/",$path);
             //画像の保存に成功したらDBに記録する
             if ($path) {
                 $post = new Post;

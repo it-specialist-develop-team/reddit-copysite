@@ -104,8 +104,7 @@
             <!-- RIGHT BAR// -->
             <div class="mdl-cell mdl-cell--3-col">
               @include('components.readerboard_rightcard')
-              @include('components.readerboard_rightcard')
-              @include('components.readerboard_rightcard')
+              @include('components.readerboard_rightcard_post')
             </div>
             <!-- //RIGHT BAR -->
 
