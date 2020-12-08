@@ -39,7 +39,6 @@ class User_subreddit_linkController extends Controller
                 ['subreddit_id', $id],
                 ['user_id', $request->user_id],
             ])->delete();
-            // User_subreddit_link::find(16)->delete();
             return 1;
         }
     }

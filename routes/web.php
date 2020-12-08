@@ -81,6 +81,5 @@ Route::post('/create/testPost', [CreateController::class, 'testPost']);
 Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
 Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
 
-// Route::get('/create/subreddit', [SubredditController::class, 'create']);
 Route::get('/create/subreddit', [SubredditController::class, 'index']);
 Route::post('/create/subreddit_post', [SubredditController::class, 'create']);
