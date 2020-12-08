@@ -26,7 +26,7 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
                     <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
                         <div class="block-post-classic">
                             @include('components.post_head', ["title" => $post->title, "body" => $post->body, "name" =>
-                            $post->user->name])
+                            $post->user->name, "file_path" => $post->attachment])
                             @include('components.post_addcomment')
                             <div class="comment-field">
                                 <div class="comment">
@@ -65,14 +65,14 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
     // fd.append("post_type", post_type);
     fd.append("body", $body.prop('value'));
     fd.append("parent_id", {{$post->id}});
-    
     // fd.append("id",id);
+
 
     $.ajax({
     headers: {
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     },//Headersを書き忘れるとエラーになる
-    url: '/create/create_subreddit_post',//ご自身のweb.phpのURLに合わせる
+    url: '/create/create_post',//ご自身のweb.phpのURLに合わせる
     type: 'POST',//リクエストタイプ
     contentType: false,
     processData: false,
@@ -80,7 +80,6 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
     })
     // Ajaxリクエスト成功時の処理
     .done(function(data) {
-    
     })
     // Ajaxリクエスト失敗時の処理
     .fail(function(data) {
