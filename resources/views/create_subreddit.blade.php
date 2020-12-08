@@ -44,11 +44,11 @@ $title="Create Post";
             <!-- RIGHT BAR// -->
             <div class="mdl-cell mdl-cell--4-col">
                 <!-- RIGHT CARD#1 -->
-                @include('components.create_subreddit.top_communities')
+                @include('components.create.top_communities')
                 <!-- RIGHT CARD#2 -->
-                @include('components.create_subreddit.top_communities')
+                @include('components.create.top_communities')
                 <!-- RIGHT CARD#3 -->
-                @include('components.create_subreddit.top_communities')
+                @include('components.create.top_communities')
             </div>
             <!-- //RIGHT BAR -->
 

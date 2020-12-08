@@ -24,7 +24,7 @@ $data = DB::table('subreddits')->find($id);
         <div class="mdl-grid">
             <!-- MAIN BAR// -->
             <div class="mdl-cell mdl-cell--8-col">
-                @include('components.subreddit_notice')
+                @include('components.subreddit_notice',['body' => $data->body])
                 <!-- //POSTCARDCLASSIC -->
                 @include('components.subreddit_classic',['posts' => $posts])
                 @if ($posts->hasMorePages())
