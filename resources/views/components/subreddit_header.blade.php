@@ -18,4 +18,5 @@
   <a href="#B-panel" class="mdl-tabs__tab">RULES</a>
   <a href="#C-panel" class="mdl-tabs__tab">DISCORD</a>
 </div> -->
+</div>
 

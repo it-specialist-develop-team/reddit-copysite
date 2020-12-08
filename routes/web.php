@@ -6,6 +6,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\Evaluation_logController;
 use App\Models\Post;
 
+use App\Http\Controllers\KubotaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,4 +63,12 @@ Route::post('/create/testPost',[CreateController::class, 'testPost']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/kubota', [KubotaController::class, 'scroll']);
+Route::get('/page1', function () {
+  return view('page1');
+});
+Route::get('/page2', function () {
+  return view('page2');
+});
 
