@@ -20,12 +20,15 @@ use App\Models\Post;
 |
 */
 
+// Route::get('/', function () {
+//   $posts = DB::table('posts')->whereNull('parent_id')->get();
+//   // $posts = DB::table('posts')->whereNull('parent_id')->paginate(10);
+//   return view('toppage',['posts' => $posts]);
+// });
 Route::get('/', function () {
-  $posts = DB::table('posts')->whereNull('parent_id')->get();
-  // $posts = DB::table('posts')->whereNull('parent_id')->paginate(10);
-  return view('toppage',['posts' => $posts]);
+    return view('toppage');
 });
-// Route::resource('/', 'App\Http\Controllers\TopPageController');
+
 Route::get('/toppage', [PostController::class, 'classic']);
 // Route::get('/subreddit/{id}', [PostController::class, 'classic']);
 Route::get('/post', function () {
