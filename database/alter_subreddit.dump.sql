@@ -1,0 +1,2 @@
+alter table `subreddits` change updated_at updated_at timestamp default current_timestamp();
+ALTER TABLE `subreddits` ADD `body` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL AFTER `subreddit_name`;

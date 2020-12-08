@@ -16,7 +16,6 @@ $title="Create Post";
 <style>
     textarea {
         resize: none;
-        width: 300px;
         height: 200px;
     }
 </style>
@@ -38,7 +37,7 @@ $title="Create Post";
         <div class="mdl-grid">
 
             <!-- LEFT BAR// -->
-            @include('components.create_subreddit.post_left_bar')
+            @include('components.create_subreddit.post_left_bar',["categories" => $categories])
 
             <!-- //LEFT BAR -->
 
