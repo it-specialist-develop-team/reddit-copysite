@@ -13,6 +13,7 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
 @endsection
 
 @section('content')
+
 <div class="page-content">
     <!-- SUB HEADER// -->
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -52,5 +53,31 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
 
 <script>
 
+    
+   $('#comment_btn').on("click",function(){
+    let $body = $("#body");
+    let fd = new FormData();
+    
+    fd.append("body", $body.prop('value'));
+    fd.append("parent_id", {{$post->id}});
+
+    $.ajax({
+    headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },//Headersを書き忘れるとエラーになる
+    url: '/create/create_post',//ご自身のweb.phpのURLに合わせる
+    type: 'POST',//リクエストタイプ
+    contentType: false,
+    processData: false,
+    data: fd,
+    })
+    // Ajaxリクエスト成功時の処理
+    .done(function(data) {
+    })
+    // Ajaxリクエスト失敗時の処理
+    .fail(function(data) {
+    console.log("error")
+     });
+   });
 </script>
 @endsection
