@@ -3,10 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
+use App\Models\Post; // Postモデルをインポートする
 
 class PostController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request, Post $post)
+    {
+        $post = Post::latest()->first();
+        return view('post',['post' => $post]);
+    }
   // public function classic()
   // {
   //     $posts = Post::get();
