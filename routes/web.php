@@ -57,13 +57,13 @@ Route::post('/evaluation', [Evaluation_logController::class, 'evaluation']);
 Route::post('/eva_show', [Evaluation_logController::class, 'show']);
 
 Route::get('/subreddit/{id}', [PostController::class, 'classic'])
-->name('subreddit.show');
+    ->name('subreddit.show');
 // Route::get('/subreddit/{id?}', function ($id = 1) {
 //   return view('subreddit')->with('id', $id);
 // });
 
 Route::get('/post/{post}', [PostController::class, 'show'])
-->name('post.show');
+    ->name('post.show');
 
 //test
 Route::post('/create/testPost', [CreateController::class, 'testPost']);
@@ -85,6 +85,5 @@ Route::get('/post/{id?}', function ($id = 1) {
 Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
 Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
 
-// Route::get('/create/subreddit', [SubredditController::class, 'create']);
 Route::get('/create/subreddit', [SubredditController::class, 'index']);
 Route::post('/create/subreddit_post', [SubredditController::class, 'create']);
