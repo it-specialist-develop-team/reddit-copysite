@@ -59,7 +59,7 @@ Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show
 Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksController');
 
 /* user */
-Route::get('user', 'App\Http\Controllers\UserController@index');
+// Route::get('user', 'App\Http\Controllers\UserController@index');
 
 /* eva */ 
 Route::post('/evaluation', [Evaluation_logController::class, 'evaluation']);
