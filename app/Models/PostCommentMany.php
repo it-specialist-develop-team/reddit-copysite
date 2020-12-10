@@ -32,4 +32,25 @@ class PostCommentMany extends Model
 // die('-----');
         return $data;
     }
+
+    public function getOrderManyComment(){
+
+        $query = DB::table('posts as parent');
+        $data = $query->select(
+            '*',
+            DB::raw('(select count(*) from
+            posts as child
+            where child.parent_id = parent.id
+            ) as cnt')
+        )
+        ->whereRaw(
+            'parent.parent_id is null'
+        )
+        ->orderBy(
+            'cnt',
+            'desc',
+        )->get();
+        return $data;
+    }
+
 }
