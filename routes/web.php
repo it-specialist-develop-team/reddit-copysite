@@ -20,16 +20,15 @@ use App\Models\Post;
 |
 */
 
+
 Route::get('/', function () {
-    $id = 1;
-    return view('subreddit')->with('id', $id);
+    return view('toppage');
 });
+
 Route::get('/post', function () {
     return view('post');
 });
-// Route::get('/subreddit', function () {
-//     return view('subreddit');
-// });
+
 Route::get('/subreddit', [PostController::class, 'classic']);
 
 Route::get('/subreddit/{id}/create', function ($id) {
