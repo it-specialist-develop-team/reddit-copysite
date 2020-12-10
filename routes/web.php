@@ -10,7 +10,8 @@ use App\Http\Controllers\Evaluation_logController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\User_subreddit_linkController;
 use App\Http\Controllers\SubredditController;
-// -------------------------------------------------------
+use App\Http\Controllers\UserController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,7 @@ Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksControll
 
 /* user */
 // Route::get('user', 'App\Http\Controllers\UserController@index');
+Route::get('/user/show/{id}', [UserController::class, 'show']);
 
 /* eva */ 
 Route::post('/evaluation', [Evaluation_logController::class, 'evaluation']);
@@ -70,7 +72,9 @@ Auth::routes();
 Route::get('/sign_in', [AuthController::class, 'sign_in']);
 Route::get('/sign_up', [AuthController::class, 'sign_up']);
 
-
-
+/* show user */
+Route::get('/show_user', function () {
+    return view('show_user');
+});
 
 

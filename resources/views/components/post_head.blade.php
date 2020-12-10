@@ -9,7 +9,7 @@
         <div class="post-status">
             <div>
                 <span>Posted by </span>
-                <span>{{ $name }}</span>
+                <a href="/user/show/{{$post->user_id}}">{{ $name }}</a>
             </div>
             <span>12 hours ago</span>
         </div>
