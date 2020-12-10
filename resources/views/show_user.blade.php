@@ -1,8 +1,8 @@
 @extends('layouts.base')
 @php
 $title="Subreddit";
-// $data = DB::table('subreddits')->find($id);
-// $posts = DB::table('posts')->get();
+$data = App\Models\User::find($id);
+// $posts = App\Models\Post::where('parent_id',$post->id)->get();
 @endphp
 @section('header-links')
 <link rel="stylesheet" href="{{asset('css/evalution.css')}}">
@@ -10,22 +10,19 @@ $title="Subreddit";
 <script src="{{asset('js/evaluation.js')}}"></script>
 @endsection
 
+
 @section('content')
 <div class="page-content">
-    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="create-button"
-        onclick="location.href='/create.html'">
-        <i class="material-icons">add</i>
-    </button>
+    <!-- SUB HEADER// -->
+    @include('components.user_header',['data' => $data])
     <!-- POSTBAR// -->
     <div class="mdl-tabs__panel is-active" id="A-panel">
         <div class="mdl-grid">
             <!-- MAIN BAR// -->
             <div class="mdl-cell mdl-cell--8-col">
+                {{-- @include('components.subreddit_notice',['body' => $data->body]) --}}
                 <!-- //POSTCARDCLASSIC -->
                 @include('components.subreddit_classic',['posts' => $posts])
-                @if ($posts->hasMorePages())
-                <p class="button more"><a href="{{ $posts->nextPageUrl() }}">もっと見る</a></p>
-                @endif
             </div>
             <!-- MAIN BAR// -->
             <!-- SIDE BAR// -->
@@ -43,4 +40,10 @@ $title="Subreddit";
 </div>
 <!-- //SUB HEADER -->
 </div>
+<script>
+    window.laravel={};
+    window.laravel.subreddit_id={{$id}};
+    window.laravel.user_id=1;
+</script>
+<script src="{{asset('js/join.js')}}"></script>
 @endsection
