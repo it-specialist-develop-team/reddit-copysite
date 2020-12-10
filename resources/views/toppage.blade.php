@@ -12,12 +12,6 @@ $title="Subreddit";
 
 @section('content')
 <div class="page-content">
-
-    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="create-button"
-        onclick="location.href='/create.html'">
-        <i class="material-icons">add</i>
-    </button>
-
     <!-- SUB HEADER// -->
 
     <!-- POSTBAR// -->
