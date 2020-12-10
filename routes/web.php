@@ -7,6 +7,7 @@ use App\Http\Controllers\Evaluation_logController;
 use App\Http\Controllers\User_subreddit_linkController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SubredditController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 
@@ -79,10 +80,16 @@ Route::get('/sign_up', [AuthController::class, 'sign_up']);
 
 
 Route::get('/post/{id?}', function ($id = 1) {
-  return view('post')->with('id', $id);
+    return view('post')->with('id', $id);
 });
 Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
 Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
 
 Route::get('/create/subreddit', [SubredditController::class, 'index']);
 Route::post('/create/subreddit_post', [SubredditController::class, 'create']);
+
+Route::get('/show_user', function () {
+    return view('show_user');
+});
+
+Route::get('/user/show/{id}', [UserController::class, 'show']);

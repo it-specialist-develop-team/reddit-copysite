@@ -1,5 +1,8 @@
 @foreach($posts as $p)
-
+@php
+$ud = App\Models\User::find($p->user_id);
+$sd = App\Models\Subreddit::find($p->subreddit_id);
+@endphp
 <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
 
     <div class="block-post-classic">
@@ -15,8 +18,8 @@
                     <header>
                         <div class="post-header">
                             <p class="post-title">{{$p->title}}</p>
-                            <p class="subreddit">r/subreddit</p>
-                            <p class="post-user">u/user</p>
+                            <p class="subreddit">{{$sd->subreddit_name}}</p>
+                            <p class="post-user">{{$ud->name}}</p>
                         </div>
                     </header>
                 </div>
