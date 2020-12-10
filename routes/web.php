@@ -21,23 +21,15 @@ use App\Models\Post;
 |
 */
 
-// Route::get('/', function () {
-//   $posts = DB::table('posts')->whereNull('parent_id')->get();
-//   // $posts = DB::table('posts')->whereNull('parent_id')->paginate(10);
-//   return view('toppage',['posts' => $posts]);
-// });
+
 Route::get('/', function () {
     return view('toppage');
 });
 
-Route::get('/toppage', [PostController::class, 'classic']);
-// Route::get('/subreddit/{id}', [PostController::class, 'classic']);
 Route::get('/post', function () {
     return view('post');
 });
-// Route::get('/subreddit', function () {
-//     return view('subreddit');
-// });
+
 Route::get('/subreddit', [PostController::class, 'classic']);
 
 Route::get('/subreddit/{id}/create', function ($id) {
