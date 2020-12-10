@@ -35,10 +35,12 @@ Route::get('/create', function () {
     return view('create');
 });
 Route::get('/create/subreddit', [SubredditController::class, 'index']);
-Route::post('/create/create_Post/{subreddit_id}', [CreateController::class, 'create_subreddit_Post']);
-Route::post('/create/create_post', [CreateController::class, 'create_post']);
-Route::post('/create/testPost', [CreateController::class, 'testPost']);
 Route::post('/create/subreddit_post', [SubredditController::class, 'create']);
+Route::post('/create/testPost', [CreateController::class, 'testPost']);
+Route::post('/create/create_post', [CreateController::class, 'create_post']);
+Route::post('/create/create_Post/{subreddit_id}', [CreateController::class, 'create_subreddit_Post']);
+
+
 
 /* post */
 Route::get('post', 'App\Http\Controllers\PostController@index');
@@ -46,10 +48,10 @@ Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
 
 /* subreddit */
 Route::get('/subreddit', [PostController::class, 'classic']);
+Route::get('/subreddit/{id}', [PostController::class, 'classic'])->name('subreddit.show');
 Route::get('/subreddit/{id}/create', function ($id) {
     return view('create_post', ['id' => $id]);
 });
-Route::get('/subreddit/{id}', [PostController::class, 'classic'])->name('subreddit.show');
 Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
 Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
 
