@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Categorie extends Model
+class Category extends Model
 {
-  use HasFactory;
-  protected $table = 'categories';
+    use HasFactory;
+    protected $table = 'categories';
 
-  public function subreddit()
-  {
-    return $this->hasMany('App\Models\Subreddit');
-  }
+    public function subreddit()
+    {
+        return $this->hasMany('App\Models\Subreddit');
+    }
 }
