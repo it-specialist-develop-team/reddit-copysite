@@ -39,11 +39,11 @@ $title="Create Post";
       <!-- RIGHT BAR// -->
       <div class="mdl-cell mdl-cell--4-col">
         <!-- RIGHT CARD#1 -->
-        @include('components.create.top_communities')
+        @include('components.sidebar_topcommunities')
         <!-- RIGHT CARD#2 -->
-        @include('components.create.top_communities')
+        @include('components.sidebar_topcommunities')
         <!-- RIGHT CARD#3 -->
-        @include('components.create.top_communities')
+        @include('components.sidebar_topcommunities')
       </div>
       <!-- //RIGHT BAR -->
 
