@@ -1,14 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CreateController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\Evaluation_logController;
-use App\Http\Controllers\User_subreddit_linkController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\SubredditController;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Post;
+
+// use controllers----------------------------------------
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\Evaluation_logController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\User_subreddit_linkController;
+use App\Http\Controllers\SubredditController;
+// -------------------------------------------------------
 
 /*
 |--------------------------------------------------------------------------
@@ -21,68 +23,52 @@ use App\Models\Post;
 |
 */
 
-
+/* top */
 Route::get('/', function () {
     return view('toppage');
 });
+Route::get('/top', [App\Http\Controllers\TopController::class, 'classic']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/post', function () {
-    return view('post');
-});
-
-Route::get('/subreddit', [PostController::class, 'classic']);
-
-Route::get('/subreddit/{id}/create', function ($id) {
-    return view('create_post', ['id' => $id]);
-});
-Route::post('/create/create_Post/{subreddit_id}', [CreateController::class, 'create_subreddit_Post']);
-
+/* create */
 Route::get('/create', function () {
     return view('create');
 });
-Route::get('/sidebar', function () {
-    return view('sidebar');
-});
+Route::get('/create/subreddit', [SubredditController::class, 'index']);
+Route::post('/create/create_Post/{subreddit_id}', [CreateController::class, 'create_subreddit_Post']);
+Route::post('/create/create_post', [CreateController::class, 'create_post']);
+Route::post('/create/testPost', [CreateController::class, 'testPost']);
+Route::post('/create/subreddit_post', [SubredditController::class, 'create']);
+
+/* post */
 Route::get('post', 'App\Http\Controllers\PostController@index');
+Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
+
+/* subreddit */
+Route::get('/subreddit', [PostController::class, 'classic']);
+Route::get('/subreddit/{id}/create', function ($id) {
+    return view('create_post', ['id' => $id]);
+});
+Route::get('/subreddit/{id}', [PostController::class, 'classic'])->name('subreddit.show');
+Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
+Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
+
+/* readerboard */
+Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksController');
+
+/* user */
 Route::get('user', 'App\Http\Controllers\UserController@index');
 
-Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksController');
-// Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::post('/create/create_post', [CreateController::class, 'create_post']);
+/* eva */ 
 Route::post('/evaluation', [Evaluation_logController::class, 'evaluation']);
 Route::post('/eva_show', [Evaluation_logController::class, 'show']);
 
-Route::get('/subreddit/{id}', [PostController::class, 'classic'])
-    ->name('subreddit.show');
-// Route::get('/subreddit/{id?}', function ($id = 1) {
-//   return view('subreddit')->with('id', $id);
-// });
-
-Route::get('/post/{post}', [PostController::class, 'show'])
-    ->name('post.show');
-
-//test
-Route::post('/create/testPost', [CreateController::class, 'testPost']);
-
+/* auth */
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-//top
-Route::get('/top', [App\Http\Controllers\TopController::class, 'classic']);
-
 Route::get('/sign_in', [AuthController::class, 'sign_in']);
 Route::get('/sign_up', [AuthController::class, 'sign_up']);
 
 
-Route::get('/post/{id?}', function ($id = 1) {
-  return view('post')->with('id', $id);
-});
-Route::post('/subreddit/{id}/join', [User_subreddit_linkController::class, 'join']);
-Route::post('/subreddit/{id}/show', [User_subreddit_linkController::class, 'show']);
 
-Route::get('/create/subreddit', [SubredditController::class, 'index']);
-Route::post('/create/subreddit_post', [SubredditController::class, 'create']);
+
+
