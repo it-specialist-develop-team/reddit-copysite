@@ -40,10 +40,4 @@ $data = App\Models\User::find($id);
 </div>
 <!-- //SUB HEADER -->
 </div>
-<script>
-    window.laravel={};
-    window.laravel.subreddit_id={{$id}};
-    window.laravel.user_id=1;
-</script>
-<script src="{{asset('js/join.js')}}"></script>
 @endsection
