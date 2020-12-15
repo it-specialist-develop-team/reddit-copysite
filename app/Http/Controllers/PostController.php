@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Post; // Postモデルをインポートする
 
 class PostController extends Controller
@@ -30,6 +31,16 @@ class PostController extends Controller
     }
     function show(Post $post)
     {
+        if(Auth::check()){
+            $u_id = Auth::id();
+            return view("post", ["post" => $post,"u_id" => $u_id]);
+        }
+        
         return view("post", ["post" => $post]);
+    }
+    function delete($id)
+    {
+        Post::find($id)->delete();
+        return redirect('/');
     }
 }
