@@ -1,3 +1,4 @@
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick=window.location="{{ route('register') }}">
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+    onclick=window.location="{{ url('/sign_up') }}">
     SIGN UP
 </button>

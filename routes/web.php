@@ -25,6 +25,7 @@ use App\Models\Post;
 */
 
 /* top */
+
 Route::get('/', function () {
     return view('toppage');
 });
@@ -63,7 +64,7 @@ Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksControll
 // Route::get('user', 'App\Http\Controllers\UserController@index');
 Route::get('/user/show/{id}', [UserController::class, 'show']);
 
-/* eva */ 
+/* eva */
 Route::post('/evaluation', [Evaluation_logController::class, 'evaluation']);
 Route::post('/eva_show', [Evaluation_logController::class, 'show']);
 
@@ -76,5 +77,3 @@ Route::get('/sign_up', [AuthController::class, 'sign_up']);
 Route::get('/show_user', function () {
     return view('show_user');
 });
-
-
