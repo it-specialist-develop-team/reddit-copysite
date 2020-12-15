@@ -7,7 +7,9 @@ $data = App\Models\User::find($id);
 @section('header-links')
 <link rel="stylesheet" href="{{asset('css/evalution.css')}}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 <script src="{{asset('js/evaluation.js')}}"></script>
+<link rel="stylesheet" href="{{asset('css/show_user.css')}}">
 @endsection
 
 
@@ -20,9 +22,8 @@ $data = App\Models\User::find($id);
         <div class="mdl-grid">
             <!-- MAIN BAR// -->
             <div class="mdl-cell mdl-cell--8-col">
-                {{-- @include('components.subreddit_notice',['body' => $data->body]) --}}
                 <!-- //POSTCARDCLASSIC -->
-                @include('components.subreddit_classic',['posts' => $posts])
+                @include('components.user.show.subreddit_classic',['posts' => $posts])
             </div>
             <!-- MAIN BAR// -->
             <!-- SIDE BAR// -->
