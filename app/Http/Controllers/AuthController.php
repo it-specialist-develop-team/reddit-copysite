@@ -10,7 +10,7 @@ class AuthController extends Controller
     public function sign_up()
     {
         if (Auth::check()) {
-            return redirect('/top');
+            return redirect('/');
         }
         return view('sign_up');
     }
@@ -18,7 +18,7 @@ class AuthController extends Controller
     public function sign_in()
     {
         if (Auth::check()) {
-            return redirect('/top');
+            return redirect('/');
         }
         return view('sign_in');
     }

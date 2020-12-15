@@ -11,6 +11,6 @@ class UserController extends Controller
     public function show($id)
     {
         $posts = Post::where('user_id', $id)->get();
-        return view('show_user', ['posts' => $posts, 'id' => $id]);
+        return view('user.show.show_user', ['posts' => $posts, 'id' => $id]);
     }
 }

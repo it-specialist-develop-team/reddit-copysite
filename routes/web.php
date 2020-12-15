@@ -77,3 +77,9 @@ Route::get('/sign_up', [AuthController::class, 'sign_up']);
 Route::get('/show_user', function () {
     return view('show_user');
 });
+Route::get('/user_page', function () {
+    return view('user.store.user_page');
+});
+Route::get('/user_store_page', function () {
+    return view('user.store.user_store_page');
+});
