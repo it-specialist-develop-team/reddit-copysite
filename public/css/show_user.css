@@ -1,0 +1,31 @@
+.bomb:before {
+    font-family: "Font Awesome 5 free";
+    content: "\f27a";
+    font-size: 26px;
+}
+
+.block-post-classic .post-rank-classic-comment {
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 35px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    text-align: center;
+    line-height: 1;
+
+}
+
+.maincard {
+    min-height: 4em;
+}
+
+.post-content-bottom .linktitle {
+    padding: 0px;
+}
+
+.post-content-bottom {
+    border-top: rgb(233, 226, 226) 1px solid;
+}
