@@ -1,13 +1,12 @@
 @extends('layouts.base')
 @php
-$title="Create Post";
+$title="User Page";
 @endphp
 
 @section('header-links')
 <link rel="stylesheet" href="{{asset('css/reader-board.css')}}">
-
 <link rel="stylesheet" href="{{asset('css/create.css')}}">
-
+<link rel="stylesheet" href="{{asset('css/user_page.css')}}">
 
 @endsection
 
@@ -17,8 +16,8 @@ $title="Create Post";
 <div class="page-content">
     <!-- SUBHEADER -->
     <div class="sub-header-readerboard">
-        <h5>User Page</h5>
-        <span>ユーザの情報を確認、変更できます。</span>
+        <h5>User Store Page</h5>
+        <span>ユーザの変更できます。</span>
     </div>
 
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -27,7 +26,7 @@ $title="Create Post";
         <div class="mdl-grid">
 
             <!-- LEFT BAR// -->
-            @include('components.user.store.user_page')
+            @include('components.user.store.user_store_page')
 
             <!-- //LEFT BAR -->
 

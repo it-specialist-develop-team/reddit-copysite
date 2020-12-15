@@ -1,12 +1,12 @@
 @extends('layouts.base')
 @php
-$title="Create Post";
+$title="User Page";
 @endphp
 
 @section('header-links')
 <link rel="stylesheet" href="{{asset('css/reader-board.css')}}">
-
 <link rel="stylesheet" href="{{asset('css/create.css')}}">
+<link rel="stylesheet" href="{{asset('css/user_page.css')}}">
 
 
 @endsection

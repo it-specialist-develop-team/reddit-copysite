@@ -7,18 +7,25 @@ $usls = DB::table('user_subreddit_links')->where([
 @endphp
 <div class="mdl-cell mdl-cell--8-col ">
     <div class="mdl-card mdl-shadow--2dp card left submit-card">
-        <p>名前：{{$u->name}}</p>
-        <p>メール：{{$u->email}}</p>
-        <p>アイコン：</p>
-        <p>登録日：{{$u->created_at}}</p>
-        <p>更新日：{{$u->updated_at}}</p>
-        <p>登録しているsubreddit一覧</p>
-        @foreach ($usls as $usl)
-        @php
-        $sn = App\Models\Subreddit::find($usl->subreddit_id);
-        @endphp
-        <a href="subreddit/{{$usl->subreddit_id}}">{{$sn->subreddit_name}}</a>
-
-        @endforeach
+        <form action={{url("/user_store/".$u->id)}} method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="card-title">
+                <h5 class="title">ユーザ情報</h5>
+                <div class="mdl-layout-spacer"></div>
+                <button type="submit"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored user_page-btn">
+                    決定
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored user_page-btn"
+                    type="reset" onclick=window.location="{{ url('/user_page/'.$u->id) }}">
+                    キャンセル
+                </button>
+            </div>
+            <div class="user_page-data-card">
+                <p>名前：<input type="text" name="user_name" value="{{$u->name}}"></p>
+                <p>メール：<input type="text" name="user_mali" value="{{$u->email}}"></p>
+                <p>アイコン：<input type="file" name="image" class="mdl-button mdl-js-button mdl-js-ripple-effect"></p>
+            </div>
+        </form>
     </div>
 </div>

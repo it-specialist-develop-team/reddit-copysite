@@ -1,5 +1,6 @@
 <div class="container mdl-shadow--2dp">
     @auth
+    @include('components.btn_user_page')
     @include('components.btn_sign_out')
     @endauth
     @guest

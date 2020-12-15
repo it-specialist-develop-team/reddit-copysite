@@ -45,7 +45,7 @@
                         <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
                     </div>
                 </div>
-                {{-- @include('components.change_auth_state') --}}
+                @include('components.change_auth_state')
 
             </div>
 

@@ -75,11 +75,30 @@ Route::get('/sign_up', [AuthController::class, 'sign_up']);
 
 /* show user */
 Route::get('/show_user', function () {
-    return view('show_user');
+    return view('/show_user');
 });
-Route::get('/user_page', function () {
-    return view('user.store.user_page');
+
+/* user page */
+Route::get('/user_page/{id}', function ($id) {
+    if (Auth::check()) {
+        if ($id == Auth::user()->id) {
+            return view('/user.store.user_page', ['id' => $id]);
+        } else {
+            return redirect('/');
+        }
+    } else {
+        return redirect('/');
+    }
 });
-Route::get('/user_store_page', function () {
-    return view('user.store.user_store_page');
+Route::get('/user_store_page/{id}', function ($id) {
+    if (Auth::check()) {
+        if ($id == Auth::user()->id) {
+            return view('user.store.user_store_page');
+        } else {
+            return redirect('/');
+        }
+    } else {
+        return redirect('/');
+    }
 });
+Route::post('/user_store/{id}', [UserController::class, 'store']);
