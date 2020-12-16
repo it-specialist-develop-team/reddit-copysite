@@ -1,7 +1,11 @@
 @extends('layouts.base')
 @php
 $title="Subreddit";
-$data = DB::table('subreddits')->find($id);
+$data = App\Models\Subreddit::find($id);
+$usl = App\Models\User_subreddit_link::where([
+['subreddit_id', $id],
+['user_id', Auth::id()],
+])->get();
 // $posts = DB::table('posts')->get();
 @endphp
 @section('header-links')
@@ -124,7 +128,6 @@ $data = DB::table('subreddits')->find($id);
 <script>
     window.laravel={};
     window.laravel.subreddit_id={{$id}};
-    window.laravel.user_id=1;
 </script>
 <script src="{{asset('js/join.js')}}"></script>
 @endsection

@@ -3,7 +3,11 @@ $child_posts = App\Models\Post::where('parent_id',$post->id)->get();
 @endphp
 
 <div class="comment-header">
-    <img src="{{asset('img/g2-logo.jpg')}}" class="comment-user-icon">
+    @if ($post->user->attachment != Null)
+    <img src="{{asset($post->user->attachment)}}" class="comment-user-icon">
+    @else
+    <img src="{{asset('img/sub-header-icon.jpg')}}" class="comment-user-icon">
+    @endif
     <div class="comment-header-status">
         {{-- <span class="comment-user">{{ $item->user->name }}</span> --}}
         <a href="/user/show/{{$post->user_id}}" class="comment-user">{{ $post->user->name }}</a>

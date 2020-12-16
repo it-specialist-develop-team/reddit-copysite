@@ -50,16 +50,14 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
     </div>
 </div>
 <!-- //POSTBAR -->
-
 <script>
-
-    
-   $('#comment_btn').on("click",function(){
+    $('#comment_btn').on("click",function(){
     let $body = $("#body");
     let fd = new FormData();
     
     fd.append("body", $body.prop('value'));
     fd.append("parent_id", {{$post->id}});
+    fd.append("user_id", {{Auth::id()}});
 
     $.ajax({
     headers: {

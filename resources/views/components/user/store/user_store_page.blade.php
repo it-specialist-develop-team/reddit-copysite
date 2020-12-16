@@ -1,9 +1,5 @@
 @php
 $u = Auth::user();
-// DB::table('subreddits')->find($id);
-$usls = DB::table('user_subreddit_links')->where([
-['user_id', $u->id],
-])->get();
 @endphp
 <div class="mdl-cell mdl-cell--8-col ">
     <div class="mdl-card mdl-shadow--2dp card left submit-card">
@@ -22,9 +18,15 @@ $usls = DB::table('user_subreddit_links')->where([
                 </button>
             </div>
             <div class="user_page-data-card">
-                <p>名前：<input type="text" name="user_name" value="{{$u->name}}"></p>
-                <p>メール：<input type="text" name="user_mali" value="{{$u->email}}"></p>
-                <p>アイコン：<input type="file" name="image" class="mdl-button mdl-js-button mdl-js-ripple-effect"></p>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="user_name" value="{{$u->name}}">
+                    <label class="mdl-textfield__label" for="sample3">名前...</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="user_mali" value="{{$u->email}}">
+                    <label class="mdl-textfield__label" for="sample3">メールアドレス...</label>
+                </div>
+                <p>アイコン<input type="file" name="image" class="mdl-button mdl-js-button mdl-js-ripple-effect"></p>
             </div>
         </form>
     </div>

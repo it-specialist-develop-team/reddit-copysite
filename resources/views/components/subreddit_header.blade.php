@@ -5,16 +5,18 @@
         <img src="{{asset('img/sub-header-icon.jpg')}}" id="sub-header-icon">
 
         <p>{{ $data->subreddit_name}}</p>
-        <button onclick="join(this,1)" id="join_{{$id}}"
+        <button onclick="join()" id="join_{{$id}}"
             class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-            JOIN
-        </button>
-    </div>
-
-</div>
-
+            @if ($usl->count() < 1) 
+            JOIN 
+            @else 
+            JOINED 
+            @endif 
+        </button> 
+    </div> 
+</div> 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-    <!-- <div class="mdl-tabs__tab-bar">
+                <!-- <div class="mdl-tabs__tab-bar">
   <a href="#A-panel" class="mdl-tabs__tab is-active">POST</a>
   <a href="#B-panel" class="mdl-tabs__tab">RULES</a>
   <a href="#C-panel" class="mdl-tabs__tab">DISCORD</a>

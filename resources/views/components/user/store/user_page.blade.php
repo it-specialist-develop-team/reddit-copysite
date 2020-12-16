@@ -1,7 +1,7 @@
 @php
 $u = Auth::user();
 // DB::table('subreddits')->find($id);
-$usls = DB::table('user_subreddit_links')->where([
+$usls = App\Models\User_subreddit_link::where([
 ['user_id', $u->id],
 ])->get();
 @endphp
@@ -20,7 +20,11 @@ $usls = DB::table('user_subreddit_links')->where([
             <p>名前：{{$u->name}}</p>
             <p>メール：{{$u->email}}</p>
             <p>アイコン</p>
+            @if ($u->attachment != Null)
             <img class="user_page-img" src="{{asset($u->attachment)}}">
+            @else
+            <img src="{{asset('img/sub-header-icon.jpg')}}" id="sub-header-icon">
+            @endif
             <p>登録日：{{$u->created_at}}</p>
             <p>更新日：{{$u->updated_at}}</p>
         </div>
@@ -40,7 +44,7 @@ $usls = DB::table('user_subreddit_links')->where([
                     $sn = App\Models\Subreddit::find($usl->subreddit_id);
                     @endphp
                     <li class="right-li">
-                        <a href="subreddit/{{$usl->subreddit_id}}">
+                        <a href="{{url('subreddit/'.$usl->subreddit_id)}}">
                             <div class="readerboard-content">
                                 <img id="icon" src="{{asset('img/g2-logo.jpg')}}">
                                 <span id="title">{{$sn->subreddit_name}}</span>
