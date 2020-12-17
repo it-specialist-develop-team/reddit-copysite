@@ -47,6 +47,7 @@ Route::post('/create/create_Post/{subreddit_id}', [CreateController::class, 'cre
 /* post */
 Route::get('post', 'App\Http\Controllers\PostController@index');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
+Route::post('/post/{id}/delete','App\Http\Controllers\PostController@delete')->name('post.delete');
 
 /* subreddit */
 Route::get('/subreddit', [PostController::class, 'classic']);
