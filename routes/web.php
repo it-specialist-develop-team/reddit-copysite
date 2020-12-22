@@ -25,6 +25,7 @@ use App\Models\Post;
 */
 
 /* top */
+
 Route::get('/', function () {
     return view('toppage');
 });
@@ -46,6 +47,7 @@ Route::post('/create/create_Post/{subreddit_id}', [CreateController::class, 'cre
 /* post */
 Route::get('post', 'App\Http\Controllers\PostController@index');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
+Route::post('/post/{id}/delete','App\Http\Controllers\PostController@delete')->name('post.delete');
 
 /* subreddit */
 Route::get('/subreddit', [PostController::class, 'classic']);
@@ -63,7 +65,7 @@ Route::resource('readerboard', '\App\Http\Controllers\UserSubredditLinksControll
 // Route::get('user', 'App\Http\Controllers\UserController@index');
 Route::get('/user/show/{id}', [UserController::class, 'show']);
 
-/* eva */ 
+/* eva */
 Route::post('/evaluation', [Evaluation_logController::class, 'evaluation']);
 Route::post('/eva_show', [Evaluation_logController::class, 'show']);
 
@@ -74,7 +76,30 @@ Route::get('/sign_up', [AuthController::class, 'sign_up']);
 
 /* show user */
 Route::get('/show_user', function () {
-    return view('show_user');
+    return view('/show_user');
 });
 
-
+/* user page */
+Route::get('/user_page/{id}', function ($id) {
+    if (Auth::check()) {
+        if ($id == Auth::user()->id) {
+            return view('/user.store.user_page', ['id' => $id]);
+        } else {
+            return redirect('/');
+        }
+    } else {
+        return redirect('/');
+    }
+});
+Route::get('/user_store_page/{id}', function ($id) {
+    if (Auth::check()) {
+        if ($id == Auth::user()->id) {
+            return view('user.store.user_store_page');
+        } else {
+            return redirect('/');
+        }
+    } else {
+        return redirect('/');
+    }
+});
+Route::post('/user_store/{id}', [UserController::class, 'store']);

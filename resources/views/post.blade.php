@@ -26,7 +26,7 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
                     <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
                         <div class="block-post-classic">
                             @include('components.post_head', ["title" => $post->title, "body" => $post->body, "name" =>
-                            $post->user->name, "file_path" => $post->attachment])
+                            $post->user->name, "file_path" => $post->attachment, "u_id" => $u_id])
                             @include('components.post_addcomment')
                             <div class="comment-field">
                                 <div class="comment">
@@ -50,16 +50,14 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
     </div>
 </div>
 <!-- //POSTBAR -->
-
 <script>
-
-    
-   $('#comment_btn').on("click",function(){
+    $('#comment_btn').on("click",function(){
     let $body = $("#body");
     let fd = new FormData();
     
     fd.append("body", $body.prop('value'));
     fd.append("parent_id", {{$post->id}});
+    fd.append("user_id", {{Auth::id()}});
 
     $.ajax({
     headers: {

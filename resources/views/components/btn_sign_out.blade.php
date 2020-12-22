@@ -1,4 +1,5 @@
-<form id="logout-form" action="{{ route('logout') }}" method="POST">
+<form id="logout-form" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored btn_sign_out_form"
+    action="{{ route('logout') }}" method="POST">
     @csrf
     <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">SIGN OUT</button>
 </form>

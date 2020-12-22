@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 use phpDocumentor\Reflection\Types\Null_;
 
 class CreateController extends Controller
 {
-  function create_post(Request $request)
-  {
+    function create_post(Request $request)
+    {
         $post = new Post;
         $post->subreddit_id = 1;
         $post->post_type = $request->post_type;
@@ -17,10 +18,10 @@ class CreateController extends Controller
         $post->body = $request->body;
         $post->attachment = "";
         $post->parent_id = $request->parent_id;
-        $post->user_id = 1;
+        $post->user_id = Auth::check()? Auth::id():1;
         $post->evaluation = 0;
         $post->save();
-  }
+    }
 
   function testPost(Request $request)
   {
@@ -38,7 +39,7 @@ class CreateController extends Controller
           $post->body = "";
           $post->attachment = $path;
           $post->parent_id = Null;
-          $post->user_id = 1;
+          $post->user_id = Auth::check()? Auth::id():1;
           $post->evaluation = 0;
           $post->save();
       }
@@ -50,7 +51,7 @@ class CreateController extends Controller
         $post->body = $request->input('body');
         $post->attachment = "";
         $post->parent_id = Null;
-        $post->user_id = 1;
+        $post->user_id = Auth::check()? Auth::id():1;
         $post->evaluation = 0;
         $post->save();
     }
@@ -72,7 +73,7 @@ class CreateController extends Controller
               $post->body = "";
               $post->attachment = $path;
               $post->parent_id = Null;
-              $post->user_id = 1;
+              $post->user_id = Auth::check()? Auth::id():1;
               $post->evaluation = 0;
               $post->save();
             }
@@ -84,7 +85,7 @@ class CreateController extends Controller
           $post->body = $request->input('body');
           $post->attachment = "";
           $post->parent_id = Null;
-          $post->user_id = 1;
+          $post->user_id = Auth::check()? Auth::id():1;
           $post->evaluation = 0;
           $post->save();
       }
