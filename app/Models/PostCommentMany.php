@@ -43,6 +43,7 @@ class PostCommentMany extends Model
             where child.parent_id = parent.id
             ) as cnt')
         )
+        ->whereNull('deleted_at')
         ->whereRaw(
             'parent.parent_id is null'
         )
