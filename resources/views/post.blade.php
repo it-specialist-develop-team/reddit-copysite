@@ -25,8 +25,13 @@ $posts = App\Models\Post::where('parent_id',$post->id)->get();
                     <!-- //POSTCARDCLASSIC -->
                     <div class="mdl-card mdl-shadow--2dp maincard postcard-classic">
                         <div class="block-post-classic">
-                            @include('components.post_head', ["title" => $post->title, "body" => $post->body, "name" =>
-                            $post->user->name, "file_path" => $post->attachment, "u_id" => $u_id])
+                            @if (Auth::check())
+                                @include('components.post_head', ["title" => $post->title, "body" => $post->body, "name" =>
+                                $post->user->name, "file_path" => $post->attachment, "u_id" => $u_id])
+                            @else
+                                @include('components.post_head', ["title" => $post->title, "body" => $post->body, "name" =>
+                                $post->user->name, "file_path" => $post->attachment])                                
+                            @endif
                             @include('components.post_addcomment')
                             <div class="comment-field">
                                 <div class="comment">

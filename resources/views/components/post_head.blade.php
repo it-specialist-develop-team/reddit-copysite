@@ -24,7 +24,8 @@
             <span> {!! $body !!}</span>
         </div>
     </div>
-    @if($post->user_id == $u_id)
+    
+    @if(Auth::check()&&$post->user_id == $u_id)
     <form action="/post/{{$post->id}}/delete" method="post">
         @csrf
         <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">delete</button>
