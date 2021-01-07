@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2021-01-07 03:36:10
+-- 生成日時: 2021-01-07 03:43:39
 -- サーバのバージョン： 10.4.14-MariaDB
 -- PHP のバージョン: 7.4.11
 
@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- テーブルの構造 `categories`
 --
 
+DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
   `category_name` varchar(50) DEFAULT NULL,
@@ -49,6 +50,7 @@ INSERT INTO `categories` (`id`, `category_name`, `updated_at`, `created_at`, `de
 -- テーブルの構造 `evaluation_logs`
 --
 
+DROP TABLE IF EXISTS `evaluation_logs`;
 CREATE TABLE `evaluation_logs` (
   `id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
@@ -65,6 +67,7 @@ CREATE TABLE `evaluation_logs` (
 -- テーブルの構造 `posts`
 --
 
+DROP TABLE IF EXISTS `posts`;
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
   `subreddit_id` int(11) NOT NULL,
@@ -132,6 +135,7 @@ INSERT INTO `posts` (`id`, `subreddit_id`, `post_type`, `title`, `body`, `attach
 -- テーブルの構造 `subreddits`
 --
 
+DROP TABLE IF EXISTS `subreddits`;
 CREATE TABLE `subreddits` (
   `id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
@@ -165,6 +169,7 @@ INSERT INTO `subreddits` (`id`, `category_id`, `subreddit_name`, `body`, `create
 -- テーブルの構造 `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -210,6 +215,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `at
 -- テーブルの構造 `user_subreddit_links`
 --
 
+DROP TABLE IF EXISTS `user_subreddit_links`;
 CREATE TABLE `user_subreddit_links` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
